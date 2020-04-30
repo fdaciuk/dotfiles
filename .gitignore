@@ -1,0 +1,8 @@
+bin/Telegram
+nvim/*
+!nvim/init.vim
+fonts-powerline
+tmux/*
+!tmux/.tmux.conf.local
+zsh/*
+!zsh/.zshrc
