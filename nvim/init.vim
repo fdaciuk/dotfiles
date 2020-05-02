@@ -19,6 +19,9 @@ call plug#begin()
   " Suporte para JSX / React 
   Plug 'maxmellon/vim-jsx-pretty'
 
+  " Suporte para Styled Components
+  Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+
   " Adicionar syntax hightlight para várias linguagens
   Plug 'sheerun/vim-polyglot' 
 
