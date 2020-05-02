@@ -4,21 +4,8 @@
 
 ## Instalation
 
-Clone this repository on your home directory.
-
-## Symbolic links
-
-Create symbolic links to keep track on updates:
-
-**Tmux:**
-
-I'm using oh-my-tmux. Clone this repository
-
-```
-ln -s ~/dotfiles/tmux ~/.tmux
-ln -s ~/dotfiles/tmux/.tmux/.tmux.conf ~/.tmux.conf
-ln -s ~/dotfiles/tmux/.tmux.conf.local ~/.tmux.conf.local
-```
+- Clone this repository somewhere on your PC
+- Run ./symlink.sh
 
 ## License
 
