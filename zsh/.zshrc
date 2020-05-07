@@ -77,14 +77,14 @@ source $ZSH/oh-my-zsh.sh
 alias please='sudo'
 alias vim='nvim'
 alias vi='vim'
-alias update='sudo apt update && sudo apt upgrade -y'
+alias update='sudo apt update && sudo apt upgrade -y && flatpak update && sudo snap refresh'
 alias copy='rsync -a --stats --progress'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export TERM='xterm-256color'
+export TERM='screen-256color'
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
