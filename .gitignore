@@ -1,6 +1,8 @@
 bin/Telegram
-nvim/*
-!nvim/init.vim
+nvim/autoload
+nvim/backups
+nvim/plugged
+nvim/undos
 fonts-powerline
 tmux/*
 !tmux/.tmux.conf.local
