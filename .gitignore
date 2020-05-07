@@ -12,5 +12,4 @@ tmux/plugins
 tmux/resurrect
 tmux/.tmux
 
-zsh/*
-!zsh/.zshrc
+zsh/plugins
