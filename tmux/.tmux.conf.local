@@ -308,7 +308,7 @@ bind -n C-M-l select-window -n
 bind - split-window -v
 
 # Criar painel horizontal com '<prefix>\'
-bind \ split-window -h
+bind \\ split-window -h
 
 # Definir modo vim para navegação 
 set-window-option mode-keys vi
