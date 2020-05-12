@@ -11,3 +11,5 @@ ln -sf $PWD/tmux/.tmux.conf.local ~/.tmux.conf.local
 
 ln -sf $PWD/zsh/.zshrc ~/.zshrc
 ln -sf $PWD/zsh/plugins ~/.oh-my-zsh/custom/plugins
+
+ln -sf $PWD/ssh/config ~/.ssh/config
