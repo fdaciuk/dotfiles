@@ -77,7 +77,7 @@ source $ZSH/oh-my-zsh.sh
 alias please='sudo'
 alias vim='nvim'
 alias vi='vim'
-alias update='sudo apt update && sudo apt upgrade -y && flatpak update && sudo snap refresh'
+alias update='sudo apt update && sudo apt upgrade -y && flatpak update -y && sudo snap refresh'
 alias copy='rsync -a --stats --progress'
 
 export NVM_DIR="$HOME/.nvm"
