@@ -186,7 +186,7 @@ tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized} #{?battery_stat
 
 # status left style
 tmux_conf_theme_status_left_fg='#e4e4e4,#e4e4e4,#e4e4e4'  # white, white , white
-tmux_conf_theme_status_left_bg='#000000,#ff00af,#00afff'  # black, pink, white blue
+tmux_conf_theme_status_left_bg='#080808,#ff00af,#00afff'  # black, pink, white blue
 tmux_conf_theme_status_left_attr='bold,none,none'
 
 # status right style
