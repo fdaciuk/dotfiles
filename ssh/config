@@ -1,0 +1,3 @@
+Host *
+ServerAliveInterval 15
+ServerAliveCountMax 5
