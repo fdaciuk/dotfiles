@@ -314,6 +314,8 @@ bind \\ split-window -h
 set-window-option mode-keys vi
 
 # -- plugins -----------------------------------------------------------------
+# Configurações padrão importantes para o tmux
+run-shell $HOME/.tmux/plugins/tmux-sensible/sensible.tmux
 
 # Plugin para salvar e restaurar sessões do tmux
 run-shell $HOME/.tmux/plugins/tmux-resurrect/resurrect.tmux
