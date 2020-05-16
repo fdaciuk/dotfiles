@@ -314,9 +314,6 @@ bind \\ split-window -h
 set-window-option mode-keys vi
 
 # -- plugins -----------------------------------------------------------------
-# Save tmux session automatically
-# set -g @continuum-restore 'on'
-# set -g @continuum-boot 'on'
 
-# run-shell $HOME/.tmux/plugins/tmux-continuum/continuum.tmux
+# Plugin para salvar e restaurar sessões do tmux
 run-shell $HOME/.tmux/plugins/tmux-resurrect/resurrect.tmux
