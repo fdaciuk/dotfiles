@@ -1,5 +1,6 @@
 {
   "diagnostic.errorSign": "🚨",
   "diagnostic.warningSign": "⚠️ ",
-  "diagnostic.infoSign": "⚠️ "
+  "diagnostic.infoSign": "⚠️ ",
+  "tsserver.enable": false
 }
