@@ -200,11 +200,11 @@ ${offset 30}${color2}I/O Write:${color} ${alignr}${offset -10}${diskio_write /de
 ${offset 30}${color2}Storage:${color} ${alignr}${offset -10}${fs_used /media/storage} / ${fs_size /media/storage}${alignr}${fs_bar /media/storage}
 ${offset 30}${color2}I/O Read:${color} ${alignr}${offset -10}${diskio_read /dev/nvme1n1p1}${alignr}${diskiograph_read nvme1n1p1 8,100}
 ${offset 30}${color2}I/O Write:${color} ${alignr}${offset -10}${diskio_write /dev/nvme1n1p1}${alignr}${diskiograph_write nvme1n1p1 8,100}
-
-${color5}${color5}${font Roboto:size=10}N E T W O R K   ${hr 2}${font}${color}
-${color2}${offset 30}IP Address: ${color} ${alignr}${offset -10$}${addrs wlxd037454a5dbc}
-${color2}${offset 30}Eth Up:${color} ${alignr}${offset -10$}${upspeed wlxd037454a5dbc}${alignr}${upspeedgraph wlxd037454a5dbc 8,100}
-${color2}${offset 30}Eth Down:${color} ${alignr}${offset -10$}${downspeed wlxd037454a5dbc}${alignr}${downspeedgraph wlxd037454a5dbc 8,100}
+#
+# ${color5}${color5}${font Roboto:size=10}N E T W O R K   ${hr 2}${font}${color}
+# ${color2}${offset 30}IP Address: ${color} ${alignr}${offset -10$}${addrs br-6242e983dd1e}
+# ${color2}${offset 30}Eth Up:${color} ${alignr}${offset -10$}${upspeed br-6242e983dd1e}${alignr}${upspeedgraph br-6242e983dd1e 8,100}
+# ${color2}${offset 30}Eth Down:${color} ${alignr}${offset -10$}${downspeed br-6242e983dd1e}${alignr}${downspeedgraph br-6242e983dd1e 8,100}
 
 ${color5}${color5}${font Roboto:size=10}N V I D I A   ${hr 2}${font}${color}
 ${font Roboto Bold:size=10}${color5}${execp  nvidia-smi --query-supported-clocks=gpu_name --format=csv,noheader}${font}
