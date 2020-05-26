@@ -97,7 +97,7 @@ let g:airline_symbols.notexists = ' ✗'
 let g:polyglot_disabled = ['jsx']
 let g:vim_jsx_pretty_highlight_close_tag = 1
 
-" Configuração do plugin de smooth scroll -----------------------------------
+" Configuração do plugin de smooth scroll ------------------------------------
 
 " Permite que o cursor acompanhe a rolagem da tela
 let g:comfortable_motion_scroll_down_key = "j"
@@ -199,8 +199,11 @@ nnoremap <leader>l :set list!<cr>
 
 " Outros atalhos -------------------------------------------------------------
 
-" Define o atalho Ctrl + P para utilizar o fzf fileS
+" Define o atalho Ctrl + P para utilizar o fzf 
 nnoremap <c-p> :Files<cr>
+
+" Define o atalho Ctrl + Meta(Alt) + P para utilizar o fzf com base no git
+nnoremap <c-m-p> :GFiles<cr>
 
 " Define o atalho Ctrl + N para abrir :Buffers com o fzf
 nnoremap <c-o> :Buffers<cr>
