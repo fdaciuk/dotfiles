@@ -44,6 +44,9 @@ call plug#begin()
   " Fazer fechamento automático de pares (parênteses, colchetes, aspas, etc)
   Plug 'jiangmiao/auto-pairs'
 
+  " Facilitar manipulação de 'surroundings' (pares)
+  Plug 'tpope/vim-surround'
+
   " Editorconfig
   Plug 'editorconfig/editorconfig-vim'  
 
