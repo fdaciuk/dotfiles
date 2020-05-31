@@ -132,6 +132,7 @@ function pull () {
 function clone () {
   DIR=$(echo $1 | sed "s?^.*:\(.*\)/\(.*\).git?\1--\2?")
   git clone $1 $DIR
+  cd $DIR
 }
 
 function copy-to-clipboard () {
