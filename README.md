@@ -5,7 +5,7 @@
 ## Instalation
 
 - Clone this repository somewhere on your PC
-- Run ./symlink.sh
+- Run `./symlinks.sh`
 
 ## License
 
