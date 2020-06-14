@@ -154,7 +154,7 @@ ${color6}${voffset 4}${font Roboto:size=12}${alignc}${time %A} ${time %B} ${time
 #${color2}Uptime:${color} ${alignr}${uptime}
 #
 ${color5}${font Roboto:size=10}P R O C E S S O R S  ${hr 2}${font}${color}
-${color2}CPU Freq:${color} $alignr${freq}MHz
+${color2}CPU Freq:${color} $alignr${freq_g}GHz
 ${color2}CPU Temp:${color} $alignr${execi 10 sensors | grep Tdie | awk '{print $2'}}
 ${color2}History:${color} ${alignr}${cpugraph 8,100}
 ${color2}${offset 30}CPU (total usage):${color} ${alignr}${offset -10}${cpu cpu0}%${alignr}${cpubar cpu0}
