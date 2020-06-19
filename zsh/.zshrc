@@ -138,3 +138,12 @@ function clone () {
 function copy-to-clipboard () {
   cat $1 | xclip -i -selection clipboard
 }
+
+function mono () {
+  case "$1" in
+    "on")
+      pacmd load-module module-remap-sink sink_name=mono master=alsa_output.usb-BEHRINGER_UMC404HD_192k-00.analog-surround-40 channels=2 channel_map=mono,mono ;;
+    "off")
+      pacmd unload-module module-remap-sink ;;
+  esac
+}
