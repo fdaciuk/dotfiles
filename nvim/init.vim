@@ -206,7 +206,7 @@ nnoremap <leader>l :set list!<cr>
 nnoremap <c-p> :Files<cr>
 
 " Define o atalho Ctrl + Meta(Alt) + P para utilizar o fzf com base no git
-nnoremap <c-m-p> :GFiles<cr>
+nnoremap <s-m-p> :GFiles<cr>
 
 " Define o atalho Ctrl + N para abrir :Buffers com o fzf
 nnoremap <c-o> :Buffers<cr>
@@ -239,8 +239,8 @@ nnoremap zni <c-w>=
 " Não permitir Ctrl + Shift + Alt + E nem Ctrl + Shift + Alt + P, pois esses 
 " atalhos são usados no OBS para iniciar/finalizar e pausar uma gravação
 " O uso do <Nop> é para remover atalhos internos do Vim
-nnoremap <c-m-s-p> <Nop>
-nnoremap <c-m-s-e> <Nop>
+nnoremap <c-s-m-p> <Nop>
+nnoremap <c-s-m-e> <Nop>
 
 " Não permitir o uso dos atalhos Alt + 1, Alt + 2 e Alt + 3, pois é usado para
 " a troca de cenas no OBS
