@@ -244,6 +244,7 @@ nnoremap <c-s-m-e> <Nop>
 
 " Não permitir o uso dos atalhos Alt + 1, Alt + 2 e Alt + 3, pois é usado para
 " a troca de cenas no OBS
+nnoremap <m-0> <Nop>
 nnoremap <m-1> <Nop>
 nnoremap <m-2> <Nop>
 nnoremap <m-3> <Nop>
