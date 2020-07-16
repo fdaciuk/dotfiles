@@ -148,6 +148,7 @@ function mono () {
   esac
 }
 
+# Transformar arquivo de vídeo para importar no DaVinci Resolve
 function toresolve () {
   ffmpeg -i "$1" -vcodec mpeg4 -q:v 0 -acodec pcm_s16le "${1%.*}.mov"
 }
