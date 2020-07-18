@@ -142,13 +142,20 @@ function copy-to-clipboard () {
 function mono () {
   case "$1" in
     "on")
-      pacmd load-module module-remap-sink sink_name=mono master=alsa_output.usb-BEHRINGER_UMC404HD_192k-00.analog-surround-40 channels=2 channel_map=mono,mono ;;
+      pacmd load-module module-remap-sink sink_name=mono master=alsa_output.usb-BEHRINGER_UMC404HD_192k-00.analog-surround-40 channels=2 channel_map=mono,mono 
+      ;;
     "off")
-      pacmd unload-module module-remap-sink ;;
+      pacmd unload-module module-remap-sink 
+      ;;
   esac
 }
 
 # Transformar arquivo de vídeo para importar no DaVinci Resolve
 function toresolve () {
-  ffmpeg -i "$1" -vcodec mpeg4 -q:v 0 -acodec pcm_s16le "${1%.*}.mov"
+  DIST="mov"
+
+  for f in *.*; do
+    mkdir $DIST
+    ffmpeg -i "$f" -vcodec mpeg4 -q:v 0 -acodec pcm_s16le "$DIST/${f%*}.mov"
+  done
 }
