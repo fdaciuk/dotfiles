@@ -150,12 +150,30 @@ function mono () {
   esac
 }
 
-# Transformar arquivo de vídeo para importar no DaVinci Resolve
+# Transformar vídeo ou audio para DaVinci Resolve
 function toresolve () {
-  DIST="mov"
-
   for f in *.*; do
-    mkdir $DIST
-    ffmpeg -i "$f" -vcodec mpeg4 -q:v 0 -acodec pcm_s16le "$DIST/${f%*}.mov"
+    EXTENSION=${f##*.}
+
+    case $EXTENSION in
+      "mp4"|"mkv") DIST="mov" ;;
+      "mp3") DIST="wav" ;;
+    esac
+
+    if [[ ! -z $DIST ]]; then
+      mkdir $DIST
+    fi
+
+    case $DIST in
+      "mov") 
+        ffmpeg -i "$f" -vcodec mpeg4 -q:v 0 -acodec pcm_s16le "$DIST/${f%.*}.$DIST" 
+        ;;
+      "wav") 
+        ffmpeg -i "$f" -acodec pcm_s16le "$DIST/${f%.*}.$DIST" 
+        ;;
+      *) 
+        echo "Não existe configuração para arquivos com extensão $EXTENSION:u" >> error.log 
+        ;;
+    esac
   done
 }
