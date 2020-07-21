@@ -177,3 +177,7 @@ function toresolve () {
     esac
   done
 }
+
+function fixvideo () {
+  ffmpeg -i "$1" -map 0 -ignore_unknown -c copy "${1%.*}.fixed.${1##*.}"
+}
