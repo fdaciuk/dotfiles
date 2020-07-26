@@ -2,5 +2,6 @@
   "diagnostic.errorSign": "🚨",
   "diagnostic.warningSign": "⚠️ ",
   "diagnostic.infoSign": "⚠️ ",
-  "tsserver.enable": false
+  "javascript.validate.enable": false
+
 }

@@ -106,6 +106,13 @@ let g:vim_jsx_pretty_highlight_close_tag = 1
 let g:comfortable_motion_scroll_down_key = "j"
 let g:comfortable_motion_scroll_up_key = "k"
 
+" Configuração do plugin COC -------------------------------------------------
+
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
 " Espaços e Tabs -------------------------------------------------------------
 
 " Define tabs como espaços
