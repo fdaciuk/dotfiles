@@ -2,6 +2,6 @@
   "diagnostic.errorSign": "🚨",
   "diagnostic.warningSign": "⚠️ ",
   "diagnostic.infoSign": "⚠️ ",
+  "javascript.suggestionActions.enabled": false,
   "javascript.validate.enable": false
-
 }
