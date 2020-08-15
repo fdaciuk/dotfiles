@@ -120,6 +120,9 @@ export PATH=node_modules/.bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/bin:$PATH
 
+# Add Yarn globals on $PATH
+export PATH=$(yarn global bin):$PATH
+
 # My functions
 function push () {
   git push origin $(git branch | grep \* | sed 's/\*\s//') $@
