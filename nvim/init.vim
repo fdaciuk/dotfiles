@@ -16,6 +16,12 @@ call plug#begin()
   " Suporte à liguagem JavaScript
   Plug 'pangloss/vim-javascript'
 
+  " Suporte à TypeScript
+  Plug 'leafgarland/typescript-vim'
+  
+  " Suporte à TypeScript com React (.tsx)
+  Plug 'ianks/vim-tsx'
+
   " Suporte para JSX / React 
   Plug 'maxmellon/vim-jsx-pretty'
 
