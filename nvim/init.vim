@@ -1,3 +1,9 @@
+" Configuração do plugin vim-jsx-pretty --------------------------------------
+" Essa configuração precisa estar antes de carregar o plugin vim-polyglot
+" Desabilita polyglot para arquivos jsx 
+let g:polyglot_disabled = ['jsx']
+let g:vim_jsx_pretty_highlight_close_tag = 1
+
 " Plugins --------------------------------------------------------------------
 
 call plug#begin()
@@ -99,12 +105,6 @@ if !exists('g:airline_symbols')
 endif
 
 let g:airline_symbols.notexists = ' ✗'
-
-" Configuração do plugin vim-jsx-pretty --------------------------------------
-
-" Desabilita polyglot para arquivos jsx 
-let g:polyglot_disabled = ['jsx']
-let g:vim_jsx_pretty_highlight_close_tag = 1
 
 " Configuração do plugin de smooth scroll ------------------------------------
 
