@@ -218,7 +218,7 @@ nnoremap <leader>l :set list!<cr>
 " Define o atalho Ctrl + P para utilizar o fzf 
 nnoremap <c-p> :Files<cr>
 
-" Define o atalho Ctrl + Meta(Alt) + P para utilizar o fzf com base no git
+" Define o atalho Shift + Meta(Alt) + P para utilizar o fzf com base no git
 nnoremap <s-m-p> :GFiles<cr>
 
 " Define o atalho Ctrl + N para abrir :Buffers com o fzf
