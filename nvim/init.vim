@@ -73,6 +73,9 @@ call plug#begin()
 
   " Emmet
   Plug 'mattn/emmet-vim'
+
+  " Carregar CSV
+  Plug 'chrisbra/csv.vim'
 call plug#end()
 
 " Cores e tema ---------------------------------------------------------------
