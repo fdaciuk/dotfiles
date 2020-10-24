@@ -122,6 +122,30 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
+" Configuração do FZF --------------------------------------------------------
+" Não exibir janela de pré-visualização de conteúdo do arquivo
+let g:fzf_preview_window = []
+
+" Posicionamento da janela do FZF
+" let g:fzf_layout = { 'down': '50%' }
+let g:fzf_layout = { 'window': { 'width': 0.94, 'height': 0.7 } }
+
+" Cores do FZF devem casar com as cores do tema
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
+
 " Espaços e Tabs -------------------------------------------------------------
 
 " Define tabs como espaços
@@ -195,7 +219,7 @@ set undofile
 
 " Atalhos com a tecla <leader> ----------------------------------------------
 
-" Define a tecla "leader" como a barra de espaços
+" Define a tecla "leader" como a vírgula
 let mapleader=","
 
 " Atalho para edição do arquivo de configuração do neovim. Só pressionar
