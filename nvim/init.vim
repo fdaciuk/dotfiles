@@ -1,9 +1,3 @@
-" Configuração do plugin vim-jsx-pretty --------------------------------------
-" Essa configuração precisa estar antes de carregar o plugin vim-polyglot
-" Desabilita polyglot para arquivos jsx 
-let g:polyglot_disabled = ['jsx']
-let g:vim_jsx_pretty_highlight_close_tag = 1
-
 " Plugins --------------------------------------------------------------------
 
 call plug#begin()
@@ -33,6 +27,13 @@ call plug#begin()
 
   " Suporte para Styled Components
   Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+
+  " Configuração do plugin vim-jsx-pretty ------------------------------------
+  " Essa configuração precisa estar antes de carregar o plugin vim-polyglot
+  " Desabilita polyglot para arquivos jsx 
+
+  let g:polyglot_disabled = ['jsx']
+  let g:vim_jsx_pretty_highlight_close_tag = 1
 
   " Adicionar syntax hightlight para várias linguagens
   Plug 'sheerun/vim-polyglot' 
