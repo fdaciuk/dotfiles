@@ -184,6 +184,9 @@ set listchars+=trail:·
 set listchars+=eol:↴
 set listchars+=nbsp:_
 
+" Modo lento, mas garantido que syntax highlight vai funcionar sempre
+autocmd BufEnter * :syntax sync fromstart
+
 " Misc ----------------------------------------------------------------------
 
 " Fazer split horizontal para baixo
