@@ -22,9 +22,6 @@ call plug#begin()
   " Suporte à TypeScript com React (.tsx)
   Plug 'ianks/vim-tsx'
 
-  " Suporte para JSX / React 
-  Plug 'maxmellon/vim-jsx-pretty'
-
   " Suporte para Styled Components
   Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
@@ -32,11 +29,11 @@ call plug#begin()
   " Essa configuração precisa estar antes de carregar o plugin vim-polyglot
   " Desabilita polyglot para arquivos jsx 
 
-  let g:polyglot_disabled = ['jsx']
-  let g:vim_jsx_pretty_highlight_close_tag = 1
-
   " Adicionar syntax hightlight para várias linguagens
   Plug 'sheerun/vim-polyglot' 
+
+  " Suporte para JSX / React 
+  Plug 'maxmellon/vim-jsx-pretty'
 
   " === 
   " Início da instalação do fzf
@@ -95,6 +92,11 @@ set t_Co=256
 
 " Habilita syntax highlight
 syntax on
+
+" Configuração do plugin vim-jsx-pretty --------------------------------------
+
+let g:vim_jsx_pretty_highlight_close_tag = 1
+let g:vim_jsx_pretty_colorful_config = 1
 
 " Configurações do plugin Airline --------------------------------------------
 
