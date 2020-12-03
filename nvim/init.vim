@@ -32,9 +32,6 @@ call plug#begin()
   " Adicionar syntax hightlight para várias linguagens
   Plug 'sheerun/vim-polyglot' 
 
-  " Suporte para JSX / React 
-  Plug 'maxmellon/vim-jsx-pretty'
-
   " === 
   " Início da instalação do fzf
   " O fzf serve para fazer buscas no estilo do sublime text, com Ctrl + P
@@ -96,7 +93,7 @@ syntax on
 " Configuração do plugin vim-jsx-pretty --------------------------------------
 
 let g:vim_jsx_pretty_highlight_close_tag = 1
-let g:vim_jsx_pretty_colorful_config = 1
+let g:vim_jsx_pretty_colorful_config = 0
 
 " Configurações do plugin Airline --------------------------------------------
 
