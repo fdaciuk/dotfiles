@@ -2,6 +2,9 @@
 
 > My configuration files for zsh, neovim and tmux.
 
+## Font
+I'm using [Cascadia Mono PL Regular](https://github.com/microsoft/cascadia-code)
+
 ## Instalation
 
 - Clone this repository somewhere on your PC
