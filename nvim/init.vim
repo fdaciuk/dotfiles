@@ -85,6 +85,13 @@ set background=dark
 " " Tema Airline
 " let g:airline_theme='palenight'
 
+" " Define se a cor usada pelo indentLine vai seguir o tema (0) ou o padrão do
+" " indentLine (1), que é cinza
+" let g:indentLine_setColors = 1
+
+" " Define a cor da linha
+" let g:indentLine_color_term = 237
+
 " Configuração para tema ayu -------------------------------------------------
 
 " Define o tema
@@ -96,6 +103,10 @@ colorscheme ayu
 " Tema Airline
 let g:airline_theme='onehalfdark'
 
+" " Define se a cor usada pelo indentLine vai seguir o tema (0) ou o padrão do
+" " indentLine (1), que é cinza
+let g:indentLine_setColors = 0
+
 " Configuração para tema onehalf ---------------------------------------------
 
 " " Define o tema
@@ -105,16 +116,20 @@ let g:airline_theme='onehalfdark'
 " " Tema Airline
 " let g:airline_theme='onehalfdark'
 
+" " Define se a cor usada pelo indentLine vai seguir o tema (0) ou o padrão do
+" " indentLine (1), que é cinza
+" let g:indentLine_setColors = 1
+
+" " Define a cor da linha
+" let g:indentLine_color_term = 237
+
 " Configuração do plugin IndentLine ------------------------------------------
 
 " Exemplos de linhas verticais: | ¦ ┆ ┊ ▏
+let g:indentLine_enabled = 1
 let g:indentLine_char = '¦'
 let g:indentLine_first_char = '¦'
 let g:indentLine_showFirstIndentLevel = 1
-
-" Define se a cor usada pelo indentLine vai seguir o tema (0) ou o padrão do
-" indentLine (1), que é cinza
-let g:indentLine_setColors = 1
 
 " Configuração do plugin polyglot para JSX (vim-jsx-pretty) ------------------
 
@@ -245,6 +260,9 @@ set undodir=~/.config/nvim/undos
 " Salva automaticamente um histórico de ações para `desfazer`, ainda que o vim
 " seja fechado
 set undofile
+
+" Não exibe símbolos ocultos por default
+set list!
 
 " Atalhos com a tecla <leader> ----------------------------------------------
 
