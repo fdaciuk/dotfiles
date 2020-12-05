@@ -321,6 +321,9 @@ nnoremap zin <c-w>_ <c-w>\|
 " não usei `zo` pq conflita com o atalho de folding
 nnoremap zni <c-w>= 
 
+" Toggle para conceal
+nnoremap coe :setlocal conceallevel=<c-r>=&conceallevel == 0 ? '2' : '0'<cr><cr>
+
 " OBS ------------------------------------------------------------------------
 
 " Não permitir Ctrl + Shift + Alt + E nem Ctrl + Shift + Alt + P, pois esses 
