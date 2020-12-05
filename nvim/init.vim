@@ -79,21 +79,22 @@ set background=dark
 
 " Configurações para tema palenight ------------------------------------------
 
-" Define o tema
-colorscheme palenight
+" " Define o tema
+" colorscheme palenight
 
-" Tema Airline
-let g:airline_theme='palenight'
+" " Tema Airline
+" let g:airline_theme='palenight'
 
 " Configuração para tema ayu -------------------------------------------------
 
-" " Define o tema
-" set termguicolors
-" let ayucolor="mirage"
-" colorscheme ayu
+" Define o tema
+set termguicolors
+let ayucolor="mirage"
+" let ayucolor="dark"
+colorscheme ayu
 
-" " Tema Airline
-" let g:airline_theme='onehalfdark'
+" Tema Airline
+let g:airline_theme='onehalfdark'
 
 " Configuração para tema onehalf ---------------------------------------------
 
