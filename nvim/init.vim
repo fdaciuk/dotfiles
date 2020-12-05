@@ -321,7 +321,16 @@ nnoremap zin <c-w>_ <c-w>\|
 " não usei `zo` pq conflita com o atalho de folding
 nnoremap zni <c-w>= 
 
-" Toggle para conceal
+" Toggle para conceallevel
+" conceallevel serve para deixar algumas coisas mais "humanamente visíveis". 
+" Exemplo:
+" em um arquivo markdown, ao invés de exibir um link completo, que pode ficar
+" ruim de ler, com o conceallevel setado para `2`, o link é exibido apenas com
+" o texto, e um underline, ao invés da sintaxe completa de [texto](http://link)
+" Mas temos que desabilitar se precisarmos editar o link. O conceallevel é
+" usado também por outros plugins, como o indentLine para exibir as linhas de
+" indentação, por isso é legal manter ele ativo, mas ter uma opção rápida para
+" desabilitar quando necessário.
 nnoremap coe :setlocal conceallevel=<c-r>=&conceallevel == 0 ? '2' : '0'<cr><cr>
 
 " OBS ------------------------------------------------------------------------
