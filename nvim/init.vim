@@ -1,16 +1,10 @@
 " Plugins --------------------------------------------------------------------
 
 call plug#begin()
-  " Tema onedark. Ler documentação na parte de 'Installation' para saber dos 
-  " detalhes necessários para a instalação
-  " Só será usado para a Airline. O tema palenight fica melhor.
-  Plug 'joshdick/onedark.vim' 
-
-  " Outros temas interessantes
+  " Temas
   Plug 'drewtempelmeyer/palenight.vim'
   Plug 'ayu-theme/ayu-vim'
   Plug 'sonph/onehalf', { 'rtp': 'vim/' }
-  Plug 'rakr/vim-one'
 
   " Caracteres especiais para indentação
   Plug 'Yggdroot/indentLine'
@@ -80,48 +74,26 @@ call plug#end()
 " Habilita syntax highlight
 syntax on
 
-" Define o background para temas escuros. Usar "light" para temas claros
+" Define o background para temas escuros. Usar `light` para temas claros
 set background=dark
-
-" Configurações para tema onedark --------------------------------------------
-
-" " Define o tema
-" colorscheme onedark
-
-" " Habilita suporte completo a cores no Vim
-" " Se habilitar suporte a 24-bit com o onedark, não são exibidas as
-" " linhas vertical e horizontal, setadas em "set colorcolumn" e 
-" " "set cursorline"
-" set t_Co=256
-
-" " Tema Airline
-" let g:airline_theme='onedark'
 
 " Configurações para tema palenight ------------------------------------------
 
-" " Define o tema
-" colorscheme palenight
+" Define o tema
+colorscheme palenight
 
-" " Tema Airline
-" let g:airline_theme='onedark'
+" Tema Airline
+let g:airline_theme='palenight'
 
 " Configuração para tema ayu -------------------------------------------------
 
-" Define o tema
-set termguicolors
-let ayucolor="mirage"
-colorscheme ayu
-
-" Tema Airline
-let g:airline_theme='one'
-
-" Configuração para tema one -------------------------------------------------
-
 " " Define o tema
-" colorscheme one
+" set termguicolors
+" let ayucolor="mirage"
+" colorscheme ayu
 
 " " Tema Airline
-" let g:airline_theme='one'
+" let g:airline_theme='onehalfdark'
 
 " Configuração para tema onehalf ---------------------------------------------
 
@@ -263,24 +235,24 @@ set ignorecase
 " Sobrescreve o `ignorecase` quando houver caracteres em maísuculo na busca 
 set smartcase
 
-" Define diretório para salvar histórico de "desfazer"
+" Define diretório para salvar histórico de `desfazer`
 set undodir=~/.config/nvim/undos
 
-" Salva automaticamente um histórico de ações para "desfazer", ainda que o vim
+" Salva automaticamente um histórico de ações para `desfazer`, ainda que o vim
 " seja fechado
 set undofile
 
 " Atalhos com a tecla <leader> ----------------------------------------------
 
-" Define a tecla "leader" como a vírgula
+" Define a tecla `leader` como a vírgula
 let mapleader=","
 
 " Atalho para edição do arquivo de configuração do neovim. Só pressionar
-" a tecla <leader> e digitar "ev" (edit vim) no modo normal
+" a tecla <leader> e digitar `ev` (edit vim) no modo normal
 nnoremap <leader>ev :e ~/.config/nvim/init.vim<cr>
 
 "Atalho para recarregar o vim após uma edição no arquivo de configuração
-"(source vim) - <leader> seguido de "sv"
+"(source vim) - <leader> seguido de `sv`
 nnoremap <leader>sv :source ~/.config/nvim/init.vim<cr>
 
 " Comentar linhas usando <leader> + /
@@ -304,16 +276,16 @@ nnoremap <s-m-p> :GFiles<cr>
 " Define o atalho Ctrl + N para abrir :Buffers com o fzf
 nnoremap <c-o> :Buffers<cr>
 
-" Lista todos os buffers com "go" e aceita um novo buffer como argumento
+" Lista todos os buffers com `go` e aceita um novo buffer como argumento
 nnoremap go :ls<cr>:b
 
-" Lista todos os buffers com "gv" e aceita um para abrir na vertical
+" Lista todos os buffers com `gv` e aceita um para abrir na vertical
 nnoremap gv :ls<cr>:vsplit \| b
 
-" Lista todos os buffers com "gh" e aceita um para abrir na horizontal
+" Lista todos os buffers com `gh` e aceita um para abrir na horizontal
 nnoremap gh :ls<cr>:split \| b
 
-" Alternar entre buffers com "gp" ao invés de Ctrl + 6
+" Alternar entre buffers com `gp` ao invés de Ctrl + 6
 nnoremap gp :e#<cr>
 
 " Zoom in em split - [z]oom [in]
@@ -324,7 +296,7 @@ nnoremap gp :e#<cr>
 nnoremap zin <c-w>_ <c-w>\|
 
 " Zoom out - [z]oom [n]ot [i]n
-" não usei "zo" pq conflita com o atalho de folding
+" não usei `zo` pq conflita com o atalho de folding
 nnoremap zni <c-w>= 
 
 " OBS ------------------------------------------------------------------------
