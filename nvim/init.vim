@@ -151,7 +151,10 @@ let g:fzf_preview_window = []
 
 " Posicionamento da janela do FZF
 " let g:fzf_layout = { 'down': '50%' }
-let g:fzf_layout = { 'window': { 'width': 0.94, 'height': 0.7 } }
+let g:fzf_layout = 
+\ { 'window': 
+  \ { 'width': 0.94, 'height': 0.5, 'yoffset': 0.94, 'border': 'rounded' } 
+\ } 
 
 " Cores do FZF devem casar com as cores do tema
 let g:fzf_colors =
