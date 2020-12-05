@@ -9,10 +9,8 @@ call plug#begin()
   " Outros temas interessantes
   Plug 'drewtempelmeyer/palenight.vim'
   Plug 'ayu-theme/ayu-vim'
-  Plug 'ntk148v/vim-horizon'
-  Plug 'rakr/vim-one'
-  Plug 'tomasr/molokai'
   Plug 'sonph/onehalf', { 'rtp': 'vim/' }
+  Plug 'rakr/vim-one'
 
   " Caracteres especiais para indentação
   Plug 'Yggdroot/indentLine'
@@ -32,10 +30,6 @@ call plug#begin()
 
   " Suporte para Styled Components
   Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-
-  " Configuração do plugin vim-jsx-pretty ------------------------------------
-  " Essa configuração precisa estar antes de carregar o plugin vim-polyglot
-  " Desabilita polyglot para arquivos jsx 
 
   " Adicionar syntax hightlight para várias linguagens
   Plug 'sheerun/vim-polyglot' 
@@ -103,15 +97,6 @@ set background=dark
 " " Tema Airline
 " let g:airline_theme='onedark'
 
-" Configurações para tema horizon --------------------------------------------
-
-" " Define o tema
-" set termguicolors
-" colorscheme horizon
-
-" " Tema Airline
-" let g:airline_theme='onedark'
-
 " Configurações para tema palenight ------------------------------------------
 
 " " Define o tema
@@ -138,15 +123,27 @@ let g:airline_theme='one'
 " " Tema Airline
 " let g:airline_theme='one'
 
+" Configuração para tema onehalf ---------------------------------------------
+
+" " Define o tema
+" set termguicolors
+" colorscheme onehalfdark
+
+" " Tema Airline
+" let g:airline_theme='onehalfdark'
+
 " Configuração do plugin IndentLine ------------------------------------------
 
-" Exemplos de linhas verticais: | ¦ ┆ ┊
+" Exemplos de linhas verticais: | ¦ ┆ ┊ ▏
 let g:indentLine_char = '¦'
 let g:indentLine_first_char = '¦'
 let g:indentLine_showFirstIndentLevel = 1
-let g:indentLine_setColors = 0
 
-" Configuração do plugin vim-jsx-pretty --------------------------------------
+" Define se a cor usada pelo indentLine vai seguir o tema (0) ou o padrão do
+" indentLine (1), que é cinza
+let g:indentLine_setColors = 1
+
+" Configuração do plugin polyglot para JSX (vim-jsx-pretty) ------------------
 
 let g:vim_jsx_pretty_highlight_close_tag = 1
 let g:vim_jsx_pretty_colorful_config = 0
