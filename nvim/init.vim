@@ -8,6 +8,13 @@ call plug#begin()
   " Outros temas interessantes
   Plug 'tomasr/molokai'
   Plug 'sonph/onehalf', { 'rtp': 'vim/' }
+  Plug 'ntk148v/vim-horizon'
+  Plug 'drewtempelmeyer/palenight.vim'
+  Plug 'ayu-theme/ayu-vim'
+  Plug 'rakr/vim-one'
+
+  " Caracteres especiais para indentação
+  Plug 'Yggdroot/indentLine'
 
   " Airline
   Plug 'vim-airline/vim-airline'
@@ -73,22 +80,59 @@ call plug#begin()
   Plug 'chrisbra/csv.vim'
 call plug#end()
 
-" Cores e tema ---------------------------------------------------------------
+" Cores ----------------------------------------------------------------------
 
-" Define o tema
-colorscheme onedark
+" Habilita syntax highlight
+syntax on
 
 " Define o background para temas escuros. Usar "light" para temas claros
 set background=dark
 
-" Habilita suporte completo a cores no Vim
-" Se habilitar suporte a 24-bit com o onedark, não são exibidas as
-" linhas vertical e horizontal, setadas em "set colorcolumn" e 
-" "set cursorline"
-set t_Co=256
+" Configurações para tema onedark --------------------------------------------
 
-" Habilita syntax highlight
-syntax on
+" " Define o tema
+" colorscheme onedark
+
+" " Habilita suporte completo a cores no Vim
+" " Se habilitar suporte a 24-bit com o onedark, não são exibidas as
+" " linhas vertical e horizontal, setadas em "set colorcolumn" e 
+" " "set cursorline"
+" set t_Co=256
+
+" " Tema Airline
+" let g:airline_theme='onedark'
+
+" Configurações para tema horizon --------------------------------------------
+
+" " Define o tema
+" set termguicolors
+" colorscheme horizon
+
+" Configurações para tema palenight ------------------------------------------
+
+" " Define o tema
+" colorscheme palenight
+
+" Configuração para tema ayu -------------------------------------------------
+
+" Define o tema
+set termguicolors
+let ayucolor="mirage"
+colorscheme ayu
+
+" Configuração para tema one -------------------------------------------------
+
+" " Define o tema
+" set termguicolors
+" colorscheme one
+
+"" Configuração do plugin IndentLine ------------------------------------------
+
+" Exemplos de linhas verticais: | ¦ ┆ ┊
+let g:indentLine_char = '¦'
+let g:indentLine_first_char = '¦'
+let g:indentLine_showFirstIndentLevel = 1
+let g:indentLine_setColors = 0
 
 " Configuração do plugin vim-jsx-pretty --------------------------------------
 
@@ -97,8 +141,8 @@ let g:vim_jsx_pretty_colorful_config = 0
 
 " Configurações do plugin Airline --------------------------------------------
 
-" Tema
-let g:airline_theme='onedark'
+" Tema Airline
+let g:airline_theme='one'
 
 " Permitir fontes Powerline
 let g:airline_powerline_fonts=1
