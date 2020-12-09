@@ -333,6 +333,10 @@ nnoremap zni <c-w>=
 " desabilitar quando necessário.
 nnoremap coe :setlocal conceallevel=<c-r>=&conceallevel == 0 ? '2' : '0'<cr><cr>
 
+" Salvar usando CTRL + S
+nmap <c-s> :w<cr>
+imap <c-s> <Esc>:w<cr>a
+
 " OBS ------------------------------------------------------------------------
 
 " Não permitir Ctrl + Shift + Alt + E nem Ctrl + Shift + Alt + P, pois esses 
