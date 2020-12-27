@@ -187,7 +187,7 @@ function fixvideo () {
 
 # Deletar branches
 function delete-branches () {
-  for i in $(git branch | grep -v -E -w '(main|dev)$'); do
+  for i in $(git branch | grep -v -E -w '(main|staging|dev)$'); do
     git branch -D "$i"
   done
 }
