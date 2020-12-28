@@ -200,6 +200,10 @@ ${offset 30}${color2}I/O Write:${color} ${alignr}${offset -10}${diskio_write /de
 ${offset 30}${color2}Storage:${color} ${alignr}${offset -10}${fs_used /media/storage} / ${fs_size /media/storage}${alignr}${fs_bar /media/storage}
 ${offset 30}${color2}I/O Read:${color} ${alignr}${offset -10}${diskio_read /dev/nvme1n1p1}${alignr}${diskiograph_read nvme1n1p1 8,100}
 ${offset 30}${color2}I/O Write:${color} ${alignr}${offset -10}${diskio_write /dev/nvme1n1p1}${alignr}${diskiograph_write nvme1n1p1 8,100}
+
+${offset 30}${color2}Storage 2:${color} ${alignr}${offset -10}${fs_used /media/storage2} / ${fs_size /media/storage2}${alignr}${fs_bar /media/storage2}
+${offset 30}${color2}I/O Read:${color} ${alignr}${offset -10}${diskio_read /dev/sdb3}${alignr}${diskiograph_read sdb3 8,100}
+${offset 30}${color2}I/O Write:${color} ${alignr}${offset -10}${diskio_write /dev/sdb3}${alignr}${diskiograph_write sdb3 8,100}
 #
 # ${color5}${color5}${font Roboto:size=10}N E T W O R K   ${hr 2}${font}${color}
 # ${color2}${offset 30}IP Address: ${color} ${alignr}${offset -10$}${addrs br-6242e983dd1e}
