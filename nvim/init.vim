@@ -210,10 +210,10 @@ set colorcolumn=80
 set cursorline
 
 " exibir números de linhas
-set number 
+set number
 
 " exibir números de linha acima ou abaixo relativos a linha atual
-set relativenumber 
+set relativenumber
 
 " Habilita a exibição de caracteres ocultos
 set list 
@@ -236,7 +236,7 @@ set splitbelow
 set splitright
 
 " permite editar outros arquivos sem salvar um antes de abrir outro
-set hidden 
+set hidden
 
 " permite ter uma pré-visualização antes de fazer uma substituição com :%s
 set inccommand=split
