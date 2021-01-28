@@ -18,12 +18,12 @@ call plug#begin()
 
   " Suporte à TypeScript
   Plug 'leafgarland/typescript-vim'
-  
+
   " Suporte à TypeScript com React (.tsx)
   Plug 'ianks/vim-tsx'
 
   " Suporte para Styled Components
-  Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+  Plug 'styled-components/vim-styled-components', { 'branch': 'develop' }
 
   " Adicionar syntax hightlight para várias linguagens
   Plug 'sheerun/vim-polyglot' 
