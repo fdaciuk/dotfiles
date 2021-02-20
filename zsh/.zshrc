@@ -77,6 +77,7 @@ source $ZSH/oh-my-zsh.sh
 alias please='sudo'
 alias vim='nvim'
 alias vi='vim'
+alias check-update='sudo apt update && apt list --upgradable'
 alias update='sudo apt update && sudo apt upgrade -y && flatpak update -y && sudo snap refresh && vim +PlugUpdate +qall'
 alias copy='rsync -a --stats --progress'
 
