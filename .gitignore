@@ -6,6 +6,8 @@ nvim/.netrwhist
 nvim/plugged
 nvim/undos
 
+coc/extensions/node_modules
+
 fonts
 fonts-powerline
 
