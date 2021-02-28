@@ -79,33 +79,33 @@ set background=dark
 
 " Configurações para tema palenight ------------------------------------------
 
-" " Define o tema
-" colorscheme palenight
+" Define o tema
+colorscheme palenight
 
-" " Tema Airline
-" let g:airline_theme='palenight'
+" Tema Airline
+let g:airline_theme='palenight'
 
-" " Define se a cor usada pelo indentLine vai seguir o tema (0) ou o padrão do
-" " indentLine (1), que é cinza
-" let g:indentLine_setColors = 1
+" Define se a cor usada pelo indentLine vai seguir o tema (0) ou o padrão do
+" indentLine (1), que é cinza
+let g:indentLine_setColors = 1
 
-" " Define a cor da linha
-" let g:indentLine_color_term = 237
+" Define a cor da linha
+let g:indentLine_color_term = 237
 
 " Configuração para tema ayu -------------------------------------------------
 
-" Define o tema
-set termguicolors
-let ayucolor="mirage"
-" let ayucolor="dark"
-colorscheme ayu
+" " Define o tema
+" set termguicolors
+" let ayucolor="mirage"
+" " let ayucolor="dark"
+" colorscheme ayu
 
-" Tema Airline
-let g:airline_theme='onehalfdark'
+" " Tema Airline
+" let g:airline_theme='onehalfdark'
 
-" " Define se a cor usada pelo indentLine vai seguir o tema (0) ou o padrão do
-" " indentLine (1), que é cinza
-let g:indentLine_setColors = 0
+" " " Define se a cor usada pelo indentLine vai seguir o tema (0) ou o padrão do
+" " " indentLine (1), que é cinza
+" let g:indentLine_setColors = 0
 
 " Configuração para tema onehalf ---------------------------------------------
 
