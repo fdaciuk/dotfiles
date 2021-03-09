@@ -17,10 +17,10 @@ call plug#begin()
   Plug 'pangloss/vim-javascript'
 
   " Suporte à TypeScript
-  Plug 'leafgarland/typescript-vim'
+  " Plug 'leafgarland/typescript-vim'
 
   " Suporte à TypeScript com React (.tsx)
-  Plug 'ianks/vim-tsx'
+  " Plug 'ianks/vim-tsx'
 
   " Suporte para Styled Components
   Plug 'styled-components/vim-styled-components', { 'branch': 'develop' }
@@ -77,7 +77,7 @@ syntax on
 " Define o background para temas escuros. Usar `light` para temas claros
 set background=dark
 
-" Configurações para tema palenight ------------------------------------------
+" [TEMA] Configurações para tema palenight -----------------------------------
 
 " Define o tema
 colorscheme palenight
@@ -92,7 +92,7 @@ let g:indentLine_setColors = 1
 " Define a cor da linha
 let g:indentLine_color_term = 237
 
-" Configuração para tema ayu -------------------------------------------------
+" [TEMA] Configuração para tema ayu ------------------------------------------
 
 " " Define o tema
 " set termguicolors
@@ -107,7 +107,7 @@ let g:indentLine_color_term = 237
 " " " indentLine (1), que é cinza
 " let g:indentLine_setColors = 0
 
-" Configuração para tema onehalf ---------------------------------------------
+" [TEMA] Configuração para tema onehalf --------------------------------------
 
 " " Define o tema
 " set termguicolors
