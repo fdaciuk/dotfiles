@@ -4,6 +4,7 @@
     "coc-eslint": ">=1.4.5",
     "coc-html": ">=1.2.4",
     "coc-json": ">=1.2.6",
+    "coc-styled-components": ">=0.4.0",
     "coc-tsserver": ">=1.5.1"
   }
 }
