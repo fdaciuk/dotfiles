@@ -5,6 +5,7 @@ call plug#begin()
   Plug 'drewtempelmeyer/palenight.vim'
   Plug 'ayu-theme/ayu-vim'
   Plug 'sonph/onehalf', { 'rtp': 'vim/' }
+  Plug 'ghifarit53/tokyonight-vim'
 
   " Caracteres especiais para indentação
   Plug 'Yggdroot/indentLine'
@@ -15,12 +16,6 @@ call plug#begin()
 
   " Suporte à liguagem JavaScript
   Plug 'pangloss/vim-javascript'
-
-  " Suporte à TypeScript
-  " Plug 'leafgarland/typescript-vim'
-
-  " Suporte à TypeScript com React (.tsx)
-  " Plug 'ianks/vim-tsx'
 
   " Suporte para Styled Components
   Plug 'styled-components/vim-styled-components', { 'branch': 'develop' }
@@ -122,6 +117,16 @@ let g:indentLine_color_term = 237
 
 " " Define a cor da linha
 " let g:indentLine_color_term = 237
+
+" [TEMA] Configuração para tema tokyonight -----------------------------------
+
+" set termguicolors
+
+" let g:tokyonight_style = 'night' " available: night, storm
+" let g:tokyonight_enable_italic = 1
+
+" colorscheme tokyonight
+" let g:airline_theme = "tokyonight"
 
 " Configuração do plugin IndentLine ------------------------------------------
 
