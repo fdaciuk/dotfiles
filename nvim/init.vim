@@ -411,6 +411,9 @@ set backupskip=/tmp/*
 " Salva o arquivo no backup
 set writebackup
 
+" Ajuste para hot reloading (desabilitar o 'safe write')
+set backupcopy=yes
+
 " Correção de typos ----------------------------------------------------------
 
 iabbrev lenght length
