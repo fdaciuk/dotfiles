@@ -317,6 +317,9 @@ bind \\ split-window -h
 # Definir modo vim para navegação 
 set-window-option mode-keys vi
 
+# Habilitar mouse
+set -g mouse on
+
 # -- plugins -----------------------------------------------------------------
 # Configurações padrão importantes para o tmux
 run-shell $HOME/.tmux/plugins/tmux-sensible/sensible.tmux
