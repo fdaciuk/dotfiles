@@ -269,8 +269,15 @@ set listchars+=trail:·
 set listchars+=eol:↴
 set listchars+=nbsp:_
 
-" Modo lento, mas garantido que syntax highlight vai funcionar sempre
+" Pode deixar o nvim lento, mas garantido que syntax highlight vai 
+" sempre funcionar
 autocmd BufEnter * :syntax sync fromstart
+
+" Habilita o mouse no modo de inserção
+" i = insert
+" v = visual
+" a = all (todos os modos)
+set mouse=a
 
 " Misc ----------------------------------------------------------------------
 
