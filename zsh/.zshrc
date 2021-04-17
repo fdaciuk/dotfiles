@@ -155,6 +155,8 @@ function mono () {
 }
 
 # Transformar vídeo ou audio para DaVinci Resolve
+# Referência de uma outra forma de converter (outras opções do ffmpeg):
+# https://alecaddd.com/davinci-resolve-ffmpeg-cheatsheet-for-linux/
 function toresolve () {
   for f in *.*; do
     EXTENSION=${f##*.}
@@ -192,3 +194,7 @@ function delete-branches () {
     git branch -D "$i"
   done
 }
+
+# Deno
+export DENO_INSTALL="/home/fernando/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
