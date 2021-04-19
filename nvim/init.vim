@@ -23,6 +23,9 @@ call plug#begin()
   " Adicionar syntax hightlight para várias linguagens
   Plug 'sheerun/vim-polyglot' 
 
+  " Suporte para ReScript
+  Plug 'rescript-lang/vim-rescript'
+
   " === 
   " Início da instalação do fzf
   " O fzf serve para fazer buscas no estilo do sublime text, com Ctrl + P
@@ -231,6 +234,21 @@ let g:fzf_colors =
   \ 'marker':  ['fg', 'Keyword'],
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
+
+" Configuração do ReScript ---------------------------------------------------
+
+" Key bindings
+autocmd FileType rescript nnoremap <silent> <buffer> <localleader>r :RescriptFormat<CR>
+autocmd FileType rescript nnoremap <silent> <buffer> <localleader>t :RescriptTypeHint<CR>
+autocmd FileType rescript nnoremap <silent> <buffer> <localleader>b :RescriptBuild<CR>
+autocmd FileType rescript nnoremap <silent> <buffer> gd :RescriptJumpToDefinition<CR>
+
+" Autocomplete
+set omnifunc=rescript#Complete
+
+" When preview is enabled, omnicomplete will display additional
+" information for a selected item
+set completeopt+=preview
 
 " Espaços e Tabs -------------------------------------------------------------
 

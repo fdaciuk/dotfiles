@@ -3,5 +3,14 @@
   "diagnostic.warningSign": "⚠️ ",
   "diagnostic.infoSign": "⚠️ ",
   "javascript.suggestionActions.enabled": false,
-  "javascript.validate.enable": false
+  "javascript.validate.enable": false,
+  "languageserver": {
+    "rescript": {
+      "enable": true,
+      "module": "~/.config/nvim/plugged/vim-rescript/rescript-vscode/extension/server/out/server.js",
+      "args": ["--node-ipc"],
+      "filetypes": ["rescript"],
+      "rootPatterns": ["bsconfig.json"]
+    }
+  }
 }
