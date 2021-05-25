@@ -122,7 +122,7 @@ export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/bin:$PATH
 
 # Add Yarn globals on $PATH
-export PATH=$(yarn global bin):$PATH
+export PATH=$PATH:$(yarn global bin)
 
 # My functions
 function push () {
