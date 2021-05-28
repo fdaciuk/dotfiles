@@ -3,7 +3,12 @@
 > My configuration files for zsh, neovim and tmux.
 
 ## Font
+
 I'm using [Cascadia Mono PL Regular](https://github.com/microsoft/cascadia-code)
+
+## Tmux theme
+
+I'm using [oh-my-tmux](https://github.com/gpakosz/.tmux)
 
 ## Instalation
 
