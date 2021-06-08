@@ -315,7 +315,7 @@ bind - split-window -v
 bind \\ split-window -h
 
 # Definir modo vim para navegação 
-set-window-option mode-keys vi
+set-window-option -g mode-keys vi
 
 # Habilitar mouse
 set -g mouse on
