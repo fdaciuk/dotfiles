@@ -320,6 +320,9 @@ set-window-option -g mode-keys vi
 # Habilitar mouse
 set -g mouse on
 
+# Rebind do `s` para exibir a árvore de painéis em ordem alfabética
+bind s choose-tree -s -Z -O name
+
 # -- plugins -----------------------------------------------------------------
 # Configurações padrão importantes para o tmux
 run-shell $HOME/.tmux/plugins/tmux-sensible/sensible.tmux
