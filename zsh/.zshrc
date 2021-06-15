@@ -74,12 +74,15 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+# Alias
 alias please='sudo'
 alias vim='nvim'
 alias vi='vim'
 alias check-update='sudo apt update && apt list --upgradable'
 alias update='flatpak update -y && sudo apt update && sudo apt upgrade -y && sudo snap refresh && vim +PlugUpdate +qall'
 alias copy='rsync -a --stats --progress'
+alias bat='batcat'
+export BAT_THEME='OneHalfDark'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -123,6 +126,10 @@ export PATH=$HOME/bin:$PATH
 
 # Add Yarn globals on $PATH
 export PATH=$PATH:$(yarn global bin)
+
+# Deno
+export DENO_INSTALL="/home/fernando/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
 
 # My functions
 function push () {
@@ -188,13 +195,9 @@ function fixvideo () {
   ffmpeg -i "$1" -map 0 -ignore_unknown -c copy "${1%.*}.fixed.${1##*.}"
 }
 
-# Deletar branches
+# Deletar branches diferente de main, staging e dev
 function delete-branches () {
   for i in $(git branch | grep -v -E -w '(main|staging|dev)$'); do
     git branch -D "$i"
   done
 }
-
-# Deno
-export DENO_INSTALL="/home/fernando/.deno"
-export PATH="$DENO_INSTALL/bin:$PATH"
