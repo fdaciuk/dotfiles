@@ -212,11 +212,16 @@ inoremap <nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(
 " Não exibir janela de pré-visualização de conteúdo do arquivo
 let g:fzf_preview_window = []
 
+" Syntax Highlight e configs default para janela de pré-visualização
+let $FZF_DEFAULT_OPTS="--preview-window 'right:60%' --layout reverse --margin=0,0 --preview 'bat --color=always --style=header,grid --line-range :300 {}'"
+
 " Posicionamento da janela do FZF
 " let g:fzf_layout = { 'down': '50%' }
+
+" Posicionamento da janela do FZF (v2)
 let g:fzf_layout = 
 \ { 'window': 
-  \ { 'width': 0.94, 'height': 0.5, 'yoffset': 0.94, 'border': 'rounded' } 
+  \ { 'width': 0.98, 'height': 0.7, 'yoffset': 0.94, 'border': 'rounded' } 
 \ } 
 
 " Cores do FZF devem casar com as cores do tema
