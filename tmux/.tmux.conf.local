@@ -51,11 +51,11 @@ tmux_conf_theme_window_bg='default'
 # highlight focused pane (tmux >= 2.1), possible values are:
 #   - true
 #   - false (default)
-tmux_conf_theme_highlight_focused_pane=false
+tmux_conf_theme_highlight_focused_pane=true
 
 # focused pane colours:
 tmux_conf_theme_focused_pane_fg='default'
-tmux_conf_theme_focused_pane_bg='#0087d7'               # light blue
+tmux_conf_theme_focused_pane_bg='#000000'               # light blue
 
 # pane border style, possible values are:
 #   - thin (default)
@@ -114,7 +114,7 @@ tmux_conf_theme_window_status_attr='none'
 tmux_conf_theme_window_status_format='#I #W'
 tmux_conf_theme_window_status_format='#{circled_window_index} #W'
 
-tmux_conf_theme_window_status_format='#I #W#{?window_bell_flag,🔔,} #{?window_zoomed_flag,⛶,}'
+tmux_conf_theme_window_status_format='#I::#W#{?window_bell_flag,🔔,} #{?window_zoomed_flag,⛶,}'
 
 # window current status style
 #   - built-in variables are:
@@ -129,7 +129,7 @@ tmux_conf_theme_window_status_current_bg='#00afff'      # light blue
 tmux_conf_theme_window_status_current_attr='bold'
 tmux_conf_theme_window_status_current_format='#I #W'
 tmux_conf_theme_window_status_current_format='#{circled_window_index} #W'
-tmux_conf_theme_window_status_current_format='#I #W #{?window_zoomed_flag,⛶,}'
+tmux_conf_theme_window_status_current_format='#I::#W #{?window_zoomed_flag,⛶,}'
 
 # window activity status style
 tmux_conf_theme_window_status_activity_fg='default'
