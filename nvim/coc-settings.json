@@ -4,6 +4,8 @@
   "diagnostic.infoSign": "⚠️ ",
   "javascript.suggestionActions.enabled": false,
   "javascript.validate.enable": false,
+  "css.validate": false,
+  "scss.validate": false,
   "languageserver": {
     "rescript": {
       "enable": true,
