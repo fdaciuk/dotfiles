@@ -150,6 +150,14 @@ function copy-to-clipboard () {
   cat $1 | xclip -i -selection clipboard
 }
 
+function mktouch () {
+  for p in $@; do
+    mkdir -p $(dirname "$p")
+  done
+
+  touch $@
+}
+
 function mono () {
   case "$1" in
     "on")
