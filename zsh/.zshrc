@@ -209,3 +209,17 @@ function delete-branches () {
     git branch -D "$i"
   done
 }
+
+
+# Listar PRs no JS Ninja
+function list-prs-jsninja () {
+  gh pr list --search "is:open" --repo da2k/curso-javascript-ninja --limit 100
+}
+
+# Fechar PRs no JS Ninja
+function close-prs-jsninja () {
+  for id in $(gh pr list --search "is:open" --repo da2k/curso-javascript-ninja --limit 100 | awk '{print $1}'); do
+    gh pr close $id --repo da2k/curso-javascript-ninja
+  done
+}
+
