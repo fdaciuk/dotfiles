@@ -77,6 +77,8 @@ set background=dark
 
 " [TEMA] Configurações para tema palenight -----------------------------------
 
+" set termguicolors
+
 " Define o tema
 colorscheme palenight
 
