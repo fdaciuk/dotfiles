@@ -7,6 +7,9 @@ call plug#begin()
   Plug 'sonph/onehalf', { 'rtp': 'vim/' }
   Plug 'ghifarit53/tokyonight-vim'
 
+  " Prisma code highlight
+  Plug 'pantharshit00/vim-prisma'
+
   " Caracteres especiais para indentação
   Plug 'Yggdroot/indentLine'
 
