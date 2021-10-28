@@ -68,6 +68,9 @@ call plug#begin()
 
   " Carregar CSV
   Plug 'chrisbra/csv.vim'
+
+  " Melhorar netw
+  Plug 'lambdalisue/fern.vim'
 call plug#end()
 
 " Cores ----------------------------------------------------------------------
