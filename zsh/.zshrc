@@ -223,3 +223,6 @@ function close-prs-jsninja () {
   done
 }
 
+function cleanup-memory () {
+  sudo sysctl -w vm.drop_caches=3
+}
