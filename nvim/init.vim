@@ -109,8 +109,8 @@ let g:indentLine_color_term = 237
 " " Tema Airline
 " let g:airline_theme='onehalfdark'
 
-" " " Define se a cor usada pelo indentLine vai seguir o tema (0) ou o padrão do
-" " " indentLine (1), que é cinza
+" " Define se a cor usada pelo indentLine vai seguir o tema (0) ou o padrão do
+" " indentLine (1), que é cinza
 " let g:indentLine_setColors = 0
 
 " [TEMA] Configuração para tema onehalf --------------------------------------
@@ -422,6 +422,14 @@ nnoremap coe :setlocal conceallevel=<c-r>=&conceallevel == 0 ? '2' : '0'<cr><cr>
 " Salvar usando CTRL + S
 nmap <c-s> :w<cr>
 imap <c-s> <Esc>:w<cr>a
+
+" Mover linha ou bloco de linhas pra cima e pra baixo (Shift+Alt+j e Shift+Alt+k)
+nnoremap <S-A-j> :m .+1<CR>==
+nnoremap <S-A-k> :m .-2<CR>==
+inoremap <S-A-j> <Esc>:m .+1<CR>==gi
+inoremap <S-A-k> <Esc>:m .-2<CR>==gi
+vnoremap <S-A-j> :m '>+1<CR>gv=gv
+vnoremap <S-A-k> :m '<-2<CR>gv=gv
 
 " OBS ------------------------------------------------------------------------
 
