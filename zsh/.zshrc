@@ -227,3 +227,9 @@ function close-prs-jsninja () {
 function cleanup-memory () {
   sudo sysctl -w vm.drop_caches=3
 }
+
+function rescripts () {
+  npm set-script rescript:dev "rescript build -w"
+  npm set-script rescript:build rescript
+  npm set-script rescript:clean "rescript clean"
+}
