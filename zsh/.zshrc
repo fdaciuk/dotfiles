@@ -233,3 +233,6 @@ function rescripts () {
   npm set-script rescript:build rescript
   npm set-script rescript:clean "rescript clean"
 }
+
+# Histórico do iex
+export ERL_AFLAGS="-kernel shell_history enabled"
