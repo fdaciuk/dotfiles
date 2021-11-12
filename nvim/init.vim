@@ -289,7 +289,7 @@ set cursorline
 set number
 
 " exibir números de linha acima ou abaixo relativos a linha atual
-set relativenumber
+" set relativenumber
 
 " Habilita a exibição de caracteres ocultos
 set list 
