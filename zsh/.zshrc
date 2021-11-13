@@ -2,7 +2,7 @@
 # export PATH=$HOME/dotfiles/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/fernando/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -129,7 +129,7 @@ export PATH=$HOME/bin:$PATH
 export PATH=$PATH:$(yarn global bin)
 
 # Deno
-export DENO_INSTALL="/home/fernando/.deno"
+export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
 # My functions
