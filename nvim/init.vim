@@ -29,6 +29,9 @@ call plug#begin()
   " Suporte para ReScript
   Plug 'rescript-lang/vim-rescript'
 
+  " Suporte para Elixir
+  Plug 'elixir-editors/vim-elixir'
+
   " === 
   " Início da instalação do fzf
   " O fzf serve para fazer buscas no estilo do sublime text, com Ctrl + P
