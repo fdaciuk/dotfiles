@@ -6,6 +6,8 @@
 
 I'm using [Cascadia Mono PL Regular](https://github.com/microsoft/cascadia-code)
 
+_You can find more fonts on [NerdFonts](https://www.nerdfonts.com/)_
+
 ## Tmux theme
 
 I'm using [oh-my-tmux](https://github.com/gpakosz/.tmux)
