@@ -12,6 +12,10 @@ _You can find more fonts on [NerdFonts](https://www.nerdfonts.com/)_
 
 I'm using [oh-my-tmux](https://github.com/gpakosz/.tmux)
 
+## Gnome Terminal
+
+To install Gnome Terminal configurations, use [this instructions](https://gist.github.com/fdaciuk/9ec4d8afc32063a6f74a21f8308e3807)
+
 ## Instalation
 
 - Clone this repository somewhere on your PC
