@@ -1,0 +1,17 @@
+[/]
+background-color='rgb(0,0,0)'
+background-transparency-percent=50
+bold-color-same-as-fg=true
+bold-is-bright=false
+cursor-colors-set=true
+cursor-foreground-color='rgb(26,25,25)'
+font='Cascadia Mono PL 11'
+foreground-color='rgb(247,247,247)'
+highlight-background-color='rgb(196,165,9)'
+highlight-colors-set=true
+highlight-foreground-color='rgb(26,25,25)'
+palette=['rgb(0,0,0)', 'rgb(235,0,0)', 'rgb(0,170,0)', 'rgb(198,167,10)', 'rgb(4,142,241)', 'rgb(170,0,170)', 'rgb(0,170,170)', 'rgb(170,170,170)', 'rgb(85,85,85)', 'rgb(255,85,85)', 'rgb(85,255,85)', 'rgb(255,255,85)', 'rgb(85,85,255)', 'rgb(255,85,255)', 'rgb(85,255,255)', 'rgb(255,255,255)']
+use-theme-colors=false
+use-theme-transparency=true
+use-transparent-background=false
+visible-name='Default'
