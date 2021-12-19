@@ -14,3 +14,6 @@ ln -sf $PWD/zsh/plugins/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-auto
 ln -sf $PWD/zsh/plugins/zsh-wakatime ~/.oh-my-zsh/custom/plugins/zsh-wakatime
 
 ln -sf $PWD/ssh/config ~/.ssh/config
+
+sudo ln -sf $PWD/moonlander/50-wally.rules /etc/udev/rules.d/50-wally.rules
+sudo ln -sf $PWD/moonlander/50-oryx.rules /etc/udev/rules.d/50-oryx.rules

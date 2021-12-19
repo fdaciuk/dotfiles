@@ -21,6 +21,20 @@ To install Gnome Terminal configurations, use [this instructions](https://gist.g
 - Clone this repository somewhere on your PC
 - Run `./symlinks.sh`
 
+## Moonlander Configuration
+
+- [Wally - install keyboard firmware](https://github.com/zsa/wally/wiki/Linux-install)
+- [Oryx - Live training](https://github.com/zsa/wally/wiki/Live-training-on-Linux)
+
+After create symbolic links, install the required dependencies: 
+
+Then, make sure your user is part of the `plugdev` group:
+
+```
+sudo groupadd plugdev
+sudo usermod -aG plugdev $USER
+```
+
 ## About bin/fishies
 
 It's an wallpaper to use on your terminal! :D 
