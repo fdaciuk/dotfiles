@@ -133,6 +133,12 @@ export PATH=$PATH:$(yarn global bin)
 export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
+# Histórico do iex
+export ERL_AFLAGS="-kernel shell_history enabled"
+
+# MXErgo Scroll Config
+xinput set-prop pointer:"Logitech MX Ergo" "libinput Scroll Method Enabled" 0, 0, 1 && xinput set-prop pointer:"Logitech MX Ergo" "libinput Button Scrolling Button" 2
+
 # My functions
 function push () {
   git push origin $(git branch | grep \* | sed 's/\*\s//') $@
@@ -234,6 +240,3 @@ function rescripts () {
   npm set-script rescript:build rescript
   npm set-script rescript:clean "rescript clean"
 }
-
-# Histórico do iex
-export ERL_AFLAGS="-kernel shell_history enabled"
