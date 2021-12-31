@@ -240,3 +240,19 @@ function rescripts () {
   npm set-script rescript:build rescript
   npm set-script rescript:clean "rescript clean"
 }
+
+# Cria novo projeto Node.js com TypeScript e Sucrase
+# Uso: make-node <project-name>
+function make-node () {
+  echo "Creating project..."
+  mkdir $1
+  cd $1
+  echo '{\n  "private": true,\n  "scripts": {\n    "dev": "nodemon --exec sucrase-node main.ts"\n  }\n}' >> package.json
+  echo "console.log('Yaay!')" >> main.ts
+  echo "node_modules" >> .gitignore
+  echo "Installing dependencies..."
+  yarn add --exact typescript >> /dev/null
+  yarn add --dev --exact @types/node nodemon sucrase >> /dev/null
+  yarn tsc --init >> /dev/null
+  echo "Finished! Run yarn dev to start sucrase server."
+}
