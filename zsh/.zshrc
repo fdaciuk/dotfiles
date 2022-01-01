@@ -247,9 +247,11 @@ function make-node () {
   echo "Creating project..."
   mkdir $1
   cd $1
-  echo '{\n  "private": true,\n  "scripts": {\n    "dev": "nodemon --exec sucrase-node main.ts"\n  }\n}' >> package.json
-  echo "console.log('Yaay!')" >> main.ts
-  echo "node_modules" >> .gitignore
+  echo '{\n  "private": true,\n  "scripts": {\n    "dev": "nodemon --exec sucrase-node src/main.ts",\n    "type-check": "tsc --noEmit"\n  }\n}' >> package.json
+  mkdir src
+  echo "console.log('Yaay!')" >> src/main.ts
+  echo "node_modules\ndist" >> .gitignore
+  echo '{\n  "compilerOptions": {\n    "incremental": true,\n    "target": "ESNext",\n    "module": "commonjs",\n    "moduleResolution": "node",\n    "baseUrl": "./",\n    "paths": {\n      "@/*": ["./src/*"]\n    },\n    "outDir": "./dist",\n    "removeComments": true,\n    "esModuleInterop": true,\n    "forceConsistentCasingInFileNames": true,\n    "strict": true,\n    "skipLibCheck": true\n  },\n  "include": ["./src"]\n}' >> tsconfig.json
   echo "Installing dependencies..."
   yarn add --exact typescript >> /dev/null
   yarn add --dev --exact @types/node nodemon sucrase >> /dev/null
