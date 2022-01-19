@@ -271,8 +271,11 @@ tmux_conf_theme_clock_style='24'
 #   - false (default)
 # on macOS, this requires installing reattach-to-user-namespace, see README.md
 # on Linux, this requires xsel or xclip
-tmux_conf_copy_to_os_clipboard=true
+# tmux_conf_copy_to_os_clipboard=true
 
+unbind -T copy-mode-vi Enter
+bind-key -T copy-mode-vi Enter send-keys -X copy-pipe-and-cancel "xclip -selection c"
+bind-key -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "xclip -in -selection clipboard"
 
 # -- user customizations -------------------------------------------------------
 # this is the place to override or undo settings
