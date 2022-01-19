@@ -193,9 +193,13 @@ ${voffset 4}     1  -  ${top_mem name 1}${alignr}${goto 170} ${goto 222}${top_me
      5  -  ${top_mem name 5}${alignr}${goto 170} ${goto 222}${top_mem cpu 5} ${goto 274}${top_mem mem 5}
 
 ${color5}${font Roboto:size=10}D R I V E S   ${hr 2}${font}${color}
-${offset 30}${color2}Pop_OS!: ${color} ${alignr}${offset -10}${fs_used /} / ${fs_size /}${alignr}${fs_bar}
+${offset 30}${color2}SO: ${color} ${alignr}${offset -10}${fs_used /} / ${fs_size /}${alignr}${fs_bar /}
 ${offset 30}${color2}I/O Read:${color} ${alignr}${offset -10}${diskio_read /dev/nvme0n1p1}${alignr}${diskiograph_read nvme0n1p2 8,100}
 ${offset 30}${color2}I/O Write:${color} ${alignr}${offset -10}${diskio_write /dev/nvme0n1p1}${alignr}${diskiograph_write nvme0n1p2 8,100}
+
+${offset 30}${color2}/home:${color} ${alignr}${offset -10}${fs_used /home} / ${fs_size /home}${alignr}${fs_bar /home}
+${offset 30}${color2}I/O Read:${color} ${alignr}${offset -10}${diskio_read /dev/sdb1}${alignr}${diskiograph_read sdb3 8,100}
+${offset 30}${color2}I/O Write:${color} ${alignr}${offset -10}${diskio_write /dev/sdb1}${alignr}${diskiograph_write sdb3 8,100}
 
 ${offset 30}${color2}Storage:${color} ${alignr}${offset -10}${fs_used /media/storage} / ${fs_size /media/storage}${alignr}${fs_bar /media/storage}
 ${offset 30}${color2}I/O Read:${color} ${alignr}${offset -10}${diskio_read /dev/nvme1n1p1}${alignr}${diskiograph_read nvme1n1p1 8,100}
