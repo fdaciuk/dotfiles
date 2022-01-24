@@ -247,11 +247,17 @@ function make-node () {
   echo "Creating project..."
   mkdir $1
   cd $1
+  # Create package.json
   echo '{\n  "private": true,\n  "scripts": {\n    "dev": "nodemon --exec sucrase-node src/main.ts",\n    "type-check": "tsc --noEmit"\n  }\n}' >> package.json
   mkdir src
-  echo "console.log('Yaay!')" >> src/main.ts
+  # Create .editorconfig
+  echo '# editorconfig.org\nroot = true\n\n[*]\nindent_size = 2\nindent_style = space\nend_of_line = lf\ncharset = utf-8\ntrim_trailing_whitespace = true\ninsert_final_newline = true\n\n[*.md]\ntrim_trailing_whitespace = false' >> .editorconfig
+  # Create .gitignore
   echo "node_modules\ndist" >> .gitignore
+  # Create tsconfig.json
   echo '{\n  "compilerOptions": {\n    "incremental": true,\n    "target": "ESNext",\n    "module": "commonjs",\n    "moduleResolution": "node",\n    "baseUrl": "./",\n    "paths": {\n      "@/*": ["./src/*"]\n    },\n    "outDir": "./dist",\n    "removeComments": true,\n    "esModuleInterop": true,\n    "forceConsistentCasingInFileNames": true,\n    "strict": true,\n    "skipLibCheck": true\n  },\n  "include": ["./src"]\n}' >> tsconfig.json
+  # Crate src/main.ts
+  echo "console.log('Yaay!')" >> src/main.ts
   echo "Installing dependencies..."
   yarn add --exact typescript >> /dev/null
   yarn add --dev --exact @types/node nodemon sucrase >> /dev/null
