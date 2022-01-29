@@ -4,7 +4,7 @@ call plug#begin()
   " Temas
   Plug 'drewtempelmeyer/palenight.vim'
   Plug 'ayu-theme/ayu-vim'
-  Plug 'sonph/onehalf', { 'rtp': 'vim/' }
+  Plug 'sonph/onehalf', { 'rtp': 'vim' }
   Plug 'ghifarit53/tokyonight-vim'
 
   " Prisma code highlight
@@ -86,40 +86,42 @@ set background=dark
 
 " [TEMA] Configurações para tema palenight -----------------------------------
 
-" set termguicolors
-
-" Define o tema
-colorscheme palenight
-
-" Tema Airline
-let g:airline_theme='palenight'
-
-" Define se a cor usada pelo indentLine vai seguir o tema (0) ou o padrão do
-" indentLine (1), que é cinza
-let g:indentLine_setColors = 1
-
-" Define a cor da linha
-let g:indentLine_color_term = 237
-
-" [TEMA] Configuração para tema ayu ------------------------------------------
+" " set termguicolors
 
 " " Define o tema
-" set termguicolors
-" let ayucolor="mirage"
-" " let ayucolor="dark"
-" colorscheme ayu
+" colorscheme palenight
 
 " " Tema Airline
-" let g:airline_theme='onehalfdark'
+" let g:airline_theme='palenight'
 
 " " Define se a cor usada pelo indentLine vai seguir o tema (0) ou o padrão do
 " " indentLine (1), que é cinza
-" let g:indentLine_setColors = 0
+" let g:indentLine_setColors = 1
+
+" " Define a cor da linha
+" let g:indentLine_color_term = 237
+
+" [TEMA] Configuração para tema ayu ------------------------------------------
+
+" Define o tema
+set termguicolors
+" let ayucolor="mirage"
+let ayucolor="dark"
+colorscheme ayu
+
+" Tema Airline
+let g:airline_theme='onehalfdark'
+
+" Define se a cor usada pelo indentLine vai seguir o tema (0) ou o padrão do
+" indentLine (1), que é cinza
+let g:indentLine_setColors = 0
 
 " [TEMA] Configuração para tema onehalf --------------------------------------
 
 " " Define o tema
-" set termguicolors
+" set t_Co=256
+" set cursorline
+" set notermguicolors
 " colorscheme onehalfdark
 
 " " Tema Airline
@@ -141,6 +143,20 @@ let g:indentLine_color_term = 237
 
 " colorscheme tokyonight
 " let g:airline_theme = "tokyonight"
+
+" Mudando o tema pra ficar do meu jeito --------------------------------------
+
+" " Função utilitária para gerar o tema
+
+" function! s:h(group, style)
+"  execute "highlight" a:group
+"   \ "guifg=" (has_key(a:style, "fg")    ? a:style.fg   : "NONE")
+"   \ "guibg=" (has_key(a:style, "bg")    ? a:style.bg   : "NONE")
+"   \ "guisp=" (has_key(a:style, "sp")    ? a:style.sp   : "NONE")
+"   \ "gui="   (has_key(a:style, "gui")   ? a:style      : "NONE")
+" endfunction
+
+" call s:h("ColorColumn", { "bg": "#444444" })
 
 " Configuração do plugin IndentLine ------------------------------------------
 
