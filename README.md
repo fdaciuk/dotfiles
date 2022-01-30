@@ -16,6 +16,14 @@ I'm using [oh-my-tmux](https://github.com/gpakosz/.tmux)
 
 To install Gnome Terminal configurations, use [this instructions](https://gist.github.com/fdaciuk/9ec4d8afc32063a6f74a21f8308e3807)
 
+## ZSH
+
+If you want to set some global environment variable, create a file `~/.zshenv`, and add your env vars like this:
+
+```
+export TEST=yaaaay!
+```
+
 ## Instalation
 
 - Clone this repository somewhere on your PC

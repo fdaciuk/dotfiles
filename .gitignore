@@ -17,4 +17,5 @@ tmux/resurrect
 tmux/.tmux
 
 zsh/plugins
+zsh/.zshenv
 nginx-lives.conf

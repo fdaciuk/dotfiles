@@ -10,6 +10,7 @@ ln -sf $PWD/tmux/.tmux/.tmux.conf ~/.tmux.conf
 ln -sf $PWD/tmux/.tmux.conf.local ~/.tmux.conf.local
 
 ln -sf $PWD/zsh/.zshrc ~/.zshrc
+ln -sf $PWD/zsh/.zshenv ~/.zshenv
 ln -sf $PWD/zsh/plugins/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 ln -sf $PWD/zsh/plugins/zsh-wakatime ~/.oh-my-zsh/custom/plugins/zsh-wakatime
 
