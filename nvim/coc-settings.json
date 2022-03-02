@@ -14,5 +14,6 @@
       "filetypes": ["rescript"],
       "rootPatterns": ["bsconfig.json"]
     }
-  }
+  },
+  "coc.preferences.formatOnSaveFiletypes": ["rust"]
 }
