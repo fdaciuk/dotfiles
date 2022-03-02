@@ -299,8 +299,8 @@ set -g status-keys vi
 set -g mode-keys vi
 
 # Trocar janelas de posição
-bind -n C-S-M-Left swap-window -t -1\; select-window -t -1
-bind -n C-S-M-Right swap-window -t +1\; select-window -t +1
+bind -n C-S-Left swap-window -t -1\; select-window -t -1
+bind -n C-S-Right swap-window -t +1\; select-window -t +1
 
 # Navegar pelos painéis com Alt+h,j,k,l
 bind -n M-h select-pane -L
