@@ -392,6 +392,16 @@ nnoremap <leader><space> :nohlsearch<cr>
 " Toggle para exibir / esconder símbolos ocultos
 nnoremap <leader>l :set list!<cr>
 
+" Copiar caminho do arquivo atual com <leader>yf (yank filename)
+" " relative path
+" :let @+ = expand("%")
+" " full path
+" :let @+ = expand("%:p")
+
+" " just filename
+" :let @+ = expand("%:t")
+nnoremap <leader>yf :let @+ = expand("%")<cr>
+
 " Outros atalhos -------------------------------------------------------------
 
 " Define o atalho Ctrl + P para utilizar o fzf 
