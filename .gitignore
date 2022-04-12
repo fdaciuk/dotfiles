@@ -20,3 +20,4 @@ zsh/plugins
 zsh/.zshenv
 nginx-lives.conf
 coc/extensions/coc-rust-analyzer-data
+coc/extensions/coc-phpls-data
