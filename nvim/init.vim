@@ -366,6 +366,9 @@ set undofile
 " Não exibe símbolos ocultos por default
 set list!
 
+" Sempre exibir a sign column (coluna com os símbolos de erro e warning)
+set signcolumn=yes
+
 " Atalhos com a tecla <leader> ----------------------------------------------
 
 " Define a tecla `leader` como a vírgula

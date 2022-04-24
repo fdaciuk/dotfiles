@@ -9,10 +9,10 @@
     "coc-phpls": ">=2.2.2",
     "coc-pyright": ">=1.1.235",
     "coc-rls": ">=1.1.6",
-    "coc-rust-analyzer": ">=0.61.2",
+    "coc-rust-analyzer": ">=0.62.0",
     "coc-styled-components": ">=0.5.0",
     "coc-tailwind-intellisense": "https://github.com/rodrigore/coc-tailwind-intellisense",
     "coc-tailwindcss": ">=0.7.0",
-    "coc-tsserver": ">=1.10.0"
+    "coc-tsserver": ">=1.10.1"
   }
 }
