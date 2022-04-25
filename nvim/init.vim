@@ -368,6 +368,7 @@ set list!
 
 " Sempre exibir a sign column (coluna com os símbolos de erro e warning)
 set signcolumn=yes
+highlight clear SignColumn
 
 " Atalhos com a tecla <leader> ----------------------------------------------
 
