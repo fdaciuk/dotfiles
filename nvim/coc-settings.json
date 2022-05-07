@@ -1,7 +1,8 @@
 {
-  "diagnostic.errorSign": "🚨",
+  "diagnostic.errorSign": "🔥",
   "diagnostic.warningSign": "⚠️ ",
-  "diagnostic.infoSign": "⚠️ ",
+  "diagnostic.infoSign": "🐦",
+  "diagnostic.hintSign": "👀",
   "javascript.suggestionActions.enabled": false,
   "javascript.validate.enable": false,
   "css.validate": false,
