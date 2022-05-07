@@ -1,18 +1,18 @@
 {
   "dependencies": {
     "coc-css": ">=1.2.6",
-    "coc-deno": ">=3.9.2",
+    "coc-deno": ">=3.9.4",
     "coc-elixir": ">=0.7.0",
     "coc-eslint": ">=1.5.8",
     "coc-html": ">=1.6.1",
     "coc-json": ">=1.3.6",
     "coc-phpls": ">=2.2.2",
-    "coc-pyright": ">=1.1.235",
+    "coc-pyright": ">=1.1.243",
     "coc-rls": ">=1.1.6",
     "coc-rust-analyzer": ">=0.62.0",
     "coc-styled-components": ">=0.5.0",
     "coc-tailwind-intellisense": "https://github.com/rodrigore/coc-tailwind-intellisense",
     "coc-tailwindcss": ">=0.7.0",
-    "coc-tsserver": ">=1.10.1"
+    "coc-tsserver": ">=1.10.3"
   }
 }
