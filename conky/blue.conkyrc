@@ -76,7 +76,7 @@ conky.config = {
 
 	--Graphical
 
-	border_inner_margin = 20, 					-- margin between border and text
+	border_inner_margin = 10, 					-- margin between border and text
 	border_outer_margin = 5, 					-- margin between border and edge of window
 	border_width = 0, 							-- border width in pixels
 	default_bar_width = 80,					-- default is 0 - full width
