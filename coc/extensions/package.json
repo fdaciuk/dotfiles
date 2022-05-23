@@ -9,7 +9,7 @@
     "coc-phpls": ">=2.2.2",
     "coc-pyright": ">=1.1.243",
     "coc-rls": ">=1.1.6",
-    "coc-rust-analyzer": ">=0.62.0",
+    "coc-rust-analyzer": ">=0.62.1",
     "coc-styled-components": ">=0.5.0",
     "coc-tailwind-intellisense": "https://github.com/rodrigore/coc-tailwind-intellisense",
     "coc-tailwindcss": ">=0.7.0",
