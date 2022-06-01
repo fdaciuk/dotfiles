@@ -1,13 +1,13 @@
 {
   "dependencies": {
     "coc-css": ">=1.2.6",
-    "coc-deno": ">=3.9.4",
+    "coc-deno": ">=3.9.5",
     "coc-elixir": ">=0.7.0",
     "coc-eslint": ">=1.5.8",
     "coc-html": ">=1.6.1",
     "coc-json": ">=1.4.2",
     "coc-phpls": ">=2.2.2",
-    "coc-pyright": ">=1.1.243",
+    "coc-pyright": ">=1.1.252",
     "coc-rls": ">=1.1.6",
     "coc-rust-analyzer": ">=0.62.1",
     "coc-styled-components": ">=0.5.0",
