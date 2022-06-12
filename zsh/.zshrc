@@ -117,6 +117,9 @@ export EDITOR=$VISUAL
 . /usr/share/autojump/autojump.zsh
 export PROMP_COMMAND=$PROMPT_COMMAND"; history -a; history -n;"
 
+# Cargo (Rust)
+. "$HOME/.cargo/env"
+
 # My GPG Key
 export GPG_TTY=$(tty)
 
@@ -208,6 +211,10 @@ function toresolve () {
 
 function fixvideo () {
   ffmpeg -i "$1" -map 0 -ignore_unknown -c copy "${1%.*}.fixed.${1##*.}"
+}
+
+function alsa-profile () {
+  alsactl --file /media/storage/code/00-opensource/dotfiles/alsamixer-profiles/$1.state restore
 }
 
 # Deletar branches diferente de main, staging e dev
