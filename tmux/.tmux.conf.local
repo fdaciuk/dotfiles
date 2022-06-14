@@ -313,10 +313,13 @@ bind -n C-M-h select-window -p
 bind -n C-M-l select-window -n
 
 # Criar painel vertical com <prefix>-
-bind - split-window -v
+bind - split-window -v -c "#{pane_current_path}"
 
 # Criar painel horizontal com '<prefix>\'
-bind \\ split-window -h
+bind \\ split-window -h -c "#{pane_current_path}"
+
+# Criar nova janela com o caminho atual
+bind c new-window -c "#{pane_current_path}"
 
 # Definir modo vim para navegação 
 set-window-option -g mode-keys vi
