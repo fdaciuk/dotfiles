@@ -74,6 +74,9 @@ call plug#begin()
 
   " Melhorar netw
   Plug 'lambdalisue/fern.vim'
+  Plug 'lambdalisue/fern-hijack.vim'
+  Plug 'lambdalisue/nerdfont.vim'
+  Plug 'lambdalisue/fern-renderer-nerdfont.vim'
 call plug#end()
 
 " Cores ----------------------------------------------------------------------
@@ -187,6 +190,12 @@ let g:airline_symbols.notexists = ' ✗'
 " Permite que o cursor acompanhe a rolagem da tela
 let g:comfortable_motion_scroll_down_key = "j"
 let g:comfortable_motion_scroll_up_key = "k"
+
+" Configuração do plugin Fern ------------------------------------------------
+let g:fern#drawer_with = 30
+let g:fern#default_hidden = 1
+let g:fern#disable_drawer_auto_quit = 1
+let g:fern#renderer = "nerdfont"
 
 " Configuração do plugin COC -------------------------------------------------
 
@@ -323,6 +332,10 @@ set listchars+=nbsp:_
 " sempre funcionar
 autocmd BufEnter * :syntax sync fromstart
 
+" Desabilita os caracteres do indentLine para o Terminal Mode
+autocmd TermOpen * IndentLinesDisable
+autocmd TermOpen * setlocal nonumber norelativenumber
+
 " Habilita o mouse no modo de inserção
 " i = insert
 " v = visual
@@ -406,6 +419,12 @@ nnoremap <leader>l :set list!<cr>
 " :let @+ = expand("%:t")
 nnoremap <leader>yf :let @+ = expand("%")<cr>
 
+" Abrir terminal com <leader>t
+nnoremap <leader>t :split \| term<cr>i
+
+" Abrir terminal na vertical com <leader>vt
+nnoremap <leader>vt :vsplit \| term<cr>i
+
 " Outros atalhos -------------------------------------------------------------
 
 " Define o atalho Ctrl + P para utilizar o fzf 
@@ -435,6 +454,7 @@ nnoremap gp :e#<cr>
 " - Ctrl + W + | = Define o split atual com a maior largura possível
 " - Ctrl + W + = = Tenta definir todas as janelas com o mesmo tamanho
 nnoremap zin <c-w>_ <c-w>\|
+nnoremap zoom <c-w>_
 
 " Zoom out - [z]oom [n]ot [i]n
 " não usei `zo` pq conflita com o atalho de folding
