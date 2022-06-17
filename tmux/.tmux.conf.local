@@ -331,8 +331,5 @@ set -g mouse on
 bind s choose-tree -s -Z -O name
 
 # -- plugins -----------------------------------------------------------------
-# Configurações padrão importantes para o tmux
-run-shell $HOME/.tmux/plugins/tmux-sensible/sensible.tmux
+set -g @plugin 'tmux-plugins/tmux-resurrect'
 
-# Plugin para salvar e restaurar sessões do tmux
-run-shell $HOME/.tmux/plugins/tmux-resurrect/resurrect.tmux
