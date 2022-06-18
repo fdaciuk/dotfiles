@@ -207,7 +207,7 @@ let g:fern#default_hidden = 1
 let g:fern#disable_drawer_auto_quit = 1
 let g:fern#renderer = "nerdfont"
 
-" Abrir Fern com Alt + f
+" Abrir/fechar Fern com Alt + f
 noremap <silent> <A-f> :Fern . -drawer -toggle -reveal=% -width=30 <cr>
 
 " Navegar entre buffers com Alt + wasd
@@ -220,8 +220,48 @@ noremap <silent> <A-s> <C-w>j
 " Alt + d = Navega pra o buffer à direita
 noremap <silent> <A-d> <C-w>l
 
-" Desabilita indentLine dentro do buffer do Fern
-autocmd FileType fern IndentLinesDisable
+" Função que é executada apenas no buffer do Fern
+function! s:init_fern() abort
+  " Desabilita indentLine dentro do buffer do Fern
+  autocmd BufEnter * IndentLinesDisable
+
+  " " Esconder cursor no Fern 
+  " " BUG: neovim não consegue se recuperar do blend=100 e o cursor nunca 
+  " " volta a ser exibido novamente
+  "
+  " autocmd BufEnter * :hi Cursor blend=100
+  " set guicursor+=a:Cursor/lCursor
+endfunction
+
+augroup fern-custom
+  autocmd! *
+  autocmd FileType fern call s:init_fern()
+augroup END
+
+" " Preview files
+" function! s:fern_preview_init() abort
+"   nmap <buffer><expr>
+"         \ <Plug>(fern-my-preview-or-nop)
+"         \ fern#smart#leaf(
+"         \   "\<Plug>(fern-action-open:edit)\<C-w>p",
+"         \   "",
+"         \ )
+"   nmap <buffer><expr> j
+"         \ fern#smart#drawer(
+"         \   "j\<Plug>(fern-my-preview-or-nop)",
+"         \   "j",
+"         \ )
+"   nmap <buffer><expr> k
+"         \ fern#smart#drawer(
+"         \   "k\<Plug>(fern-my-preview-or-nop)",
+"         \   "k",
+"         \ )
+" endfunction
+
+" augroup my-fern-preview
+"   autocmd! *
+"   autocmd FileType fern call s:fern_preview_init()
+" augroup END
 
 " Configuração do plugin COC -------------------------------------------------
 
