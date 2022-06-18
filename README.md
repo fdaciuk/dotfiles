@@ -4,9 +4,10 @@
 
 ## Font
 
-I'm using [Cascadia Mono PL Regular](https://github.com/microsoft/cascadia-code)
+~~I'm using [Cascadia Mono PL Regular](https://github.com/microsoft/cascadia-code)~~
+I'm using [JetBrainsMono Nerd Font](https://www.programmingfonts.org/#jetbrainsmono)
 
-_You can find more fonts on [NerdFonts](https://www.nerdfonts.com/)_
+_You can find this and more fonts on [NerdFonts](https://www.nerdfonts.com/)_
 
 ## Tmux theme
 
