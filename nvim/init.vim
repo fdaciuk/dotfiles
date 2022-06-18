@@ -77,6 +77,7 @@ call plug#begin()
   Plug 'lambdalisue/fern-hijack.vim'
   Plug 'lambdalisue/nerdfont.vim'
   Plug 'lambdalisue/fern-renderer-nerdfont.vim'
+  Plug 'lambdalisue/glyph-palette.vim'
 call plug#end()
 
 " Cores ----------------------------------------------------------------------
@@ -108,8 +109,9 @@ set background=dark
 
 " Define o tema
 set termguicolors
-" let ayucolor="mirage"
 let ayucolor="dark"
+" let ayucolor="mirage"
+" let ayucolor="light"
 colorscheme ayu
 
 " Tema Airline
@@ -161,6 +163,14 @@ let g:indentLine_setColors = 0
 
 " call s:h("ColorColumn", { "bg": "#444444" })
 
+" Configuração do plugin glyph-palette ---------------------------------------
+
+augroup my-glyph-palette
+  autocmd! *
+  autocmd FileType fern call glyph_palette#apply()
+  autocmd FileType nerdtree,startify call glyph_palette#apply()
+augroup END
+
 " Configuração do plugin IndentLine ------------------------------------------
 
 " Exemplos de linhas verticais: | ¦ ┆ ┊ ▏
@@ -196,6 +206,22 @@ let g:fern#drawer_with = 30
 let g:fern#default_hidden = 1
 let g:fern#disable_drawer_auto_quit = 1
 let g:fern#renderer = "nerdfont"
+
+" Abrir Fern com Alt + f
+noremap <silent> <A-f> :Fern . -drawer -toggle -reveal=% -width=30 <cr>
+
+" Navegar entre buffers com Alt + wasd
+" Alt + w = Navega para o buffer acima
+noremap <silent> <A-w> <C-w>k
+" Alt + a = Navega para o buffer à esquerda
+noremap <silent> <A-a> <C-w>h
+" Alt + s = Navega para o buffer abaixo
+noremap <silent> <A-s> <C-w>j
+" Alt + d = Navega pra o buffer à direita
+noremap <silent> <A-d> <C-w>l
+
+" Desabilita indentLine dentro do buffer do Fern
+autocmd FileType fern IndentLinesDisable
 
 " Configuração do plugin COC -------------------------------------------------
 
@@ -334,7 +360,6 @@ autocmd BufEnter * :syntax sync fromstart
 
 " Desabilita os caracteres do indentLine para o Terminal Mode
 autocmd TermOpen * IndentLinesDisable
-autocmd TermOpen * setlocal nonumber norelativenumber
 
 " Habilita o mouse no modo de inserção
 " i = insert
@@ -454,7 +479,12 @@ nnoremap gp :e#<cr>
 " - Ctrl + W + | = Define o split atual com a maior largura possível
 " - Ctrl + W + = = Tenta definir todas as janelas com o mesmo tamanho
 nnoremap zin <c-w>_ <c-w>\|
-nnoremap zoom <c-w>_
+
+" Zoom vertical
+nnoremap zv <c-w>_
+
+" Zoom horizontal
+nnoremap zh <c-w>\|
 
 " Zoom out - [z]oom [n]ot [i]n
 " não usei `zo` pq conflita com o atalho de folding
