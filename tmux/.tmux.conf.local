@@ -328,7 +328,11 @@ set-window-option -g mode-keys vi
 set -g mouse on
 
 # Rebind do `s` para exibir a árvore de painéis em ordem alfabética
-bind s choose-tree -s -Z -O name
+# unbind do `s`. Usar o `p` no lugar
+unbind s
+
+# Usar o `p` ao invés do `s` para exibir a arvore de painéis em ordem alfabética
+bind p choose-tree -s -Z -O name
 
 # -- plugins -----------------------------------------------------------------
 set -g @plugin 'tmux-plugins/tmux-resurrect'
