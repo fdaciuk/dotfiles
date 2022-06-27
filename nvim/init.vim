@@ -6,6 +6,7 @@ call plug#begin()
   Plug 'ayu-theme/ayu-vim'
   Plug 'sonph/onehalf', { 'rtp': 'vim' }
   Plug 'ghifarit53/tokyonight-vim'
+  Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 
   " Prisma code highlight
   Plug 'pantharshit00/vim-prisma'
@@ -121,6 +122,17 @@ let g:airline_theme='onehalfdark'
 " indentLine (1), que é cinza
 let g:indentLine_setColors = 0
 
+" [TEMA] Configuração para tema catppuccin -----------------------------------
+
+" lua << EOF
+" local catppuccin = require("catppuccin")
+" catppuccin.setup({integrations = { coc_nvim = true }})
+" EOF
+
+" set termguicolors
+" let g:catppuccin_flavour = "mocha"
+" colorscheme catppuccin
+ 
 " [TEMA] Configuração para tema onehalf --------------------------------------
 
 " " Define o tema
@@ -202,13 +214,14 @@ let g:comfortable_motion_scroll_down_key = "j"
 let g:comfortable_motion_scroll_up_key = "k"
 
 " Configuração do plugin Fern ------------------------------------------------
-let g:fern#drawer_with = 30
+let g:fern#drawer_width = 35
+let g:fern#disable_drawer_auto_resize = 0
 let g:fern#default_hidden = 1
 let g:fern#disable_drawer_auto_quit = 1
 let g:fern#renderer = "nerdfont"
 
 " Abrir/fechar Fern com Alt + f
-noremap <silent> <A-f> :Fern . -drawer -toggle -reveal=% -width=30 <cr>
+noremap <silent> <A-f> :Fern . -drawer -toggle -reveal=% -width=35 <cr>
 
 " Navegar entre buffers com Alt + wasd
 " Alt + w = Navega para o buffer acima
@@ -220,22 +233,9 @@ noremap <silent> <A-s> <C-w>j
 " Alt + d = Navega pra o buffer à direita
 noremap <silent> <A-d> <C-w>l
 
-" Função que é executada apenas no buffer do Fern
-function! s:init_fern() abort
-  " Desabilita indentLine dentro do buffer do Fern
-  autocmd BufEnter * IndentLinesDisable
-
-  " " Esconder cursor no Fern 
-  " " BUG: neovim não consegue se recuperar do blend=100 e o cursor nunca 
-  " " volta a ser exibido novamente
-  "
-  " autocmd BufEnter * :hi Cursor blend=100
-  " set guicursor+=a:Cursor/lCursor
-endfunction
-
 augroup fern-custom
   autocmd! *
-  autocmd FileType fern call s:init_fern()
+  autocmd FileType fern IndentLinesDisable
 augroup END
 
 " " Preview files
@@ -448,7 +448,7 @@ set list!
 set signcolumn=yes
 highlight clear SignColumn
 
-" Atalhos com a tecla <leader> ----------------------------------------------
+" Atalhos com a tecla <leader> -----------------------------------------------
 
 " Define a tecla `leader` como a vírgula
 let mapleader=","
@@ -585,6 +585,10 @@ set writebackup
 
 " Ajuste para hot reloading (desabilitar o 'safe write')
 set backupcopy=yes
+
+" Define Highlight para arquivos que não são detectados automaticamente ------
+au BufReadPost .tmux.conf.local set syntax ft=tmux
+au BufReadPost .env.* set syntax ft=sh
 
 " Correção de typos ----------------------------------------------------------
 
