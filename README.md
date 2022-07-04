@@ -25,6 +25,14 @@ If you want to set some global environment variable, create a file `~/.zshenv`, 
 export TEST=yaaaay!
 ```
 
+## COC Neovim
+
+For autocomplete/autoformatting C# files, you must install `dotnet` SDK v6 in your PC, than run the command:
+
+```
+dotnet tool install --global csharp-ls
+```
+
 ## Instalation
 
 - Clone this repository somewhere on your PC

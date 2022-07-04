@@ -6,8 +6,9 @@ nvim/.netrwhist
 nvim/plugged
 nvim/undos
 
-coc/extensions/node_modules
-coc/extensions/db.json
+coc/extensions/
+!coc/extensions/package.json
+!coc/extensions/yarn.lock
 
 fonts
 fonts-powerline
@@ -19,5 +20,4 @@ tmux/.tmux
 zsh/plugins
 zsh/.zshenv
 nginx-lives.conf
-coc/extensions/coc-rust-analyzer-data
-coc/extensions/coc-phpls-data
+

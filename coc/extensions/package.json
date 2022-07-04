@@ -4,6 +4,7 @@
     "coc-deno": ">=3.9.5",
     "coc-elixir": ">=0.7.0",
     "coc-eslint": ">=1.5.8",
+    "coc-fsharp": ">=0.3.5",
     "coc-html": ">=1.6.1",
     "coc-json": ">=1.4.2",
     "coc-phpls": ">=2.2.2",
