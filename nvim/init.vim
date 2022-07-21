@@ -13,6 +13,7 @@ call plug#begin()
 
   " Caracteres especiais para indentação
   Plug 'Yggdroot/indentLine'
+  " Plug 'lukas-reineke/indent-blankline.nvim'
 
   " Airline
   Plug 'vim-airline/vim-airline'
@@ -32,6 +33,9 @@ call plug#begin()
 
   " Suporte para Elixir
   Plug 'elixir-editors/vim-elixir'
+
+  " Dicas de teclas de atalho
+  Plug 'folke/which-key.nvim'
 
   " === 
   " Início da instalação do fzf
@@ -262,6 +266,7 @@ augroup END
 "   autocmd! *
 "   autocmd FileType fern call s:fern_preview_init()
 " augroup END
+
 
 " Configuração do plugin COC -------------------------------------------------
 

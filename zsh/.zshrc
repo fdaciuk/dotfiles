@@ -82,6 +82,8 @@ alias update='vim +PlugUpdate +qall && vim +CocUpdate +qall'
 alias update-first='flatpak update -y && sudo snap refresh'
 alias copy='rsync -a --stats --progress'
 alias l='ls -lah --group-directories-first'
+# Alias for localstack
+alias awslocal='aws --endpoint-url=http://localhost:4566'
 alias bat='batcat'
 export BAT_THEME='OneHalfDark'
 
@@ -239,6 +241,11 @@ function close-prs-jsninja () {
 
 function cleanup-memory () {
   sudo sysctl -w vm.drop_caches=3
+}
+
+# get time in milisseconds
+function ms () {
+  TIMEFMT=%*E; time $@
 }
 
 function rescripts () {
