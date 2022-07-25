@@ -78,7 +78,7 @@ source $ZSH/oh-my-zsh.sh
 alias please='sudo'
 alias vim='nvim'
 alias vi='vim'
-alias update='vim +PlugUpdate +qall && vim +CocUpdate +qall'
+alias update='yay -Syua && vim +PlugUpdate +qall && vim +CocUpdate +qall'
 alias update-first='flatpak update -y && sudo snap refresh'
 alias copy='rsync -a --stats --progress'
 alias l='ls -lah --group-directories-first'
