@@ -277,3 +277,10 @@ function make-node () {
   yarn tsc --init >> /dev/null
   echo "Finished! Run yarn dev to start sucrase server."
 }
+
+# bun completions
+[ -s "/home/fernando/.bun/_bun" ] && source "/home/fernando/.bun/_bun"
+
+# bun
+export BUN_INSTALL="/home/fernando/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
