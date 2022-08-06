@@ -334,6 +334,10 @@ unbind s
 # Usar o `p` ao invés do `s` para exibir a arvore de painéis em ordem alfabética
 bind p choose-tree -s -Z -O name
 
+# Ajustar cores do terminal
+set -g default-terminal "tmux-256color"
+set -ga terminal-overrides ",*256col*:Tc"
+
 # -- plugins -----------------------------------------------------------------
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 
