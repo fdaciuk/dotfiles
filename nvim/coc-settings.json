@@ -21,6 +21,6 @@
       "rootPatterns": ["*.csproj", ".vim/", ".git/", ".hg/"]
     }
   },
-  "coc.preferences.formatOnSaveFiletypes": ["cs", "rust"],
+  "coc.preferences.formatOnSaveFiletypes": ["cs", "rust", "rescript"],
   "rust-analyzer.rustfmt.extraArgs": ["+nightly"]
 }
