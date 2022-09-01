@@ -9,11 +9,11 @@
     "coc-html": ">=1.6.1",
     "coc-json": ">=1.6.1",
     "coc-phpls": ">=2.2.2",
-    "coc-pyright": ">=1.1.266",
-    "coc-rust-analyzer": ">=0.66.0",
+    "coc-pyright": ">=1.1.269",
+    "coc-rust-analyzer": ">=0.67.1",
     "coc-styled-components": ">=0.5.0",
     "coc-tailwind-intellisense": "https://github.com/rodrigore/coc-tailwind-intellisense",
     "coc-tailwindcss": ">=0.7.0",
-    "coc-tsserver": ">=1.11.3"
+    "coc-tsserver": ">=1.11.5"
   }
 }
