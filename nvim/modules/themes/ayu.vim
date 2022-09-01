@@ -14,4 +14,5 @@ let g:airline_theme='onehalfdark'
 " indentLine (1), que é cinza
 let g:indentLine_setColors = 0
 
+" Ajusta cor de fundo do highlight menu
 highlight Pmenu guibg=darkblack
