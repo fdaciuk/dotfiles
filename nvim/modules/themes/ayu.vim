@@ -2,9 +2,7 @@
 
 " Define o tema
 set termguicolors
-let ayucolor="dark"
-" let ayucolor="mirage"
-" let ayucolor="light"
+let ayucolor='dark' " available: dark | mirage | light
 colorscheme ayu
 
 " Tema Airline
@@ -15,4 +13,5 @@ let g:airline_theme='onehalfdark'
 let g:indentLine_setColors = 0
 
 " Ajusta cor de fundo do highlight menu
-highlight Pmenu guibg=darkblack
+highlight! link CocPumMenu Pmenu
+highlight! link CocMenuSel PmenuSel
