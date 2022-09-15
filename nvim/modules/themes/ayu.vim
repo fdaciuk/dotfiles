@@ -15,3 +15,9 @@ let g:indentLine_setColors = 0
 " Ajusta cor de fundo do highlight menu
 highlight! link CocPumMenu Pmenu
 highlight! link CocMenuSel PmenuSel
+
+" Ajusta cores de inlayHints
+hi DiagnosticError guifg=Red
+hi DiagnosticWarn guifg=DarkOrange
+hi DiagnosticInfo guifg=Cyan
+hi DiagnosticHint guifg=DarkCyan
