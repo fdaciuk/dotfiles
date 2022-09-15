@@ -22,5 +22,6 @@
     }
   },
   "coc.preferences.formatOnSaveFiletypes": ["cs", "rust", "rescript"],
-  "rust-analyzer.rustfmt.extraArgs": ["+nightly"]
+  "rust-analyzer.rustfmt.extraArgs": ["+nightly"],
+  "rust-analyzer.inlayHints.parameterHints.enable": false
 }
