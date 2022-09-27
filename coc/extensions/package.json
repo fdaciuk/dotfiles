@@ -14,5 +14,8 @@
     "coc-tailwind-intellisense": "https://github.com/rodrigore/coc-tailwind-intellisense",
     "coc-tailwindcss": ">=0.7.0",
     "coc-tsserver": ">=1.11.7"
-  }
+  },
+  "disabled": [],
+  "locked": [],
+  "lastUpdate": 1663802227452
 }
