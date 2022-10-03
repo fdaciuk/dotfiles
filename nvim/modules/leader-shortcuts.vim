@@ -1,11 +1,5 @@
 " Atalhos com a tecla <leader> -----------------------------------------------
 
-" Define a tecla `leader` como a vírgula
-let mapleader=","
-
-" Define a tecla `localleader` como o ponto-e-vírgula
-let maplocalleader=";"
-
 " Atalho para edição do arquivo de configuração do neovim. Só pressionar
 " a tecla <leader> e digitar `ev` (edit vim) no modo normal
 nnoremap <leader>ev :e ~/.config/nvim/init.vim<cr>

@@ -1,3 +1,9 @@
+" Define a tecla `leader` como a vírgula
+let mapleader=","
+
+" Define a tecla `localleader` como o ponto-e-vírgula
+let maplocalleader=";"
+
 " Plugins
 source $HOME/.config/nvim/modules/plugins.vim
 
