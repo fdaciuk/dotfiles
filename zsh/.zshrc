@@ -141,6 +141,12 @@ export PATH=$PATH:$(yarn global bin)
 export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
+# Solana
+export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
+
+# AVM (Anchor - Solana)
+export PATH="$HOME/.avm/bin:$PATH"
+
 # Histórico do iex
 export ERL_AFLAGS="-kernel shell_history enabled"
 
