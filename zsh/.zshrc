@@ -294,3 +294,6 @@ function make-node () {
 # bun
 export BUN_INSTALL="/home/fernando/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Deta
+export PATH="/home/fernando/.deta/bin:$PATH"
