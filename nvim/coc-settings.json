@@ -11,17 +11,38 @@
     "rescript": {
       "enable": true,
       "module": "~/.config/nvim/plugged/vim-rescript/server/out/server.js",
-      "args": ["--node-ipc"],
-      "filetypes": ["rescript"],
-      "rootPatterns": ["bsconfig.json"]
+      "args": [
+        "--node-ipc"
+      ],
+      "filetypes": [
+        "rescript"
+      ],
+      "rootPatterns": [
+        "bsconfig.json"
+      ]
     },
     "csharp-ls": {
       "command": "csharp-ls",
-      "filetypes": ["cs"],
-      "rootPatterns": ["*.csproj", ".vim/", ".git/", ".hg/"]
+      "filetypes": [
+        "cs"
+      ],
+      "rootPatterns": [
+        "*.csproj",
+        ".vim/",
+        ".git/",
+        ".hg/"
+      ]
     }
   },
-  "coc.preferences.formatOnSaveFiletypes": ["cs", "rust", "rescript"],
-  "rust-analyzer.rustfmt.extraArgs": ["+nightly"],
+  "coc.preferences.formatOnSave": true,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "cs",
+    "rust",
+    "rescript",
+    "prisma"
+  ],
+  "rust-analyzer.rustfmt.extraArgs": [
+    "+nightly"
+  ],
   "rust-analyzer.inlayHints.parameterHints.enable": false
 }
