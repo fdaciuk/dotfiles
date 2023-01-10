@@ -86,6 +86,7 @@ alias l='ls -lah --group-directories-first'
 alias awslocal='aws --endpoint-url=http://localhost:4566'
 alias bat='batcat'
 export BAT_THEME='OneHalfDark'
+alias mem="command time -f '%M KB peak memory usage'"
 
 
 # Fly.io
