@@ -21,3 +21,4 @@ zsh/plugins
 zsh/.zshenv
 nginx-lives.conf
 
+better-vim/better-vim/.bettervimrc
