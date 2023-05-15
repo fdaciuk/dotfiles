@@ -16,6 +16,7 @@ return {
   },
   lsps = {
     astro = {},
+    prismals = {},
     -- ["rescriptls@latest-master"] = {},
     rust_analyzer = {},
     gopls = {},
@@ -55,6 +56,9 @@ return {
     after_setup = function()
       -- Floatterm config
       vim.g.floaterm_title = ""
+
+      -- ftdetect
+      vim.cmd [[ autocmd BufNewFile,BufRead *.mdx set filetype=markdown.jsx ]]
 
       -- Vim common config
       -- vim.cmd [[ let &colorcolumn=join(range(81,999),",") ]]

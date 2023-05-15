@@ -29,6 +29,9 @@ call plug#begin()
   " Adicionar syntax hightlight para várias linguagens
   Plug 'sheerun/vim-polyglot' 
 
+  " Code highlight para astro
+  Plug 'wuelnerdotexe/vim-astro'
+
   " Suporte para ReScript
   Plug 'rescript-lang/vim-rescript'
 

@@ -88,7 +88,6 @@ alias bat='batcat'
 export BAT_THEME='OneHalfDark'
 alias mem="command time -f '%M KB peak memory usage'"
 
-
 # Fly.io
 alias flyctl='$HOME/.fly/bin/flyctl'
 
@@ -151,7 +150,7 @@ export PATH="$HOME/.avm/bin:$PATH"
 # Histórico do iex
 export ERL_AFLAGS="-kernel shell_history enabled"
 
-# MXErgo Scroll Config
+# MXErgo Scroll Config - Mouse configuration
 xinput set-prop pointer:"Logitech MX Ergo" "libinput Scroll Method Enabled" 0, 0, 1 && xinput set-prop pointer:"Logitech MX Ergo" "libinput Button Scrolling Button" 2
 
 # My functions

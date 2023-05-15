@@ -2,8 +2,9 @@
 
 ln -sf $PWD/bin ~/bin
 ln -sf $PWD/conky ~/.config/conky
-ln -sf $PWD/nvim ~/.config/nvim
-ln -sf $PWD/coc/extensions ~/.config/coc/extensions
+
+ln -sf $PWD/better-vim $HOME/.config/better-vim
+ln -sf $HOME/.config/better-vim ~/.config/nvim/lua/better-vim
 
 ln -sf $PWD/tmux ~/.tmux
 ln -sf $PWD/tmux/.tmux/.tmux.conf ~/.tmux.conf
