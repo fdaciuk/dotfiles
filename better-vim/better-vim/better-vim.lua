@@ -14,10 +14,19 @@ return {
       K = { vim.lsp.buf.hover, " Show documentation" },
     },
   },
+  nvim_tree = {
+    update_cwd = false,
+    update_focused_file = {
+      update_cwd = false,
+    },
+    view = {
+      adaptive_size = false,
+    },
+  },
   lsps = {
     astro = {},
     prismals = {},
-    -- ["rescriptls@latest-master"] = {},
+    ["rescriptls@latest-master"] = {},
     rust_analyzer = {},
     gopls = {},
     bashls = {
