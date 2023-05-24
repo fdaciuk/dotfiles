@@ -1,3 +1,9 @@
+local lsps = require "better-vim.lsps"
+local nvim_tree = require "better-vim.nvim-tree"
+local lualine = require "better-vim.lualine"
+local custom_mappings = require "better-vim.custom-mappings"
+local plugins = require "better-vim.plugins"
+
 return {
   theme = {
     name = "catppuccin",
@@ -7,56 +13,13 @@ return {
   },
   mappings = {
     leader = ",",
-    custom = {
-      ["<leader>t"] = { "<cmd>FloatermNew --width=0.8 --height=0.8<cr>", "Open terminal" },
-      gp = { ":e#<cr>", "Switch between the lastest two buffers" },
-      gd = { vim.lsp.buf.definition, " Go to definition" },
-      K = { vim.lsp.buf.hover, " Show documentation" },
-    },
+    custom = custom_mappings,
   },
-  nvim_tree = {
-    update_cwd = false,
-    update_focused_file = {
-      update_cwd = false,
-    },
-    view = {
-      adaptive_size = false,
-    },
-  },
-  lsps = {
-    astro = {},
-    prismals = {},
-    ["rescriptls@latest-master"] = {},
-    rust_analyzer = {},
-    gopls = {},
-    bashls = {
-      allowlist = { "sh", "bash" },
-    },
-  },
+  nvim_tree = nvim_tree,
+  lsps = lsps,
   treesitter = "all",
-  plugins = {
-    "rescript-lang/vim-rescript",
-    "nkrkv/nvim-treesitter-rescript",
-    "devongovett/tree-sitter-highlight",
-    "wakatime/vim-wakatime",
-    "voldikss/vim-floaterm",
-  },
-  lualine = {
-    options = {
-      -- icons:
-      --           
-      component_separators = { left = "", right = "" },
-      section_separators = { left = " ", right = "" },
-    },
-    sections = {
-      a = { "mode" },
-      b = { "branch" },
-      c = { "filename" },
-      x = { "encoding", "fileformat", "filetype" },
-      y = { "progress" },
-      z = { "location" },
-    },
-  },
+  plugins = plugins,
+  lualine = lualine,
   flags = {
     disable_tabs = true,
     format_on_save = true,
@@ -70,7 +33,18 @@ return {
       vim.cmd [[ autocmd BufNewFile,BufRead *.mdx set filetype=markdown.jsx ]]
 
       -- Vim common config
-      -- vim.cmd [[ let &colorcolumn=join(range(81,999),",") ]]
+      -- colorcolumn from 80 to the end of the buffer width
+      vim.cmd [[ let &colorcolumn=join(range(81,999),",") ]]
+      --
+      --
+      --   -- Show a different background color for texts that overlength
+      --   vim.cmd [[
+      --     augroup vimrc_autocmds
+      --     au!
+      --         autocmd BufRead * highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+      --         autocmd BufRead * match OverLength /\%81v.*/
+      --     augroup END
+      -- ]]
     end,
   },
 }
