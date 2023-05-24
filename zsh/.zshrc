@@ -78,14 +78,13 @@ source $ZSH/oh-my-zsh.sh
 alias please='sudo'
 alias vim='nvim'
 alias vi='vim'
+alias cat='bat'
 alias update='yay -Syua && vim +PlugUpdate +qall && vim +CocUpdate +qall'
 alias update-first='flatpak update -y && sudo snap refresh'
 alias copy='rsync -a --stats --progress'
 alias l='ls -lah --group-directories-first'
 # Alias for localstack
 alias awslocal='aws --endpoint-url=http://localhost:4566'
-alias bat='batcat'
-export BAT_THEME='OneHalfDark'
 alias mem="command time -f '%M KB peak memory usage'"
 
 # Fly.io
@@ -297,3 +296,6 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Deta
 export PATH="/home/fernando/.deta/bin:$PATH"
+
+# diff-so-fancy
+export PATH="/media/storage/code/00-opensource/diff-so-fancy:$PATH"
