@@ -1,8 +1,8 @@
+local plugins = require "better-vim.plugins"
 local lsps = require "better-vim.lsps"
 local nvim_tree = require "better-vim.nvim-tree"
 local lualine = require "better-vim.lualine"
 local custom_mappings = require "better-vim.custom-mappings"
-local plugins = require "better-vim.plugins"
 
 return {
   theme = {
@@ -20,6 +20,11 @@ return {
   treesitter = "all",
   plugins = plugins,
   lualine = lualine,
+  noice = {
+    messages = {
+      view = "mini",
+    },
+  },
   flags = {
     disable_tabs = true,
     format_on_save = true,
@@ -45,6 +50,9 @@ return {
       --         autocmd BufRead * match OverLength /\%81v.*/
       --     augroup END
       -- ]]
+      --
+      -- -- Palenightfall theme setup
+      -- require "palenightfall".setup {}
     end,
   },
 }
