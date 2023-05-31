@@ -3,4 +3,5 @@ return {
   gp = { ":e#<cr>", "Switch between the lastest two buffers" },
   gd = { "<leader>gd", " Go to definition", remap = true },
   K = { "<leader>cd", " Show documentation", remap = true },
+  ["<c-\\>"] = { "<cmd>FloatermToggle!<cr>", "Toggle Terminal", mode = { "t", "n" } },
 }
