@@ -1,58 +1,142 @@
-local plugins = require "better-vim.plugins"
-local lsps = require "better-vim.lsps"
-local nvim_tree = require "better-vim.nvim-tree"
-local lualine = require "better-vim.lualine"
-local custom_mappings = require "better-vim.custom-mappings"
+local M = {}
 
-return {
-  theme = {
-    name = "catppuccin",
-    catppuccin_flavour = "frappe",
-    ayucolor = "dark",
-    rose_pine = { variant = "moon" },
+M.theme = {
+  -- name = "palenightfall",
+  name = "catppuccin",
+  catppuccin_flavour = "frappe",
+  ayucolor = "dark",
+  rose_pine = { variant = "moon" },
+}
+
+M.mappings = {
+  leader = ",",
+  custom = {
+    ["<leader>t"] = { "<cmd>FloatermNew --width=0.8 --height=0.8<cr>", "Open terminal" },
+    gp = { ":e#<cr>", "Switch between the lastest two buffers" },
+    gd = { "<leader>gd", " Go to definition", remap = true },
+    K = { "<leader>cd", " Show documentation", remap = true },
+    ["<c-\\>"] = { "<cmd>FloatermToggle!<cr>", "Toggle Terminal", mode = { "t", "n" } },
   },
-  mappings = {
-    leader = ",",
-    custom = custom_mappings,
+}
+
+M.nvim_tree = {
+  update_cwd = false,
+  update_focused_file = {
+    update_cwd = false,
   },
-  nvim_tree = nvim_tree,
-  lsps = lsps,
-  treesitter = "all",
-  plugins = plugins,
-  lualine = lualine,
-  noice = {
-    messages = {
-      view = "mini",
+  view = {
+    adaptive_size = false,
+  },
+  filters = {
+    dotfiles = false,
+    exclude = { "github.*" },
+  },
+}
+
+M.lsps = {
+  astro = {},
+  prismals = {},
+  ["rescriptls@latest-master"] = {},
+  rust_analyzer = {},
+  gopls = {},
+  bashls = {
+    settings = {
+      allowlist = { "sh", "bash" },
     },
   },
-  flags = {
-    disable_tabs = true,
-    format_on_save = true,
-  },
-  hooks = {
-    after_setup = function()
-      -- Floatterm config
-      vim.g.floaterm_title = ""
-
-      -- ftdetect
-      vim.cmd [[ autocmd BufNewFile,BufRead *.mdx set filetype=markdown.jsx ]]
-
-      -- Vim common config
-      -- colorcolumn from 80 to the end of the buffer width
-      vim.cmd [[ let &colorcolumn=join(range(81,999),",") ]]
-      --
-      --
-      --   -- Show a different background color for texts that overlength
-      --   vim.cmd [[
-      --     augroup vimrc_autocmds
-      --     au!
-      --         autocmd BufRead * highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-      --         autocmd BufRead * match OverLength /\%81v.*/
-      --     augroup END
-      -- ]]
-      --
-      -- -- Palenightfall theme setup
-      -- require "palenightfall".setup {}
+  tsserver = {
+    on_attach = function(client, bufnr)
+      require "twoslash-queries".attach(client, bufnr)
     end,
   },
 }
+
+M.treesitter = "all"
+
+M.plugins = {
+  "rescript-lang/vim-rescript",
+  "nkrkv/nvim-treesitter-rescript",
+  "devongovett/tree-sitter-highlight",
+  "wakatime/vim-wakatime",
+  "voldikss/vim-floaterm",
+  {
+    "JoosepAlviste/palenightfall.nvim",
+    opts = {},
+  },
+  "mg979/vim-visual-multi",
+  {
+    "marilari88/twoslash-queries.nvim",
+    opts = {
+      multi_line = true,  -- to print types in multi line mode
+      highlight = "Type", -- to set up a highlight group for the virtual text
+    },
+  }
+  -- "Exafunction/codeium.vim",
+}
+
+M.lualine = {
+  options = {
+    -- icons:
+    --           
+    component_separators = { left = "", right = "" },
+    section_separators = { left = " ", right = "" },
+  },
+  sections = {
+    a = { "mode" },
+    b = { "branch" },
+    c = { "filename" },
+    x = { "encoding", "fileformat", "filetype" },
+    y = { "progress" },
+    z = { "location" },
+  },
+}
+
+M.noice = {
+  messages = {
+    view = "mini",
+  },
+}
+
+M.flags = {
+  disable_tabs = true,
+  format_on_save = true,
+}
+
+M.hooks = {
+  after_setup = function()
+    -- Floatterm config
+    vim.g.floaterm_title = ""
+
+    -- ftdetect
+    vim.cmd [[ autocmd BufNewFile,BufRead *.mdx set filetype=markdown.jsx ]]
+
+    -- colorcolumn from 80 to the end of the buffer width
+    vim.cmd [[ let &colorcolumn=join(range(81,999),",") ]]
+
+    -- Set relative number when in normal mode and normal number in insert mode
+    -- Reference: https://vi.stackexchange.com/a/38037
+    vim.cmd [[
+      set number
+      " Toggles relativenumber on and off based on mode
+      augroup numbertoggle
+        " Do not show relative number in these filetypes
+        let ignore = ['dashboard']
+        autocmd!
+        autocmd BufEnter,FocusGained,InsertLeave * if index(ignore, &ft) < 0 | set relativenumber | endif
+        autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+      augroup END
+    ]]
+    --
+    --
+    --   -- Show a different background color for texts that overlength
+    --   vim.cmd [[
+    --     augroup vimrc_autocmds
+    --     au!
+    --         autocmd BufRead * highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+    --         autocmd BufRead * match OverLength /\%81v.*/
+    --     augroup END
+    -- ]]
+  end,
+}
+
+return M
