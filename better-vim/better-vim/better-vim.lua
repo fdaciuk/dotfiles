@@ -120,7 +120,7 @@ M.hooks = {
       " Toggles relativenumber on and off based on mode
       augroup numbertoggle
         " Do not show relative number in these filetypes
-        let ignore = ['dashboard']
+        let ignore = ['dashboard', 'NvimTree', 'floaterm']
         autocmd!
         autocmd BufEnter,FocusGained,InsertLeave * if index(ignore, &ft) < 0 | set relativenumber | endif
         autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
