@@ -107,6 +107,10 @@ M.hooks = {
     -- Floatterm config
     vim.g.floaterm_title = ""
 
+    vim.o.backupdir = "/tmp/.nvim/backup"
+    vim.o.directory = "/tmp/.nvim/swap"
+    vim.o.undodir = "/tmp/.nvim/undo"
+
     -- ftdetect
     vim.cmd [[ autocmd BufNewFile,BufRead *.mdx set filetype=markdown.jsx ]]
 
