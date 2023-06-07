@@ -36,6 +36,7 @@ M.nvim_tree = {
 M.lsps = {
   astro = {},
   prismals = {},
+  tailwindcss = {},
   ["rescriptls@latest-master"] = {},
   rust_analyzer = {},
   gopls = {},
@@ -124,7 +125,7 @@ M.hooks = {
       " Toggles relativenumber on and off based on mode
       augroup numbertoggle
         " Do not show relative number in these filetypes
-        let ignore = ['dashboard', 'NvimTree', 'floaterm', 'TelescopePrompt', 'mason']
+        let ignore = ['dashboard', 'NvimTree', 'floaterm', 'TelescopePrompt', 'mason', 'noice']
         autocmd!
         autocmd BufEnter,FocusGained,InsertLeave * if index(ignore, &ft) < 0 | set relativenumber | endif
         autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
