@@ -13,6 +13,7 @@ M.mappings = {
   custom = {
     ["<leader>t"] = { "<cmd>FloatermNew --width=0.8 --height=0.8<cr>", "Open terminal" },
     ["<c-\\>"] = { "<cmd>FloatermToggle!<cr>", "Toggle Terminal", mode = { "t", "n" } },
+    ["<c-q>"] = { "<cmd>:qa<cr>", "Close all buffers" },
     gp = { ":e#<cr>", "Switch between the lastest two buffers" },
     gd = { "<leader>gd", " Go to definition", remap = true },
     K = { "<leader>cd", " Show documentation", remap = true },
