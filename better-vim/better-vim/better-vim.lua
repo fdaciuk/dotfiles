@@ -12,10 +12,10 @@ M.mappings = {
   leader = ",",
   custom = {
     ["<leader>t"] = { "<cmd>FloatermNew --width=0.8 --height=0.8<cr>", "Open terminal" },
+    ["<c-\\>"] = { "<cmd>FloatermToggle!<cr>", "Toggle Terminal", mode = { "t", "n" } },
     gp = { ":e#<cr>", "Switch between the lastest two buffers" },
     gd = { "<leader>gd", " Go to definition", remap = true },
     K = { "<leader>cd", " Show documentation", remap = true },
-    ["<c-\\>"] = { "<cmd>FloatermToggle!<cr>", "Toggle Terminal", mode = { "t", "n" } },
   },
 }
 
@@ -124,7 +124,7 @@ M.hooks = {
       " Toggles relativenumber on and off based on mode
       augroup numbertoggle
         " Do not show relative number in these filetypes
-        let ignore = ['dashboard', 'NvimTree', 'floaterm']
+        let ignore = ['dashboard', 'NvimTree', 'floaterm', 'TelescopePrompt', 'mason']
         autocmd!
         autocmd BufEnter,FocusGained,InsertLeave * if index(ignore, &ft) < 0 | set relativenumber | endif
         autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
