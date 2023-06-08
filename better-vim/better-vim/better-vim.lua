@@ -103,6 +103,12 @@ M.noice = {
   messages = {
     view = "mini",
   },
+  routes = {
+    {
+      filter = { event = "notify" },
+      opts = { skip = true, title = "NvimTree" },
+    },
+  },
 }
 
 M.flags = {
