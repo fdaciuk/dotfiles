@@ -79,11 +79,7 @@ M.plugins = {
 local terminal_opened_status = function()
   local terminals = vim.inspect(vim.api.nvim_call_function("floaterm#buflist#gather", {}))
   local is_terminal_opened = #terminals > 2
-  if is_terminal_opened then
-    return "󰆍"
-  else
-    return ""
-  end
+  return is_terminal_opened and "󰆍" or ""
 end
 
 M.lualine = {
