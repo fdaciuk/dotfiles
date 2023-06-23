@@ -40,7 +40,6 @@ M.lsps = {
   tailwindcss = {},
   ["rescriptls@latest-master"] = {},
   rust_analyzer = {},
-  gopls = {},
   bashls = {
     settings = {
       allowlist = { "sh", "bash" },
@@ -49,6 +48,11 @@ M.lsps = {
   tsserver = {
     on_attach = function(client, bufnr)
       require "twoslash-queries".attach(client, bufnr)
+      local lsp_ts_utils = require "nvim-lsp-ts-utils"
+      lsp_ts_utils.setup {
+        filter_out_diagnostics_by_code = { 80001 },
+      }
+      lsp_ts_utils.setup_client(client)
     end,
   },
 }
@@ -61,6 +65,7 @@ M.plugins = {
   "devongovett/tree-sitter-highlight",
   "wakatime/vim-wakatime",
   "voldikss/vim-floaterm",
+  "jose-elias-alvarez/nvim-lsp-ts-utils",
   {
     "JoosepAlviste/palenightfall.nvim",
     opts = {},
