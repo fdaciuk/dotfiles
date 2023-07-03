@@ -40,11 +40,6 @@ M.lsps = {
   tailwindcss = {},
   ["rescriptls@latest-master"] = {},
   rust_analyzer = {},
-  bashls = {
-    settings = {
-      allowlist = { "sh", "bash" },
-    },
-  },
   tsserver = {
     on_attach = function(client, bufnr)
       require "twoslash-queries".attach(client, bufnr)
