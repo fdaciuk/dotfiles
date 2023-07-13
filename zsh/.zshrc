@@ -86,6 +86,7 @@ alias l='ls -lah --group-directories-first'
 # Alias for localstack
 alias awslocal='aws --endpoint-url=http://localhost:4566'
 alias mem="command time -f '%M KB peak memory usage'"
+alias code="nvim"
 
 # Fly.io
 alias flyctl='$HOME/.fly/bin/flyctl'
