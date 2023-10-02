@@ -1,0 +1,4 @@
+[bindings]
+keys = [
+  { key = "n", with = "control", action = "ReceiveChar" }
+]

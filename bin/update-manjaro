@@ -1,0 +1,22 @@
+#!/bin/zsh
+set -euo pipefail
+
+case "$1" in
+  "-y")
+    pacman_no_confirm="--noconfirm"
+    pamac_no_confirm="--no-confirm"
+    flatpak_no_confirm="-y"
+  ;;
+  "-h"|"--help")
+    echo "You can use -y option to just update everything without asking questions"
+  ;;
+esac
+
+echo "Updating neovim..."
+nvim --headless "+Lazy! sync" +qa
+echo "\nUpdating system..."
+sudo pacman-mirrors -f 5
+sudo pacman -Syyu $pacman_no_confirm
+pamac update --force-refresh $pamac_no_confirm
+flatpak update $flatpak_no_confirm
+sudo snap refresh
