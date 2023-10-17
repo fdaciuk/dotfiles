@@ -1,6 +1,24 @@
 #!/bin/zsh
 set -euo pipefail
 
+# To ignore some packages to be updated from pamac, you can edit the file /etc/pacman.conf
+# and add the package name in the `IgnorePkg` list.
+# Example:
+# ```
+# IgnorePkg = systemd otherpackage
+# ```
+# Then, you can use `downgrade` if you want to fix any previous version:
+# ```
+# sudo downgrade systemd
+# ```
+#
+# You'll see a bunch of versions to choose.
+#
+# ## My ignored packages
+# <package>
+#   - version pined that has no issues: <version>
+#   - reason: <reason>
+
 case "$1" in
   "-y")
     pacman_no_confirm="--noconfirm"
@@ -10,13 +28,19 @@ case "$1" in
   "-h"|"--help")
     echo "You can use -y option to just update everything without asking questions"
   ;;
+  *)
+    pacman_no_confirm=""
+    pamac_no_confirm=""
+    flatpak_no_confirm=""
+  ;;
 esac
 
 echo "Updating neovim..."
 nvim --headless "+Lazy! sync" +qa
 echo "\nUpdating system..."
+sudo snap refresh
 sudo pacman-mirrors -f 5
 sudo pacman -Syyu $pacman_no_confirm
 pamac update --force-refresh $pamac_no_confirm
 flatpak update $flatpak_no_confirm
-sudo snap refresh
+flatpak update $flatpak_no_confirm
