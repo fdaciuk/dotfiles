@@ -331,9 +331,6 @@ set -g mouse on
 # unbind do `s`. Usar o `p` no lugar
 unbind s
 
-# Impedir que C-d feche um painel
-bind -n C-d run true
-
 # Usar o `p` ao invés do `s` para exibir a arvore de painéis em ordem alfabética
 bind p choose-tree -s -Z -O name
 
