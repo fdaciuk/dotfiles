@@ -1,3 +1,5 @@
+-- local utils = require "better-vim-utils"
+
 local M = {}
 
 M.theme = {
@@ -8,10 +10,38 @@ M.theme = {
   rose_pine = { variant = "moon" },
 }
 
+local function expand_relative_path()
+  vim.cmd [[:let @+ = expand("%")]]
+  print("Relative path copied to clipboard!")
+end
+
+local function expand_full_path()
+  vim.cmd [[:let @+ = expand("%:p")]]
+  print("Full path copied to clipboard!")
+end
+
+M.dashboard = {
+  header = {
+    [[                                                                       ]],
+    [[                                                                     ]],
+    [[       ████ ██████           █████      ██                     ]],
+    [[      ███████████             █████                             ]],
+    [[      █████████ ███████████████████ ███   ███████████   ]],
+    [[     █████████  ███    █████████████ █████ ██████████████   ]],
+    [[    █████████ ██████████ █████████ █████ █████ ████ █████   ]],
+    [[  ███████████ ███    ███ █████████ █████ █████ ████ █████  ]],
+    [[ ██████  █████████████████████ ████ █████ █████ ████ ██████ ]],
+    [[                                                                       ]],
+  }
+}
+
 M.mappings = {
   leader = ",",
   custom = {
     ["<leader>t"] = { "<cmd>FloatermNew --width=0.8 --height=0.8<cr>", "Open terminal" },
+    ["<leader>f"] = { "va}zf", "Create folding" },
+    ["<leader>yf"] = { expand_relative_path, "Copy relative file path" },
+    ["<leader>yn"] = { expand_full_path, "Copy full file path" },
     ["<c-\\>"] = { "<cmd>FloatermToggle!<cr>", "Toggle Terminal", mode = { "t", "n" } },
     ["<c-q>"] = { "<cmd>:qa<cr>", "Close all buffers" },
     gp = { ":e#<cr>", "Switch between the lastest two buffers" },
@@ -25,9 +55,9 @@ M.nvim_tree = {
   update_focused_file = {
     update_cwd = false,
   },
-  view = {
-    adaptive_size = false,
-  },
+  -- view = {
+  --   adaptive_size = false,
+  -- },
   filters = {
     dotfiles = false,
     exclude = { "github.*" },
@@ -37,9 +67,20 @@ M.nvim_tree = {
 M.lsps = {
   astro = {},
   prismals = {},
-  tailwindcss = {},
-  ["rescriptls@latest-master"] = {},
+  tailwindcss = {
+    settings = {
+      tailwindCSS = {
+        experimental = {
+          classRegex = {
+            { "cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]" },
+            { "cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)" },
+          },
+        },
+      },
+    },
+  },
   rust_analyzer = {},
+  rescriptls = {},
   tsserver = {
     on_attach = function(client, bufnr)
       require "twoslash-queries".attach(client, bufnr)
@@ -55,6 +96,7 @@ M.lsps = {
 M.treesitter = "all"
 
 M.plugins = {
+  "f-person/git-blame.nvim",
   "rescript-lang/vim-rescript",
   "nkrkv/nvim-treesitter-rescript",
   "devongovett/tree-sitter-highlight",
@@ -72,7 +114,7 @@ M.plugins = {
       multi_line = true,  -- to print types in multi line mode
       highlight = "Type", -- to set up a highlight group for the virtual text
     },
-  }
+  },
   -- "Exafunction/codeium.vim",
 }
 
@@ -92,6 +134,7 @@ M.lualine = {
   sections = {
     a = { "mode" },
     b = { "branch" },
+    -- c = { utils.statusline.get_file_name, terminal_opened_status },
     c = { "filename", terminal_opened_status },
     x = { "encoding", "fileformat", "filetype" },
     y = { "progress" },
@@ -111,6 +154,8 @@ M.noice = {
   },
 }
 
+M.unload_plugins = { "snippets", "noice" }
+
 M.flags = {
   disable_tabs = true,
   format_on_save = true,
@@ -124,6 +169,9 @@ M.hooks = {
     vim.o.backupdir = "/tmp/.nvim/backup"
     vim.o.directory = "/tmp/.nvim/swap"
     vim.o.undodir = "/tmp/.nvim/undo"
+
+    -- do not show ~ for blank lines
+    vim.opt.fillchars = { eob = ' ' }
 
     -- ftdetect
     vim.cmd [[ autocmd BufNewFile,BufRead *.mdx set filetype=markdown.jsx ]]
@@ -144,15 +192,16 @@ M.hooks = {
         autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
       augroup END
     ]]
-    --
-    --
-    --   -- Show a different background color for texts that overlength
-    --   vim.cmd [[
-    --     augroup vimrc_autocmds
-    --     au!
-    --         autocmd BufRead * highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-    --         autocmd BufRead * match OverLength /\%81v.*/
-    --     augroup END
+
+    vim.o.wildignore = ""
+
+    -- -- Show a different background color for texts that overlength
+    -- vim.cmd [[
+    --   augroup vimrc_autocmds
+    --   au!
+    --       autocmd BufRead * highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+    --       autocmd BufRead * match OverLength /\%81v.*/
+    --   augroup END
     -- ]]
   end,
 }
