@@ -79,8 +79,6 @@ alias please='sudo'
 alias vim='nvim'
 alias vi='vim'
 alias cat='bat'
-alias update='yay -Syua && vim +PlugUpdate +qall && vim +CocUpdate +qall'
-alias update-first='flatpak update -y && sudo snap refresh'
 alias copy='rsync -a --stats --progress'
 alias l='ls -lah --group-directories-first'
 # Alias for localstack
@@ -91,6 +89,10 @@ alias code="nvim"
 # Fly.io
 alias flyctl='$HOME/.fly/bin/flyctl'
 
+# Protontricks
+alias protontricks='flatpak run com.github.Matoking.protontricks'
+
+# NVM (Node.js version manager)
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -135,7 +137,9 @@ export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/bin:$PATH
 
 # Add Yarn globals on $PATH
-export PATH=$PATH:$(yarn global bin)
+# export PATH=$PATH:$(yarn global bin)
+export PATH=$PATH:/usr/bin/yarn
+
 
 # Deno
 export DENO_INSTALL="$HOME/.deno"
@@ -229,9 +233,9 @@ function alsa-profile () {
   alsactl --file /media/storage/code/00-opensource/dotfiles/alsamixer-profiles/$1.state restore
 }
 
-# Deletar branches diferente de main, staging e dev
+# Deletar branches diferente de main, staging e dev / develop
 function delete-branches () {
-  for i in $(git branch | grep -v -E -w '(main|staging|dev)$'); do
+  for i in $(git branch | grep -v -E -w '(main|staging|dev|develop)$'); do
     git branch -D "$i"
   done
 }
@@ -251,6 +255,10 @@ function close-prs-jsninja () {
 
 function cleanup-memory () {
   sudo sysctl -w vm.drop_caches=3
+}
+
+function kill-discord () {
+  kill -9 $(ps aux | rg discord | head -n 1 | awk '{print $2}')
 }
 
 # get time in milisseconds
@@ -289,14 +297,23 @@ function make-node () {
 }
 
 # bun completions
-[ -s "/home/fernando/.bun/_bun" ] && source "/home/fernando/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # bun
-export BUN_INSTALL="/home/fernando/.bun"
+export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Deta
-export PATH="/home/fernando/.deta/bin:$PATH"
+export PATH="$HOME/.deta/bin:$PATH"
 
 # diff-so-fancy
 export PATH="/media/storage/code/00-opensource/diff-so-fancy:$PATH"
+
+# # Volta (Node.js version manager)
+# export VOLTA_HOME="$HOME/.volta"
+# export PATH="$VOLTA_HOME/bin:$PATH"
+# # Volta completions (not working, throwing an error)
+# # source <(volta completions zsh)
+
+# bun completions
+[ -s "/home/fernando/.bun/_bun" ] && source "/home/fernando/.bun/_bun"
