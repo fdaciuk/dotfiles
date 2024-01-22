@@ -154,9 +154,6 @@ export PATH="$HOME/.avm/bin:$PATH"
 # Histórico do iex
 export ERL_AFLAGS="-kernel shell_history enabled"
 
-# MXErgo Scroll Config - Mouse configuration
-xinput set-prop pointer:"Logitech MX Ergo" "libinput Scroll Method Enabled" 0, 0, 1 && xinput set-prop pointer:"Logitech MX Ergo" "libinput Button Scrolling Button" 2
-
 # My functions
 function push () {
   git push origin $(git branch | grep \* | sed 's/\*\s//') $@
@@ -295,6 +292,15 @@ function make-node () {
   yarn tsc --init >> /dev/null
   echo "Finished! Run yarn dev to start sucrase server."
 }
+
+function mx-ergo-config () {
+# MXErgo Scroll Config - Mouse configuration
+xinput set-prop pointer:"Logitech MX Ergo" "libinput Scroll Method Enabled" 0, 0, 1 && xinput set-prop pointer:"Logitech MX Ergo" "libinput Button Scrolling Button" 2
+}
+
+if [ -n "$(xinput | rg "Logitech MX Ergo")" ]; then
+  mx-ergo-config
+fi
 
 # bun completions
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
