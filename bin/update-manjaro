@@ -35,7 +35,9 @@ case "$1" in
   ;;
 esac
 
-echo "Updating neovim..."
+echo "Updating Oh My ZSH..."
+omz update
+echo "Updating neovim plugins..."
 nvim --headless "+Lazy! sync" +qa
 echo "\nUpdating system..."
 sudo snap refresh
