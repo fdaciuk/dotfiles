@@ -279,6 +279,15 @@ M.noice = {
   },
 }
 
+M.telescope = {
+  pickers = {
+    buffers = {
+      ignore_current_buffer = true,
+      sort_lastused = true,
+    },
+  },
+}
+
 M.unload_plugins = { "snippets", "noice" }
 
 M.flags = {
