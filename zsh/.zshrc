@@ -78,7 +78,7 @@ source $ZSH/oh-my-zsh.sh
 alias please='sudo'
 alias vim='nvim'
 alias vi='vim'
-alias cat='bat'
+alias cat=$(command -v 'batcat' || command -v 'bat')
 alias copy='rsync -a --stats --progress'
 alias l='ls -lah --group-directories-first'
 # Alias for localstack
