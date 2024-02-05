@@ -294,12 +294,14 @@ function make-node () {
 }
 
 function mx-ergo-config () {
-# MXErgo Scroll Config - Mouse configuration
-xinput set-prop pointer:"Logitech MX Ergo" "libinput Scroll Method Enabled" 0, 0, 1 && xinput set-prop pointer:"Logitech MX Ergo" "libinput Button Scrolling Button" 2
+  # MXErgo Scroll Config - Mouse configuration
+  xinput set-prop pointer:$1 "libinput Scroll Method Enabled" 0, 0, 1 && xinput set-prop pointer:$1 "libinput Button Scrolling Button" 2
 }
 
 if [ -n "$(xinput | rg "Logitech MX Ergo")" ]; then
-  mx-ergo-config
+  mx-ergo-config "Logitech MX Ergo"
+elif [ -n "$(xinput | rg "MX Ergo")" ]; then
+  mx-ergo-config "MX Ergo"
 fi
 
 # bun completions
