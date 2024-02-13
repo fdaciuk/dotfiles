@@ -35,8 +35,6 @@ case "$1" in
   ;;
 esac
 
-echo "Updating Oh My ZSH..."
-omz update
 echo "Updating neovim plugins..."
 nvim --headless "+Lazy! sync" +qa
 echo "\nUpdating system..."
@@ -46,3 +44,5 @@ sudo pacman -Syyu $pacman_no_confirm
 pamac update --force-refresh $pamac_no_confirm
 flatpak update $flatpak_no_confirm
 flatpak update $flatpak_no_confirm
+echo "Updating Oh my ZSH..."
+zsh -ic "omz update"
