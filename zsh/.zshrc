@@ -263,6 +263,11 @@ function ms () {
   TIMEFMT=%*E; time $@
 }
 
+# muc = most used commands
+function muc () {
+  history | awk '{print $2}' | sort | uniq -c | sort -rn | head -50
+}
+
 function rescripts () {
   npm set-script rescript:dev "rescript build -w"
   npm set-script rescript:build rescript

@@ -22,3 +22,4 @@ zsh/.zshenv
 nginx-lives.conf
 
 better-vim/better-vim/.bettervimrc
+better-vim/better-vim/.bettervim.json
