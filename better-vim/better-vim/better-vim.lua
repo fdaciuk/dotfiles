@@ -3,8 +3,9 @@
 local M = {}
 
 M.theme = {
-  -- name = "palenightfall",
+  -- name = "palenight",
   name = "catppuccin",
+  -- name = "ayu",
   catppuccin_flavour = "frappe",
   ayucolor = "dark",
   rose_pine = { variant = "moon" },
@@ -61,6 +62,25 @@ M.dashboard = {
     [[⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⣿ BetterGym ⣿]],
     [[⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]],
     [[                                     ]],
+    --
+    --
+    -- shrek
+    -- [[⢀⡴⠑⡄⠀⠀⠀⠀⠀⠀⠀⣀⣀⣤⣤⣤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀]],
+    -- [[⠸⡇⠀⠿⡀⠀⠀⠀⣀⡴⢿⣿⣿⣿⣿⣿⣿⣿⣷⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀]],
+    -- [[⠀⠀⠀⠀⠑⢄⣠⠾⠁⣀⣄⡈⠙⣿⣿⣿⣿⣿⣿⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀]],
+    -- [[⠀⠀⠀⠀⢀⡀⠁⠀⠀⠈⠙⠛⠂⠈⣿⣿⣿⣿⣿⠿⡿⢿⣆⠀⠀⠀⠀⠀⠀⠀]],
+    -- [[⠀⠀⠀⢀⡾⣁⣀⠀⠴⠂⠙⣗⡀⠀⢻⣿⣿⠭⢤⣴⣦⣤⣹⠀⠀⠀⢀⢴⣶⣆]],
+    -- [[⠀⠀⢀⣾⣿⣿⣿⣷⣮⣽⣾⣿⣥⣴⣿⣿⡿⢂⠔⢚⡿⢿⣿⣦⣴⣾⠁⠸⣼⡿]],
+    -- [[⠀⢀⡞⠁⠙⠻⠿⠟⠉⠀⠛⢹⣿⣿⣿⣿⣿⣌⢤⣼⣿⣾⣿⡟⠉⠀⠀⠀⠀⠀]],
+    -- [[⠀⣾⣷⣶⠇⠀⠀⣤⣄⣀⡀⠈⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀]],
+    -- [[⠀⠉⠈⠉⠀⠀⢦⡈⢻⣿⣿⣿⣶⣶⣶⣶⣤⣽⡹⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀]],
+    -- [[⠀⠀⠀⠀⠀⠀⠀⠉⠲⣽⡻⢿⣿⣿⣿⣿⣿⣿⣷⣜⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀]],
+    -- [[⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣷⣶⣮⣭⣽⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀]],
+    -- [[⠀⠀⠀⠀⠀⠀⣀⣀⣈⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇⠀      ]],
+    -- [[⠀⠀⠀⠀⠀⠀⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀   ]],
+    -- [[⠀⠀⠀⠀⠀⠀⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀ ]],
+    -- [[⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠻⠿⠿⠿⠿⠛⠉            ]],
+    -- [[                              ]],
     --
     -- jimmy neutron
     -- [[⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠄⠄⠄⠄⠄⠘⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]],
@@ -259,6 +279,16 @@ M.plugins = {
       highlight = "Type", -- to set up a highlight group for the virtual text
     },
   },
+  {
+    "lukas-reineke/virt-column.nvim",
+    opts = {
+      char = "│",
+      virtcolumn = "+1,80",
+      exclude = {
+        filetypes = { "dashboard" },
+      },
+    },
+  },
   -- "Exafunction/codeium.vim",
 }
 
@@ -312,6 +342,7 @@ M.unload_plugins = { "snippets", "noice" }
 M.flags = {
   disable_tabs = true,
   format_on_save = true,
+  experimental_tsserver = true,
 }
 
 M.hooks = {
@@ -329,9 +360,6 @@ M.hooks = {
     -- ftdetect
     vim.cmd [[ autocmd BufNewFile,BufRead *.mdx set filetype=markdown.jsx ]]
 
-    -- colorcolumn from 80 to the end of the buffer width
-    vim.cmd [[ let &colorcolumn=join(range(81,999),",") ]]
-
     -- Set relative number when in normal mode and normal number in insert mode
     -- Reference: https://vi.stackexchange.com/a/38037
     vim.cmd [[
@@ -348,6 +376,11 @@ M.hooks = {
 
     vim.o.wildignore = ""
 
+    -- colorcolumn1
+    -- -- colorcolumn from 80 to the end of the buffer width
+    -- vim.cmd [[ let &colorcolumn=join(range(81,999),",") ]]
+
+    -- colorcolumn2
     -- -- Show a different background color for texts that overlength
     -- vim.cmd [[
     --   augroup vimrc_autocmds
