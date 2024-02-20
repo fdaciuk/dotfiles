@@ -41,6 +41,7 @@ M.mappings = {
     ["<leader>br"] = { "<Plug>RestNvim", "Run the request under the cursor" },
     ["<leader>bp"] = { "<Plug>RestNvimPreview", "Preview the request cURL command" },
     ["<leader>ba"] = { "<Plug>RestNvimLast", "Re-run the last request" },
+    ["<leader>gb"] = { "<cmd>GitBlameToggle<cr>", "Toggle Git Blame" },
   },
 }
 
@@ -139,7 +140,12 @@ M.plugins = {
       })
     end,
   },
-  "f-person/git-blame.nvim",
+  {
+    "f-person/git-blame.nvim",
+    opts = {
+      enabled = false,
+    },
+  },
   "rescript-lang/vim-rescript",
   "nkrkv/nvim-treesitter-rescript",
   "devongovett/tree-sitter-highlight",
