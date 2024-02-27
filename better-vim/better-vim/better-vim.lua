@@ -174,6 +174,10 @@ M.plugins = {
       },
     },
   },
+  {
+    "dmmulroy/ts-error-translator.nvim",
+    opts = {},
+  },
   -- "Exafunction/codeium.vim",
 }
 
