@@ -35,6 +35,8 @@ case "$1" in
   ;;
 esac
 
+echo "Updating Rust..."
+rustup update
 echo "Updating neovim plugins..."
 nvim --headless "+Lazy! sync" +qa
 echo "\nUpdating system..."
