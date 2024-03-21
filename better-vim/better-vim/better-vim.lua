@@ -214,18 +214,30 @@ M.hooks = {
     vim.cmd [[ autocmd BufNewFile,BufRead *.mdx set filetype=markdown.jsx ]]
 
     -- Set relative number when in normal mode and normal number in insert mode
-    -- Reference: https://vi.stackexchange.com/a/38037
-    vim.cmd [[
-      set number
-      " Toggles relativenumber on and off based on mode
-      augroup numbertoggle
-        " Do not show relative number in these filetypes
-        let ignore = ['dashboard', 'NvimTree', 'floaterm', 'TelescopePrompt', 'mason', 'noice', 'httpResult', 'help']
-        autocmd!
-        autocmd BufEnter,FocusGained,InsertLeave * if index(ignore, &ft) < 0 | set relativenumber | endif
-        autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-      augroup END
-    ]]
+    -- Code from plugin numbertoggle:
+    -- https://github.com/sitiom/nvim-numbertoggle/blob/main/plugin/numbertoggle.lua
+    local augroup = vim.api.nvim_create_augroup("numbertoggle", {})
+
+    vim.api.nvim_create_autocmd({ "BufEnter", "FocusGained", "InsertLeave", "CmdlineLeave", "WinEnter" }, {
+      pattern = "*",
+      group = augroup,
+      callback = function()
+        if vim.o.nu and vim.api.nvim_get_mode().mode ~= "i" then
+          vim.opt.relativenumber = true
+        end
+      end,
+    })
+
+    vim.api.nvim_create_autocmd({ "BufLeave", "FocusLost", "InsertEnter", "CmdlineEnter", "WinLeave" }, {
+      pattern = "*",
+      group = augroup,
+      callback = function()
+        if vim.o.nu then
+          vim.opt.relativenumber = false
+          vim.cmd "redraw"
+        end
+      end,
+    })
 
     vim.o.wildignore = ""
 
