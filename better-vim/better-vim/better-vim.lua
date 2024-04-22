@@ -41,6 +41,9 @@ M.mappings = {
     ["<leader>br"] = { "<cmd>Rest run<cr>", "Run the request under the cursor" },
     ["<leader>ba"] = { "<cmd>Rest run last<cr>", "Re-run the last request" },
     ["<leader>gb"] = { "<cmd>GitBlameToggle<cr>", "Toggle Git Blame" },
+    -- Naming mappings groups
+    ["<leader>b"] = { name = "HTTP", _ = "which_key_ignore" },
+    ["<leader>y"] = { name = "Yank Path", _ = "which_key_ignore" },
   },
 }
 
