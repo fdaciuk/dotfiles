@@ -1,7 +1,7 @@
--- local utils = require "better-vim-utils"
-local dashboard_headers = require "better-vim.dashboard-headers"
-
 local M = {}
+
+local dashboard_headers = require "better-vim.dashboard-headers"
+local utils = require "better-vim-utils"
 
 M.theme = {
   -- name = "palenight",
@@ -93,20 +93,22 @@ M.lsps = {
 M.treesitter = "all"
 
 M.plugins = {
-  {
-    "vhyrro/luarocks.nvim",
-    opts = {
-      rocks = { "lua-curl", "nvim-nio", "mimetypes", "xml2lua" },
-    },
-  },
-  {
-    "rest-nvim/rest.nvim",
-    ft = "http",
-    dependencies = { "luarocks.nvim" },
-    config = function()
-      require("rest-nvim").setup {}
-    end,
-  },
+  -- {
+  --   "vhyrro/luarocks.nvim",
+  --   priority = 10000,
+  --   config = true,
+  --   opts = {
+  --     rocks = { "lua-curl", "nvim-nio", "mimetypes", "xml2lua" },
+  --   },
+  -- },
+  -- {
+  --   "rest-nvim/rest.nvim",
+  --   ft = "http",
+  --   dependencies = { "luarocks.nvim" },
+  --   config = function()
+  --     require("rest-nvim").setup {}
+  --   end,
+  -- },
   {
     "f-person/git-blame.nvim",
     opts = {
@@ -119,10 +121,7 @@ M.plugins = {
   "wakatime/vim-wakatime",
   "voldikss/vim-floaterm",
   "jose-elias-alvarez/nvim-lsp-ts-utils",
-  {
-    "JoosepAlviste/palenightfall.nvim",
-    opts = {},
-  },
+  utils.should_load_theme("palenightfall", { "JoosepAlviste/palenightfall.nvim" }),
   "mg979/vim-visual-multi",
   {
     "marilari88/twoslash-queries.nvim",
