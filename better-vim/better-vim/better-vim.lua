@@ -183,11 +183,22 @@ M.noice = {
   },
 }
 
+local telescope_file_ignore_patterns = { "node_modules", ".git/" }
 M.telescope = {
   pickers = {
     buffers = {
       ignore_current_buffer = true,
       sort_lastused = true,
+    },
+    live_grep = {
+      file_ignore_patterns = telescope_file_ignore_patterns,
+      additional_args = function(_)
+        return { "--hidden" }
+      end,
+    },
+    find_files = {
+      file_ignore_patterns = telescope_file_ignore_patterns,
+      hidden = true,
     },
   },
 }
