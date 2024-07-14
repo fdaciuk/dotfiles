@@ -1,3 +1,5 @@
+# run 'cut -c3- ~/.tmux.conf | sh -s _apply_configuration'
+
 # exit the script if any statement returns a non-true return value
 set -e
 

@@ -39,7 +39,6 @@ const CustomStatusLeft = () => {
     <Box>
       <SessionName icon="〣" />
     </Box>
-
   )
 }
 
@@ -53,6 +52,7 @@ const Clima = () => {
       </WidgetIcon>
       <WidgetLabel>
         {`#(${request} | cut -d ' ' -f 3; sleep ${timeToUpdate})`}
+        {`#(${request} | cut -d ' ' -f 4; sleep ${timeToUpdate})`}
       </WidgetLabel>
     </Widget>
   )
@@ -60,7 +60,7 @@ const Clima = () => {
 
 const CustomStatusRight = () => (
   <Box>
-    {/* <Clima /> */}
+    <Clima />
     <Date format={`${tmux.globals.abbreviated_day}, ${tmux.globals.day} ${tmux.globals.abbreviated_month}`} />
     <Clock />
     <Hostname />
