@@ -14,6 +14,10 @@ const Zoom = () => {
   return "#{?window_zoomed_flag,⛶,}"
 }
 
+const Prefix = () => {
+  return "#{?client_prefix,⌨ ,}"
+}
+
 const Ghost = () => (
   <Box>
     <WindowBellFlag />
@@ -60,6 +64,7 @@ const Clima = () => {
 
 const CustomStatusRight = () => (
   <Box>
+    <Prefix />
     <Clima />
     <Date format={`${tmux.globals.abbreviated_day}, ${tmux.globals.day} ${tmux.globals.abbreviated_month}`} />
     <Clock />
