@@ -11,11 +11,11 @@ const WindowBellFlag = () => {
   return "#{?window_bell_flag,🔔,}"
 }
 const Zoom = () => {
-  return "#{?window_zoomed_flag,⛶,}"
+  return "#{?window_zoomed_flag, ⛶,}"
 }
 
 const Prefix = () => {
-  return "#{?client_prefix,⌨ ,}"
+  return "#{?client_prefix,⌨  ,}"
 }
 
 const Ghost = () => (
@@ -33,7 +33,7 @@ const Window = ({ type, number, name }: WindowConfig) => {
       bg={type === 'active' ? theme.primary : theme.background}
       fg={type === 'active' ? theme.background : theme.foreground}
     >
-      {number}::{name} <Ghost />
+      {number}::{name}<Ghost />
     </Box>
   )
 }
