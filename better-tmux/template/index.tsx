@@ -6,16 +6,17 @@ import {
   tmux,
 } from 'better-tmux'
 import { Clock, Date, Hostname, SessionName, Widget, WidgetIcon, WidgetLabel } from 'better-tmux/widgets'
+import { icons } from "./shared"
 
 const WindowBellFlag = () => {
-  return "#{?window_bell_flag,🔔,}"
+  return `#{?window_bell_flag,${icons.bell},}`
 }
 const Zoom = () => {
-  return "#{?window_zoomed_flag, ⛶,}"
+  return `#{?window_zoomed_flag, ${icons.zoom},}`
 }
 
 const Prefix = () => {
-  return "#{?client_prefix,⌨  ,}"
+  return `#{?client_prefix,${icons.prefix}  ,}`
 }
 
 const Ghost = () => (
@@ -29,7 +30,7 @@ const Window = ({ type, number, name }: WindowConfig) => {
   const theme = useTheme()
   return (
     <Box
-      padding={1}
+      padding={2}
       bg={type === 'active' ? theme.primary : theme.background}
       fg={type === 'active' ? theme.background : theme.foreground}
     >
