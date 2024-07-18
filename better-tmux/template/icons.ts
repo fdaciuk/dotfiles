@@ -1,7 +1,15 @@
 import type { Icons } from "./types"
+import { machine } from "./shared"
 
-export const icons: Icons = {
+const defaultIcons: Icons = {
   zoom: "⛶",
   bell: "🔔",
   prefix: "⌨",
 }
+
+const ubuntuIcons: Icons = {
+  ...defaultIcons,
+  zoom: "",
+}
+
+export const icons = machine === "pc" ? defaultIcons : ubuntuIcons

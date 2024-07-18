@@ -6,7 +6,7 @@ import {
   tmux,
 } from 'better-tmux'
 import { Clock, Date, Hostname, SessionName, Widget, WidgetIcon, WidgetLabel } from 'better-tmux/widgets'
-import { icons } from "./shared"
+import { icons } from "./icons"
 
 const WindowBellFlag = () => {
   return `#{?window_bell_flag,${icons.bell},}`

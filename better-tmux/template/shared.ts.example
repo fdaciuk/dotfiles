@@ -1,4 +1,2 @@
 import type { Machine } from "./types"
 export const machine: Machine = "pc"
-
-export * from "./icons"
