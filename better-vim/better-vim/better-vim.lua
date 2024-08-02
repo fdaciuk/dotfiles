@@ -4,9 +4,12 @@ local dashboard_headers = require "better-vim.dashboard-headers"
 local utils = require "better-vim-utils"
 
 M.theme = {
-  -- name = "palenight",
+  -- name = "onedark",
   name = "catppuccin",
+  -- name = "palenight",
   -- name = "ayu",
+  -- name = "nightfox",
+
   catppuccin_flavour = "frappe",
   ayucolor = "dark",
   rose_pine = { variant = "moon" },
@@ -78,6 +81,7 @@ M.lsps = {
   },
   rust_analyzer = {},
   rescriptls = {},
+  terraformls = {},
   tsserver = {
     on_attach = function(client, bufnr)
       require "twoslash-queries".attach(client, bufnr)
@@ -88,6 +92,10 @@ M.lsps = {
       lsp_ts_utils.setup_client(client)
     end,
   },
+}
+
+M.formatters = {
+  terraform_fmt = {},
 }
 
 M.treesitter = "all"
@@ -116,7 +124,7 @@ M.plugins = {
     },
   },
   "rescript-lang/vim-rescript",
-  "nkrkv/nvim-treesitter-rescript",
+  "rescript-lang/tree-sitter-rescript",
   "devongovett/tree-sitter-highlight",
   "wakatime/vim-wakatime",
   "voldikss/vim-floaterm",
@@ -158,7 +166,8 @@ M.lualine = {
     -- icons:
     --           
     component_separators = { left = "", right = "" },
-    section_separators = { left = " ", right = "" },
+    -- section_separators = { left = " ", right = "" },
+    section_separators = { left = " ", right = "" },
   },
   sections = {
     a = { "mode" },
@@ -223,8 +232,8 @@ M.hooks = {
     -- do not show ~ for blank lines
     vim.opt.fillchars = { eob = ' ' }
 
-    -- ftdetect
-    vim.cmd [[ autocmd BufNewFile,BufRead *.mdx set filetype=markdown.jsx ]]
+    -- -- ftdetect
+    -- vim.cmd [[ autocmd BufNewFile,BufRead *.mdx set filetype=markdown.jsx ]]
 
     -- Set relative number when in normal mode and normal number in insert mode
     -- Code from plugin numbertoggle:
@@ -253,6 +262,26 @@ M.hooks = {
     })
 
     vim.o.wildignore = ""
+
+    -- Syntax highlight support for MDX
+    vim.filetype.add({
+      extension = {
+        mdx = 'mdx',
+      }
+    })
+    vim.treesitter.language.register('markdown', 'mdx')
+    vim.treesitter.language.register('bash', 'sh')
+    -- local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
+    -- parser_config.rescript = {
+    --   install_info = {
+    --     url = "https://github.com/rescript-lang/tree-sitter-rescript",
+    --     branch = "main",
+    --     files = { "src/scanner.c" },
+    --     generate_requires_npm = false,
+    --     requires_generate_from_grammar = true,
+    --     use_makefile = true, -- macOS specific instruction
+    --   },
+    -- }
 
     -- colorcolumn1
     -- -- colorcolumn from 80 to the end of the buffer width
