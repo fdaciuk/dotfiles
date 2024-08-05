@@ -152,6 +152,7 @@ M.plugins = {
     "dmmulroy/ts-error-translator.nvim",
     opts = {},
   },
+  "hashivim/vim-terraform",
   -- "Exafunction/codeium.vim",
 }
 
