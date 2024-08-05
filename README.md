@@ -15,7 +15,7 @@ I'm using [Better Vim](https://bettervim.com) ❤️
 
 ## Tmux theme
 
-I'm using [oh-my-tmux](https://github.com/gpakosz/.tmux)
+I'm using [Better Tmux](https://github.com/better-vim/better-tmux)
 
 ## Gnome Terminal
 

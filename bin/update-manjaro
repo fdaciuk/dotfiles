@@ -37,8 +37,6 @@ esac
 
 echo "Updating Rust..."
 rustup update
-echo "Updating neovim plugins..."
-nvim --headless "+Lazy! sync" +qa
 echo "\nUpdating system..."
 sudo snap refresh
 sudo pacman-mirrors -f 5
