@@ -32,21 +32,22 @@ M.dashboard = {
 M.mappings = {
   leader = ",",
   custom = {
-    ["<leader>t"] = { "<cmd>FloatermNew --width=0.8 --height=0.8<cr>", "Open terminal" },
-    ["<leader>f"] = { "va}zf", "Create folding" },
-    ["<leader>yf"] = { expand_relative_path, "Copy relative file path" },
-    ["<leader>yn"] = { expand_full_path, "Copy full file path" },
-    ["<c-\\>"] = { "<cmd>FloatermToggle!<cr>", "Toggle Terminal", mode = { "t", "n" } },
-    ["<c-q>"] = { "<cmd>:qa<cr>", "Close all buffers" },
-    gp = { ":e#<cr>", "Switch between the lastest two buffers" },
-    gd = { "<leader>gd", " Go to definition", remap = true },
-    K = { "<leader>cd", " Show documentation", remap = true },
-    ["<leader>br"] = { "<cmd>Rest run<cr>", "Run the request under the cursor" },
-    ["<leader>ba"] = { "<cmd>Rest run last<cr>", "Re-run the last request" },
-    ["<leader>gb"] = { "<cmd>GitBlameToggle<cr>", "Toggle Git Blame" },
+    { "<leader>t", "<cmd>FloatermNew --width=0.8 --height=0.8<cr>", desc = "Open terminal" },
+    { "<leader>f", "va}zf", desc = "Create folding" },
+    { "<leader>yf", expand_relative_path, desc = "Copy relative file path" },
+    { "<leader>yn", expand_full_path, desc = "Copy full file path" },
+    { "<c-\\>", "<cmd>FloatermToggle!<cr>", desc = "Toggle Terminal", mode = { "t", "n" } },
+    { "<c-q>", "<cmd>:qa<cr>", desc = "Close all buffers" },
+    { "gp", ":e#<cr>", desc = "Switch between the lastest two buffers" },
+    { "gd", "<leader>gd", desc = " Go to definition", remap = true },
+    { "K", "<leader>cd", desc = " Show documentation", remap = true },
+    { "<leader>br", "<cmd>Rest run<cr>", desc = "Run the request under the cursor" },
+    { "<leader>ba", "<cmd>Rest run last<cr>", desc = "Re-run the last request" },
+    { "<leader>gb", "<cmd>GitBlameToggle<cr>", desc = "Toggle Git Blame" },
+    { "[c", function() require("treesitter-context").go_to_context(vim.v.count1) end, desc = "Jumping to context (upwards)", silent = true },
     -- Naming mappings groups
-    ["<leader>b"] = { name = "HTTP", _ = "which_key_ignore" },
-    ["<leader>y"] = { name = "Yank Path", _ = "which_key_ignore" },
+    { "<leader>b", group = "HTTP" },
+    { "<leader>y", group = "Yank Path" },
   },
 }
 
@@ -65,6 +66,7 @@ M.nvim_tree = {
 }
 
 M.lsps = {
+  biome = {},
   astro = {},
   prismals = {},
   tailwindcss = {
@@ -101,6 +103,7 @@ M.formatters = {
 M.treesitter = "all"
 
 M.plugins = {
+  { "nvim-treesitter/nvim-treesitter-context" },
   -- {
   --   "vhyrro/luarocks.nvim",
   --   priority = 10000,
@@ -272,6 +275,7 @@ M.hooks = {
     })
     vim.treesitter.language.register('markdown', 'mdx')
     vim.treesitter.language.register('bash', 'sh')
+
     -- local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
     -- parser_config.rescript = {
     --   install_info = {
