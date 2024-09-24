@@ -48,20 +48,30 @@ const CustomStatusLeft = () => {
 }
 
 const Clima = () => {
-  const request = `bunx clima curitiba?format=1`
-  const timeToUpdate = "900"
   return (
     <Widget>
-      <WidgetIcon>
-        {`#(${request} | cut -d ' ' -f 1; sleep ${timeToUpdate})`}
-      </WidgetIcon>
       <WidgetLabel>
-        {`#(${request} | cut -d ' ' -f 3; sleep ${timeToUpdate})`}
-        {`#(${request} | cut -d ' ' -f 4; sleep ${timeToUpdate})`}
+        {`#(bunx clima curitiba?format=1; sleep 900)`}
       </WidgetLabel>
     </Widget>
   )
 }
+
+// const Clima = () => {
+//   const request = `bunx clima curitiba?format=1`
+//   const timeToUpdate = "900"
+//   return (
+//     <Widget>
+//       <WidgetIcon>
+//         {`#(${request} | cut -d ' ' -f 1; sleep ${timeToUpdate})`}
+//       </WidgetIcon>
+//       <WidgetLabel>
+//         {`#(${request} | cut -d ' ' -f 3; sleep ${timeToUpdate})`}
+//         {`#(${request} | cut -d ' ' -f 4; sleep ${timeToUpdate})`}
+//       </WidgetLabel>
+//     </Widget>
+//   )
+// }
 
 const CustomStatusRight = () => (
   <Box>
