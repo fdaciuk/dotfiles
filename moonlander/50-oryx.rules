@@ -1,2 +1,0 @@
-# Rule for the Moonlander
-SUBSYSTEM=="usb", ATTR{idVendor}=="3297", ATTR{idProduct}=="1969", GROUP="plugdev"

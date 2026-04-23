@@ -1,0 +1,2511 @@
+state.Loopback {
+	control.1 {
+		iface PCM
+		name 'PCM Rate Shift 100000'
+		value 100000
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '80000 - 120000 (step 1)'
+		}
+	}
+	control.2 {
+		iface PCM
+		name 'PCM Notify'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.3 {
+		iface PCM
+		name 'PCM Slave Active'
+		value false
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.4 {
+		iface PCM
+		name 'PCM Slave Format'
+		value 2
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '0 - 52 (step 1)'
+		}
+	}
+	control.5 {
+		iface PCM
+		name 'PCM Slave Rate'
+		value 48000
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '0 - 192000 (step 1)'
+		}
+	}
+	control.6 {
+		iface PCM
+		name 'PCM Slave Channels'
+		value 2
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '1 - 1024 (step 1)'
+		}
+	}
+	control.7 {
+		iface PCM
+		name 'PCM Slave Access Mode'
+		value Interleaved
+		comment {
+			access read
+			type ENUMERATED
+			count 1
+			item.0 Interleaved
+			item.1 Non-interleaved
+		}
+	}
+	control.8 {
+		iface PCM
+		subdevice 1
+		name 'PCM Rate Shift 100000'
+		value 100000
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '80000 - 120000 (step 1)'
+		}
+	}
+	control.9 {
+		iface PCM
+		subdevice 1
+		name 'PCM Notify'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.10 {
+		iface PCM
+		subdevice 1
+		name 'PCM Slave Active'
+		value false
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.11 {
+		iface PCM
+		subdevice 1
+		name 'PCM Slave Format'
+		value 2
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '0 - 52 (step 1)'
+		}
+	}
+	control.12 {
+		iface PCM
+		subdevice 1
+		name 'PCM Slave Rate'
+		value 48000
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '0 - 192000 (step 1)'
+		}
+	}
+	control.13 {
+		iface PCM
+		subdevice 1
+		name 'PCM Slave Channels'
+		value 2
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '1 - 1024 (step 1)'
+		}
+	}
+	control.14 {
+		iface PCM
+		subdevice 1
+		name 'PCM Slave Access Mode'
+		value Interleaved
+		comment {
+			access read
+			type ENUMERATED
+			count 1
+			item.0 Interleaved
+			item.1 Non-interleaved
+		}
+	}
+	control.15 {
+		iface PCM
+		subdevice 2
+		name 'PCM Rate Shift 100000'
+		value 100000
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '80000 - 120000 (step 1)'
+		}
+	}
+	control.16 {
+		iface PCM
+		subdevice 2
+		name 'PCM Notify'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.17 {
+		iface PCM
+		subdevice 2
+		name 'PCM Slave Active'
+		value false
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.18 {
+		iface PCM
+		subdevice 2
+		name 'PCM Slave Format'
+		value 2
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '0 - 52 (step 1)'
+		}
+	}
+	control.19 {
+		iface PCM
+		subdevice 2
+		name 'PCM Slave Rate'
+		value 48000
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '0 - 192000 (step 1)'
+		}
+	}
+	control.20 {
+		iface PCM
+		subdevice 2
+		name 'PCM Slave Channels'
+		value 2
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '1 - 1024 (step 1)'
+		}
+	}
+	control.21 {
+		iface PCM
+		subdevice 2
+		name 'PCM Slave Access Mode'
+		value Interleaved
+		comment {
+			access read
+			type ENUMERATED
+			count 1
+			item.0 Interleaved
+			item.1 Non-interleaved
+		}
+	}
+	control.22 {
+		iface PCM
+		subdevice 3
+		name 'PCM Rate Shift 100000'
+		value 100000
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '80000 - 120000 (step 1)'
+		}
+	}
+	control.23 {
+		iface PCM
+		subdevice 3
+		name 'PCM Notify'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.24 {
+		iface PCM
+		subdevice 3
+		name 'PCM Slave Active'
+		value false
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.25 {
+		iface PCM
+		subdevice 3
+		name 'PCM Slave Format'
+		value 2
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '0 - 52 (step 1)'
+		}
+	}
+	control.26 {
+		iface PCM
+		subdevice 3
+		name 'PCM Slave Rate'
+		value 48000
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '0 - 192000 (step 1)'
+		}
+	}
+	control.27 {
+		iface PCM
+		subdevice 3
+		name 'PCM Slave Channels'
+		value 2
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '1 - 1024 (step 1)'
+		}
+	}
+	control.28 {
+		iface PCM
+		subdevice 3
+		name 'PCM Slave Access Mode'
+		value Interleaved
+		comment {
+			access read
+			type ENUMERATED
+			count 1
+			item.0 Interleaved
+			item.1 Non-interleaved
+		}
+	}
+	control.29 {
+		iface PCM
+		subdevice 4
+		name 'PCM Rate Shift 100000'
+		value 100000
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '80000 - 120000 (step 1)'
+		}
+	}
+	control.30 {
+		iface PCM
+		subdevice 4
+		name 'PCM Notify'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.31 {
+		iface PCM
+		subdevice 4
+		name 'PCM Slave Active'
+		value false
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.32 {
+		iface PCM
+		subdevice 4
+		name 'PCM Slave Format'
+		value 2
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '0 - 52 (step 1)'
+		}
+	}
+	control.33 {
+		iface PCM
+		subdevice 4
+		name 'PCM Slave Rate'
+		value 48000
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '0 - 192000 (step 1)'
+		}
+	}
+	control.34 {
+		iface PCM
+		subdevice 4
+		name 'PCM Slave Channels'
+		value 2
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '1 - 1024 (step 1)'
+		}
+	}
+	control.35 {
+		iface PCM
+		subdevice 4
+		name 'PCM Slave Access Mode'
+		value Interleaved
+		comment {
+			access read
+			type ENUMERATED
+			count 1
+			item.0 Interleaved
+			item.1 Non-interleaved
+		}
+	}
+	control.36 {
+		iface PCM
+		subdevice 5
+		name 'PCM Rate Shift 100000'
+		value 100000
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '80000 - 120000 (step 1)'
+		}
+	}
+	control.37 {
+		iface PCM
+		subdevice 5
+		name 'PCM Notify'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.38 {
+		iface PCM
+		subdevice 5
+		name 'PCM Slave Active'
+		value false
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.39 {
+		iface PCM
+		subdevice 5
+		name 'PCM Slave Format'
+		value 2
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '0 - 52 (step 1)'
+		}
+	}
+	control.40 {
+		iface PCM
+		subdevice 5
+		name 'PCM Slave Rate'
+		value 48000
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '0 - 192000 (step 1)'
+		}
+	}
+	control.41 {
+		iface PCM
+		subdevice 5
+		name 'PCM Slave Channels'
+		value 2
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '1 - 1024 (step 1)'
+		}
+	}
+	control.42 {
+		iface PCM
+		subdevice 5
+		name 'PCM Slave Access Mode'
+		value Interleaved
+		comment {
+			access read
+			type ENUMERATED
+			count 1
+			item.0 Interleaved
+			item.1 Non-interleaved
+		}
+	}
+	control.43 {
+		iface PCM
+		subdevice 6
+		name 'PCM Rate Shift 100000'
+		value 100000
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '80000 - 120000 (step 1)'
+		}
+	}
+	control.44 {
+		iface PCM
+		subdevice 6
+		name 'PCM Notify'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.45 {
+		iface PCM
+		subdevice 6
+		name 'PCM Slave Active'
+		value false
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.46 {
+		iface PCM
+		subdevice 6
+		name 'PCM Slave Format'
+		value 2
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '0 - 52 (step 1)'
+		}
+	}
+	control.47 {
+		iface PCM
+		subdevice 6
+		name 'PCM Slave Rate'
+		value 48000
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '0 - 192000 (step 1)'
+		}
+	}
+	control.48 {
+		iface PCM
+		subdevice 6
+		name 'PCM Slave Channels'
+		value 2
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '1 - 1024 (step 1)'
+		}
+	}
+	control.49 {
+		iface PCM
+		subdevice 6
+		name 'PCM Slave Access Mode'
+		value Interleaved
+		comment {
+			access read
+			type ENUMERATED
+			count 1
+			item.0 Interleaved
+			item.1 Non-interleaved
+		}
+	}
+	control.50 {
+		iface PCM
+		subdevice 7
+		name 'PCM Rate Shift 100000'
+		value 100000
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '80000 - 120000 (step 1)'
+		}
+	}
+	control.51 {
+		iface PCM
+		subdevice 7
+		name 'PCM Notify'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.52 {
+		iface PCM
+		subdevice 7
+		name 'PCM Slave Active'
+		value false
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.53 {
+		iface PCM
+		subdevice 7
+		name 'PCM Slave Format'
+		value 2
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '0 - 52 (step 1)'
+		}
+	}
+	control.54 {
+		iface PCM
+		subdevice 7
+		name 'PCM Slave Rate'
+		value 48000
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '0 - 192000 (step 1)'
+		}
+	}
+	control.55 {
+		iface PCM
+		subdevice 7
+		name 'PCM Slave Channels'
+		value 2
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '1 - 1024 (step 1)'
+		}
+	}
+	control.56 {
+		iface PCM
+		subdevice 7
+		name 'PCM Slave Access Mode'
+		value Interleaved
+		comment {
+			access read
+			type ENUMERATED
+			count 1
+			item.0 Interleaved
+			item.1 Non-interleaved
+		}
+	}
+	control.57 {
+		iface PCM
+		device 1
+		name 'PCM Rate Shift 100000'
+		value 100000
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '80000 - 120000 (step 1)'
+		}
+	}
+	control.58 {
+		iface PCM
+		device 1
+		name 'PCM Notify'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.59 {
+		iface PCM
+		device 1
+		name 'PCM Slave Active'
+		value false
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.60 {
+		iface PCM
+		device 1
+		name 'PCM Slave Format'
+		value 2
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '0 - 52 (step 1)'
+		}
+	}
+	control.61 {
+		iface PCM
+		device 1
+		name 'PCM Slave Rate'
+		value 48000
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '0 - 192000 (step 1)'
+		}
+	}
+	control.62 {
+		iface PCM
+		device 1
+		name 'PCM Slave Channels'
+		value 2
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '1 - 1024 (step 1)'
+		}
+	}
+	control.63 {
+		iface PCM
+		device 1
+		name 'PCM Slave Access Mode'
+		value Interleaved
+		comment {
+			access read
+			type ENUMERATED
+			count 1
+			item.0 Interleaved
+			item.1 Non-interleaved
+		}
+	}
+	control.64 {
+		iface PCM
+		device 1
+		subdevice 1
+		name 'PCM Rate Shift 100000'
+		value 100000
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '80000 - 120000 (step 1)'
+		}
+	}
+	control.65 {
+		iface PCM
+		device 1
+		subdevice 1
+		name 'PCM Notify'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.66 {
+		iface PCM
+		device 1
+		subdevice 1
+		name 'PCM Slave Active'
+		value false
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.67 {
+		iface PCM
+		device 1
+		subdevice 1
+		name 'PCM Slave Format'
+		value 2
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '0 - 52 (step 1)'
+		}
+	}
+	control.68 {
+		iface PCM
+		device 1
+		subdevice 1
+		name 'PCM Slave Rate'
+		value 48000
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '0 - 192000 (step 1)'
+		}
+	}
+	control.69 {
+		iface PCM
+		device 1
+		subdevice 1
+		name 'PCM Slave Channels'
+		value 2
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '1 - 1024 (step 1)'
+		}
+	}
+	control.70 {
+		iface PCM
+		device 1
+		subdevice 1
+		name 'PCM Slave Access Mode'
+		value Interleaved
+		comment {
+			access read
+			type ENUMERATED
+			count 1
+			item.0 Interleaved
+			item.1 Non-interleaved
+		}
+	}
+	control.71 {
+		iface PCM
+		device 1
+		subdevice 2
+		name 'PCM Rate Shift 100000'
+		value 100000
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '80000 - 120000 (step 1)'
+		}
+	}
+	control.72 {
+		iface PCM
+		device 1
+		subdevice 2
+		name 'PCM Notify'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.73 {
+		iface PCM
+		device 1
+		subdevice 2
+		name 'PCM Slave Active'
+		value false
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.74 {
+		iface PCM
+		device 1
+		subdevice 2
+		name 'PCM Slave Format'
+		value 2
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '0 - 52 (step 1)'
+		}
+	}
+	control.75 {
+		iface PCM
+		device 1
+		subdevice 2
+		name 'PCM Slave Rate'
+		value 48000
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '0 - 192000 (step 1)'
+		}
+	}
+	control.76 {
+		iface PCM
+		device 1
+		subdevice 2
+		name 'PCM Slave Channels'
+		value 2
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '1 - 1024 (step 1)'
+		}
+	}
+	control.77 {
+		iface PCM
+		device 1
+		subdevice 2
+		name 'PCM Slave Access Mode'
+		value Interleaved
+		comment {
+			access read
+			type ENUMERATED
+			count 1
+			item.0 Interleaved
+			item.1 Non-interleaved
+		}
+	}
+	control.78 {
+		iface PCM
+		device 1
+		subdevice 3
+		name 'PCM Rate Shift 100000'
+		value 100000
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '80000 - 120000 (step 1)'
+		}
+	}
+	control.79 {
+		iface PCM
+		device 1
+		subdevice 3
+		name 'PCM Notify'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.80 {
+		iface PCM
+		device 1
+		subdevice 3
+		name 'PCM Slave Active'
+		value false
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.81 {
+		iface PCM
+		device 1
+		subdevice 3
+		name 'PCM Slave Format'
+		value 2
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '0 - 52 (step 1)'
+		}
+	}
+	control.82 {
+		iface PCM
+		device 1
+		subdevice 3
+		name 'PCM Slave Rate'
+		value 48000
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '0 - 192000 (step 1)'
+		}
+	}
+	control.83 {
+		iface PCM
+		device 1
+		subdevice 3
+		name 'PCM Slave Channels'
+		value 2
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '1 - 1024 (step 1)'
+		}
+	}
+	control.84 {
+		iface PCM
+		device 1
+		subdevice 3
+		name 'PCM Slave Access Mode'
+		value Interleaved
+		comment {
+			access read
+			type ENUMERATED
+			count 1
+			item.0 Interleaved
+			item.1 Non-interleaved
+		}
+	}
+	control.85 {
+		iface PCM
+		device 1
+		subdevice 4
+		name 'PCM Rate Shift 100000'
+		value 100000
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '80000 - 120000 (step 1)'
+		}
+	}
+	control.86 {
+		iface PCM
+		device 1
+		subdevice 4
+		name 'PCM Notify'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.87 {
+		iface PCM
+		device 1
+		subdevice 4
+		name 'PCM Slave Active'
+		value false
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.88 {
+		iface PCM
+		device 1
+		subdevice 4
+		name 'PCM Slave Format'
+		value 2
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '0 - 52 (step 1)'
+		}
+	}
+	control.89 {
+		iface PCM
+		device 1
+		subdevice 4
+		name 'PCM Slave Rate'
+		value 48000
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '0 - 192000 (step 1)'
+		}
+	}
+	control.90 {
+		iface PCM
+		device 1
+		subdevice 4
+		name 'PCM Slave Channels'
+		value 2
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '1 - 1024 (step 1)'
+		}
+	}
+	control.91 {
+		iface PCM
+		device 1
+		subdevice 4
+		name 'PCM Slave Access Mode'
+		value Interleaved
+		comment {
+			access read
+			type ENUMERATED
+			count 1
+			item.0 Interleaved
+			item.1 Non-interleaved
+		}
+	}
+	control.92 {
+		iface PCM
+		device 1
+		subdevice 5
+		name 'PCM Rate Shift 100000'
+		value 100000
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '80000 - 120000 (step 1)'
+		}
+	}
+	control.93 {
+		iface PCM
+		device 1
+		subdevice 5
+		name 'PCM Notify'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.94 {
+		iface PCM
+		device 1
+		subdevice 5
+		name 'PCM Slave Active'
+		value false
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.95 {
+		iface PCM
+		device 1
+		subdevice 5
+		name 'PCM Slave Format'
+		value 2
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '0 - 52 (step 1)'
+		}
+	}
+	control.96 {
+		iface PCM
+		device 1
+		subdevice 5
+		name 'PCM Slave Rate'
+		value 48000
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '0 - 192000 (step 1)'
+		}
+	}
+	control.97 {
+		iface PCM
+		device 1
+		subdevice 5
+		name 'PCM Slave Channels'
+		value 2
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '1 - 1024 (step 1)'
+		}
+	}
+	control.98 {
+		iface PCM
+		device 1
+		subdevice 5
+		name 'PCM Slave Access Mode'
+		value Interleaved
+		comment {
+			access read
+			type ENUMERATED
+			count 1
+			item.0 Interleaved
+			item.1 Non-interleaved
+		}
+	}
+	control.99 {
+		iface PCM
+		device 1
+		subdevice 6
+		name 'PCM Rate Shift 100000'
+		value 100000
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '80000 - 120000 (step 1)'
+		}
+	}
+	control.100 {
+		iface PCM
+		device 1
+		subdevice 6
+		name 'PCM Notify'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.101 {
+		iface PCM
+		device 1
+		subdevice 6
+		name 'PCM Slave Active'
+		value false
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.102 {
+		iface PCM
+		device 1
+		subdevice 6
+		name 'PCM Slave Format'
+		value 2
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '0 - 52 (step 1)'
+		}
+	}
+	control.103 {
+		iface PCM
+		device 1
+		subdevice 6
+		name 'PCM Slave Rate'
+		value 48000
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '0 - 192000 (step 1)'
+		}
+	}
+	control.104 {
+		iface PCM
+		device 1
+		subdevice 6
+		name 'PCM Slave Channels'
+		value 2
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '1 - 1024 (step 1)'
+		}
+	}
+	control.105 {
+		iface PCM
+		device 1
+		subdevice 6
+		name 'PCM Slave Access Mode'
+		value Interleaved
+		comment {
+			access read
+			type ENUMERATED
+			count 1
+			item.0 Interleaved
+			item.1 Non-interleaved
+		}
+	}
+	control.106 {
+		iface PCM
+		device 1
+		subdevice 7
+		name 'PCM Rate Shift 100000'
+		value 100000
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '80000 - 120000 (step 1)'
+		}
+	}
+	control.107 {
+		iface PCM
+		device 1
+		subdevice 7
+		name 'PCM Notify'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.108 {
+		iface PCM
+		device 1
+		subdevice 7
+		name 'PCM Slave Active'
+		value false
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.109 {
+		iface PCM
+		device 1
+		subdevice 7
+		name 'PCM Slave Format'
+		value 2
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '0 - 52 (step 1)'
+		}
+	}
+	control.110 {
+		iface PCM
+		device 1
+		subdevice 7
+		name 'PCM Slave Rate'
+		value 48000
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '0 - 192000 (step 1)'
+		}
+	}
+	control.111 {
+		iface PCM
+		device 1
+		subdevice 7
+		name 'PCM Slave Channels'
+		value 2
+		comment {
+			access read
+			type INTEGER
+			count 1
+			range '1 - 1024 (step 1)'
+		}
+	}
+	control.112 {
+		iface PCM
+		device 1
+		subdevice 7
+		name 'PCM Slave Access Mode'
+		value Interleaved
+		comment {
+			access read
+			type ENUMERATED
+			count 1
+			item.0 Interleaved
+			item.1 Non-interleaved
+		}
+	}
+	control.113 {
+		iface MIXER
+		name 'PCM Playback Volume'
+		value.0 136
+		value.1 136
+		comment {
+			access 'read write user'
+			type INTEGER
+			count 2
+			range '0 - 255'
+			tlv '0000000100000008ffffec1400000014'
+			dbmin -5100
+			dbmax 0
+			dbvalue.0 -2380
+			dbvalue.1 -2380
+		}
+	}
+}
+state.NVidia {
+	control.1 {
+		iface CARD
+		name 'HDMI/DP,pcm=3 Jack'
+		value true
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.2 {
+		iface MIXER
+		name 'IEC958 Playback Con Mask'
+		value '0fff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access read
+			type IEC958
+			count 1
+		}
+	}
+	control.3 {
+		iface MIXER
+		name 'IEC958 Playback Pro Mask'
+		value '0f00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access read
+			type IEC958
+			count 1
+		}
+	}
+	control.4 {
+		iface MIXER
+		name 'IEC958 Playback Default'
+		value '0400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access 'read write'
+			type IEC958
+			count 1
+		}
+	}
+	control.5 {
+		iface MIXER
+		name 'IEC958 Playback Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.6 {
+		iface PCM
+		device 3
+		name ELD
+		value '100008006a140001000100000000000026130027432d502050524f2032370907070000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access 'read volatile'
+			type BYTES
+			count 95
+		}
+	}
+	control.7 {
+		iface CARD
+		name 'HDMI/DP,pcm=7 Jack'
+		value true
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.8 {
+		iface MIXER
+		name 'IEC958 Playback Con Mask'
+		index 1
+		value '0fff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access read
+			type IEC958
+			count 1
+		}
+	}
+	control.9 {
+		iface MIXER
+		name 'IEC958 Playback Pro Mask'
+		index 1
+		value '0f00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access read
+			type IEC958
+			count 1
+		}
+	}
+	control.10 {
+		iface MIXER
+		name 'IEC958 Playback Default'
+		index 1
+		value '0400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access 'read write'
+			type IEC958
+			count 1
+		}
+	}
+	control.11 {
+		iface MIXER
+		name 'IEC958 Playback Switch'
+		index 1
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.12 {
+		iface PCM
+		device 7
+		name ELD
+		value '100007006814000100040000000000005e210027505052533237563209070700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access 'read volatile'
+			type BYTES
+			count 95
+		}
+	}
+	control.13 {
+		iface CARD
+		name 'HDMI/DP,pcm=8 Jack'
+		value false
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.14 {
+		iface MIXER
+		name 'IEC958 Playback Con Mask'
+		index 2
+		value '0fff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access read
+			type IEC958
+			count 1
+		}
+	}
+	control.15 {
+		iface MIXER
+		name 'IEC958 Playback Pro Mask'
+		index 2
+		value '0f00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access read
+			type IEC958
+			count 1
+		}
+	}
+	control.16 {
+		iface MIXER
+		name 'IEC958 Playback Default'
+		index 2
+		value '0400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access 'read write'
+			type IEC958
+			count 1
+		}
+	}
+	control.17 {
+		iface MIXER
+		name 'IEC958 Playback Switch'
+		index 2
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.18 {
+		iface PCM
+		device 8
+		name ELD
+		value ''
+		comment {
+			access 'read volatile'
+			type BYTES
+			count 0
+		}
+	}
+	control.19 {
+		iface CARD
+		name 'HDMI/DP,pcm=9 Jack'
+		value false
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.20 {
+		iface MIXER
+		name 'IEC958 Playback Con Mask'
+		index 3
+		value '0fff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access read
+			type IEC958
+			count 1
+		}
+	}
+	control.21 {
+		iface MIXER
+		name 'IEC958 Playback Pro Mask'
+		index 3
+		value '0f00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access read
+			type IEC958
+			count 1
+		}
+	}
+	control.22 {
+		iface MIXER
+		name 'IEC958 Playback Default'
+		index 3
+		value '0400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access 'read write'
+			type IEC958
+			count 1
+		}
+	}
+	control.23 {
+		iface MIXER
+		name 'IEC958 Playback Switch'
+		index 3
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.24 {
+		iface PCM
+		device 9
+		name ELD
+		value ''
+		comment {
+			access 'read volatile'
+			type BYTES
+			count 0
+		}
+	}
+	control.25 {
+		iface PCM
+		device 3
+		name 'Playback Channel Map'
+		value.0 0
+		value.1 0
+		value.2 0
+		value.3 0
+		value.4 0
+		value.5 0
+		value.6 0
+		value.7 0
+		comment {
+			access 'read write volatile'
+			type INTEGER
+			count 8
+			range '0 - 36'
+		}
+	}
+	control.26 {
+		iface PCM
+		device 7
+		name 'Playback Channel Map'
+		value.0 0
+		value.1 0
+		value.2 0
+		value.3 0
+		value.4 0
+		value.5 0
+		value.6 0
+		value.7 0
+		comment {
+			access 'read write volatile'
+			type INTEGER
+			count 8
+			range '0 - 36'
+		}
+	}
+	control.27 {
+		iface PCM
+		device 8
+		name 'Playback Channel Map'
+		value.0 0
+		value.1 0
+		value.2 0
+		value.3 0
+		value.4 0
+		value.5 0
+		value.6 0
+		value.7 0
+		comment {
+			access 'read write volatile'
+			type INTEGER
+			count 8
+			range '0 - 36'
+		}
+	}
+	control.28 {
+		iface PCM
+		device 9
+		name 'Playback Channel Map'
+		value.0 0
+		value.1 0
+		value.2 0
+		value.3 0
+		value.4 0
+		value.5 0
+		value.6 0
+		value.7 0
+		comment {
+			access 'read write volatile'
+			type INTEGER
+			count 8
+			range '0 - 36'
+		}
+	}
+}
+state.Generic {
+	control.1 {
+		iface MIXER
+		name 'Front Playback Volume'
+		value.0 64
+		value.1 64
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 64'
+			dbmin -6400
+			dbmax 0
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.2 {
+		iface MIXER
+		name 'Front Playback Switch'
+		value.0 true
+		value.1 true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 2
+		}
+	}
+	control.3 {
+		iface MIXER
+		name 'Surround Playback Volume'
+		value.0 64
+		value.1 64
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 64'
+			dbmin -6400
+			dbmax 0
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.4 {
+		iface MIXER
+		name 'Surround Playback Switch'
+		value.0 true
+		value.1 true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 2
+		}
+	}
+	control.5 {
+		iface MIXER
+		name 'Center Playback Volume'
+		value 64
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 64'
+			dbmin -6400
+			dbmax 0
+			dbvalue.0 0
+		}
+	}
+	control.6 {
+		iface MIXER
+		name 'LFE Playback Volume'
+		value 64
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 64'
+			dbmin -6400
+			dbmax 0
+			dbvalue.0 0
+		}
+	}
+	control.7 {
+		iface MIXER
+		name 'Center Playback Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.8 {
+		iface MIXER
+		name 'LFE Playback Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.9 {
+		iface MIXER
+		name 'Headphone Playback Volume'
+		value.0 64
+		value.1 64
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 64'
+			dbmin -6400
+			dbmax 0
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.10 {
+		iface MIXER
+		name 'Headphone Playback Switch'
+		value.0 true
+		value.1 true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 2
+		}
+	}
+	control.11 {
+		iface MIXER
+		name 'Loopback Mixing'
+		value Disabled
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 Disabled
+			item.1 Enabled
+		}
+	}
+	control.12 {
+		iface MIXER
+		name 'Rear Mic Playback Volume'
+		value.0 0
+		value.1 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 31'
+			dbmin -3450
+			dbmax 1200
+			dbvalue.0 -3450
+			dbvalue.1 -3450
+		}
+	}
+	control.13 {
+		iface MIXER
+		name 'Rear Mic Playback Switch'
+		value.0 false
+		value.1 false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 2
+		}
+	}
+	control.14 {
+		iface MIXER
+		name 'Front Mic Playback Volume'
+		value.0 0
+		value.1 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 31'
+			dbmin -3450
+			dbmax 1200
+			dbvalue.0 -3450
+			dbvalue.1 -3450
+		}
+	}
+	control.15 {
+		iface MIXER
+		name 'Front Mic Playback Switch'
+		value.0 false
+		value.1 false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 2
+		}
+	}
+	control.16 {
+		iface MIXER
+		name 'Line Playback Volume'
+		value.0 0
+		value.1 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 31'
+			dbmin -3450
+			dbmax 1200
+			dbvalue.0 -3450
+			dbvalue.1 -3450
+		}
+	}
+	control.17 {
+		iface MIXER
+		name 'Line Playback Switch'
+		value.0 false
+		value.1 false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 2
+		}
+	}
+	control.18 {
+		iface MIXER
+		name 'Auto-Mute Mode'
+		value Enabled
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 Disabled
+			item.1 Enabled
+		}
+	}
+	control.19 {
+		iface MIXER
+		name 'Input Source'
+		value 'Front Mic'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 'Rear Mic'
+			item.1 'Front Mic'
+			item.2 Line
+		}
+	}
+	control.20 {
+		iface MIXER
+		name 'Input Source'
+		index 1
+		value 'Rear Mic'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 'Rear Mic'
+			item.1 'Front Mic'
+			item.2 Line
+		}
+	}
+	control.21 {
+		iface MIXER
+		name 'Capture Volume'
+		value.0 28
+		value.1 28
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 46'
+			dbmin -1600
+			dbmax 3000
+			dbvalue.0 1200
+			dbvalue.1 1200
+		}
+	}
+	control.22 {
+		iface MIXER
+		name 'Capture Switch'
+		value.0 true
+		value.1 true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 2
+		}
+	}
+	control.23 {
+		iface MIXER
+		name 'Capture Volume'
+		index 1
+		value.0 0
+		value.1 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 46'
+			dbmin -1600
+			dbmax 3000
+			dbvalue.0 -1600
+			dbvalue.1 -1600
+		}
+	}
+	control.24 {
+		iface MIXER
+		name 'Capture Switch'
+		index 1
+		value.0 false
+		value.1 false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 2
+		}
+	}
+	control.25 {
+		iface MIXER
+		name 'Rear Mic Boost Volume'
+		value.0 0
+		value.1 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 3'
+			dbmin 0
+			dbmax 3000
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.26 {
+		iface MIXER
+		name 'Front Mic Boost Volume'
+		value.0 0
+		value.1 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 3'
+			dbmin 0
+			dbmax 3000
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.27 {
+		iface MIXER
+		name 'Line Boost Volume'
+		value.0 0
+		value.1 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 3'
+			dbmin 0
+			dbmax 3000
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.28 {
+		iface MIXER
+		name 'IEC958 Playback Con Mask'
+		value '0fff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access read
+			type IEC958
+			count 1
+		}
+	}
+	control.29 {
+		iface MIXER
+		name 'IEC958 Playback Pro Mask'
+		value '0f00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access read
+			type IEC958
+			count 1
+		}
+	}
+	control.30 {
+		iface MIXER
+		name 'IEC958 Playback Default'
+		value '0400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access 'read write'
+			type IEC958
+			count 1
+		}
+	}
+	control.31 {
+		iface MIXER
+		name 'IEC958 Playback Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.32 {
+		iface MIXER
+		name 'IEC958 Default PCM Playback Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.33 {
+		iface MIXER
+		name 'Master Playback Volume'
+		value 44
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 64'
+			dbmin -6400
+			dbmax 0
+			dbvalue.0 -2000
+		}
+	}
+	control.34 {
+		iface MIXER
+		name 'Master Playback Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.35 {
+		iface CARD
+		name 'Rear Mic Jack'
+		value false
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.36 {
+		iface CARD
+		name 'Front Mic Jack'
+		value false
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.37 {
+		iface CARD
+		name 'Line Jack'
+		value false
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.38 {
+		iface CARD
+		name 'Line Out Front Jack'
+		value false
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.39 {
+		iface CARD
+		name 'Line Out Surround Jack'
+		value false
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.40 {
+		iface CARD
+		name 'Line Out CLFE Jack'
+		value false
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.41 {
+		iface CARD
+		name 'Front Headphone Jack'
+		value false
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.42 {
+		iface CARD
+		name 'SPDIF Phantom Jack'
+		value true
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.43 {
+		iface PCM
+		name 'Playback Channel Map'
+		value.0 0
+		value.1 0
+		value.2 0
+		value.3 0
+		value.4 0
+		value.5 0
+		comment {
+			access 'read volatile'
+			type INTEGER
+			count 6
+			range '0 - 36'
+		}
+	}
+	control.44 {
+		iface PCM
+		name 'Capture Channel Map'
+		value.0 0
+		value.1 0
+		comment {
+			access 'read volatile'
+			type INTEGER
+			count 2
+			range '0 - 36'
+		}
+	}
+	control.45 {
+		iface PCM
+		device 1
+		name 'Playback Channel Map'
+		value.0 0
+		value.1 0
+		comment {
+			access 'read volatile'
+			type INTEGER
+			count 2
+			range '0 - 36'
+		}
+	}
+	control.46 {
+		iface PCM
+		device 2
+		name 'Capture Channel Map'
+		value.0 0
+		value.1 0
+		comment {
+			access 'read volatile'
+			type INTEGER
+			count 2
+			range '0 - 36'
+		}
+	}
+	control.47 {
+		iface MIXER
+		name 'PCM Playback Volume'
+		value.0 255
+		value.1 255
+		comment {
+			access 'read write user'
+			type INTEGER
+			count 2
+			range '0 - 255'
+			tlv '0000000100000008ffffec1400000014'
+			dbmin -5100
+			dbmax 0
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+}
+state.U192k {
+	control.1 {
+		iface PCM
+		name 'Playback Channel Map'
+		value.0 0
+		value.1 0
+		value.2 0
+		value.3 0
+		comment {
+			access 'read volatile'
+			type INTEGER
+			count 4
+			range '0 - 36'
+		}
+	}
+	control.2 {
+		iface PCM
+		name 'Capture Channel Map'
+		value.0 0
+		value.1 0
+		value.2 0
+		value.3 0
+		comment {
+			access 'read volatile'
+			type INTEGER
+			count 4
+			range '0 - 36'
+		}
+	}
+	control.3 {
+		iface MIXER
+		name 'UMC404HD 192k Output Playback Switch'
+		value.0 true
+		value.1 true
+		value.2 true
+		value.3 true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 4
+		}
+	}
+	control.4 {
+		iface MIXER
+		name 'UMC404HD 192k Output Playback Switch'
+		index 1
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.5 {
+		iface MIXER
+		name 'UMC404HD 192k Output Playback Volume'
+		value.0 127
+		value.1 127
+		value.2 127
+		value.3 127
+		comment {
+			access 'read write'
+			type INTEGER
+			count 4
+			range '0 - 127'
+			dbmin -12700
+			dbmax 0
+			dbvalue.0 0
+			dbvalue.1 0
+			dbvalue.2 0
+			dbvalue.3 0
+		}
+	}
+	control.6 {
+		iface MIXER
+		name 'UMC404HD 192k Output Playback Volume'
+		index 1
+		value 127
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 127'
+			dbmin -12700
+			dbmax 0
+			dbvalue.0 0
+		}
+	}
+	control.7 {
+		iface CARD
+		name 'UMC404HD 192k Internal Clock Validity'
+		value true
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.8 {
+		iface MIXER
+		name 'Mic Capture Switch'
+		value.0 true
+		value.1 true
+		value.2 true
+		value.3 true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 4
+		}
+	}
+	control.9 {
+		iface MIXER
+		name 'Mic Capture Switch'
+		index 1
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.10 {
+		iface MIXER
+		name 'Mic Capture Volume'
+		value.0 127
+		value.1 127
+		value.2 127
+		value.3 127
+		comment {
+			access 'read write'
+			type INTEGER
+			count 4
+			range '0 - 127'
+			dbmin -12700
+			dbmax 0
+			dbvalue.0 0
+			dbvalue.1 0
+			dbvalue.2 0
+			dbvalue.3 0
+		}
+	}
+	control.11 {
+		iface MIXER
+		name 'Mic Capture Volume'
+		index 1
+		value 127
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 127'
+			dbmin -12700
+			dbmax 0
+			dbvalue.0 0
+		}
+	}
+}
+state.Webcam {
+	control.1 {
+		iface PCM
+		name 'Capture Channel Map'
+		value.0 0
+		value.1 0
+		comment {
+			access 'read volatile'
+			type INTEGER
+			count 2
+			range '0 - 36'
+		}
+	}
+	control.2 {
+		iface MIXER
+		name 'Mic Capture Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.3 {
+		iface MIXER
+		name 'Mic Capture Volume'
+		value 15
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 15'
+			dbmin 2000
+			dbmax 5000
+			dbvalue.0 5000
+		}
+	}
+}

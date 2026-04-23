@@ -68,7 +68,7 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-wakatime asdf)
+plugins=(git zsh-autosuggestions zsh-wakatime)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -92,11 +92,7 @@ alias flyctl='$HOME/.fly/bin/flyctl'
 # Protontricks
 alias protontricks='flatpak run com.github.Matoking.protontricks'
 
-# NVM (Node.js version manager)
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
+# Terminal colors on Tmux
 export TERM='screen-256color'
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -135,11 +131,6 @@ export GPG_TTY=$(tty)
 export PATH=node_modules/.bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/bin:$PATH
-
-# Add Yarn globals on $PATH
-# export PATH=$PATH:$(yarn global bin)
-export PATH=$PATH:/usr/bin/yarn
-
 
 # Deno
 export DENO_INSTALL="$HOME/.deno"
@@ -258,6 +249,10 @@ function kill-discord () {
   kill -9 $(ps aux | rg discord | head -n 1 | awk '{print $2}')
 }
 
+function kill-rustdesk () {
+  kill -9 $(ps aux | rg rustdesk | head -n 1 | awk '{print $2}')
+}
+
 # get time in milisseconds
 function ms () {
   TIMEFMT=%*E; time $@
@@ -274,62 +269,26 @@ function rescripts () {
   npm set-script rescript:clean "rescript clean"
 }
 
-# Cria novo projeto Node.js com TypeScript e Sucrase
-# Uso: make-node <project-name>
-function make-node () {
-  echo "Creating project..."
-  mkdir $1
-  cd $1
-  # Create package.json
-  echo '{\n  "private": true,\n  "scripts": {\n    "dev": "nodemon --exec sucrase-node src/main.ts",\n    "type-check": "tsc --noEmit"\n  }\n}' >> package.json
-  mkdir src
-  # Create .editorconfig
-  echo '# editorconfig.org\nroot = true\n\n[*]\nindent_size = 2\nindent_style = space\nend_of_line = lf\ncharset = utf-8\ntrim_trailing_whitespace = true\ninsert_final_newline = true\n\n[*.md]\ntrim_trailing_whitespace = false' >> .editorconfig
-  # Create .gitignore
-  echo "node_modules\ndist" >> .gitignore
-  # Create tsconfig.json
-  echo '{\n  "compilerOptions": {\n    "incremental": true,\n    "target": "ESNext",\n    "module": "commonjs",\n    "moduleResolution": "node",\n    "baseUrl": "./",\n    "paths": {\n      "@/*": ["./src/*"]\n    },\n    "outDir": "./dist",\n    "removeComments": true,\n    "esModuleInterop": true,\n    "forceConsistentCasingInFileNames": true,\n    "strict": true,\n    "skipLibCheck": true\n  },\n  "include": ["./src"]\n}' >> tsconfig.json
-  # Crate src/main.ts
-  echo "console.log('Yaay!')" >> src/main.ts
-  echo "Installing dependencies..."
-  yarn add --exact typescript >> /dev/null
-  yarn add --dev --exact @types/node nodemon sucrase >> /dev/null
-  yarn tsc --init >> /dev/null
-  echo "Finished! Run yarn dev to start sucrase server."
-}
-
-function mx-ergo-config () {
-  # MXErgo Scroll Config - Mouse configuration
-  xinput set-prop pointer:$1 "libinput Scroll Method Enabled" 0, 0, 1 && xinput set-prop pointer:$1 "libinput Button Scrolling Button" 2
-}
-
-if [ -n "$(xinput | rg "Logitech MX Ergo")" ]; then
-  mx-ergo-config "Logitech MX Ergo"
-elif [ -n "$(xinput | rg "MX Ergo")" ]; then
-  mx-ergo-config "MX Ergo"
-fi
+# GREP colors
+export GREP_COLORS="mt=1;33"
 
 # bun completions
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
-
-# GREP colors
-export GREP_COLORS="mt=1;33"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-# Deta
-export PATH="$HOME/.deta/bin:$PATH"
-
 # diff-so-fancy
 export PATH="/media/storage/code/00-opensource/diff-so-fancy:$PATH"
 
-# # Volta (Node.js version manager)
-# export VOLTA_HOME="$HOME/.volta"
-# export PATH="$VOLTA_HOME/bin:$PATH"
-# # Volta completions (not working, throwing an error)
-# # source <(volta completions zsh)
+# BEGIN opam configuration (OCaml)
+# This is useful if you're using opam as it adds:
+#   - the correct directories to the PATH
+#   - auto-completion for the opam binary
+# This section can be safely removed at any time if needed.
+[[ ! -r "$HOME/.opam/opam-init/init.zsh" ]] || source "$HOME/.opam/opam-init/init.zsh" > /dev/null 2> /dev/null
+# END opam configuration
 
-# bun completions
-[ -s "/home/fernando/.bun/_bun" ] && source "/home/fernando/.bun/_bun"
+# Mise (https://mise.jdx.dev/)
+eval "$(mise activate zsh)"
