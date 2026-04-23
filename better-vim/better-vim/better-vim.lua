@@ -66,7 +66,7 @@ M.nvim_tree = {
 }
 
 M.lsps = {
-  biome = {},
+  ["biome@1.8.3"] = {},
   astro = {},
   prismals = {},
   tailwindcss = {
@@ -82,7 +82,17 @@ M.lsps = {
     },
   },
   rust_analyzer = {},
-  rescriptls = {},
+  rescriptls = {
+    -- cmd = { "rescript-language-server", "--stdio" },
+    -- cmd = { "bun", "./node_modules/.bin/rescript-language-server", "--stdio" },
+    init_options = {
+      extensionConfiguration = {
+        incrementalTypechecking = {
+          enabled = true,
+        },
+      },
+    },
+  },
   terraformls = {},
   tsserver = {
     on_attach = function(client, bufnr)
@@ -96,14 +106,62 @@ M.lsps = {
   },
 }
 
-M.formatters = {
-  terraform_fmt = {},
+M.treesitter = {
+  -- TypeScript & React Core
+  "typescript",
+  "tsx",
+  "javascript",
+  "jsx",
+  "jsdoc",
+
+  -- Elixir Core
+  "elixir",
+  "eex",
+  "heex",
+  "surface",
+
+  -- Rust Core
+  "rust",
+
+  -- ReScript Core
+  "rescript",
+
+  -- Configuração & Package Managers
+  "json",
+  "toml",
+
+  -- Documentação
+  "markdown",
+  "markdown_inline",
+
+  -- Web & Estilo (para projetos React)
+  "html",
+  "css",
+  "scss",
+
+  -- Build & Deploy
+  "dockerfile",
+  "yaml",
+
+  -- Controle de Versão & Config
+  "gitignore",
+  "gitcommit",
+  "git_config",
+  "git_rebase",
+
+  -- Outros Configs Comuns
+  "bash",
+  "regex",
+  "comment",
+  "diff"
 }
 
-M.treesitter = "all"
+-- M.treesitter = "all"
+-- M.treesitter_ignore = { "hoon", "ipkg", "blueprint", "t32", "jsonc", "fusion", "rnoweb" }
 
 M.plugins = {
   { "nvim-treesitter/nvim-treesitter-context" },
+
   -- {
   --   "vhyrro/luarocks.nvim",
   --   priority = 10000,
@@ -120,12 +178,14 @@ M.plugins = {
   --     require("rest-nvim").setup {}
   --   end,
   -- },
+
   {
     "f-person/git-blame.nvim",
     opts = {
       enabled = false,
     },
   },
+
   "rescript-lang/vim-rescript",
   "rescript-lang/tree-sitter-rescript",
   "devongovett/tree-sitter-highlight",
@@ -133,7 +193,9 @@ M.plugins = {
   "voldikss/vim-floaterm",
   "jose-elias-alvarez/nvim-lsp-ts-utils",
   utils.should_load_theme("palenightfall", { "JoosepAlviste/palenightfall.nvim" }),
-  "mg979/vim-visual-multi",
+
+  -- "mg979/vim-visual-multi",
+
   {
     "marilari88/twoslash-queries.nvim",
     opts = {
@@ -141,6 +203,7 @@ M.plugins = {
       highlight = "Type", -- to set up a highlight group for the virtual text
     },
   },
+
   {
     "lukas-reineke/virt-column.nvim",
     opts = {
@@ -151,12 +214,28 @@ M.plugins = {
       },
     },
   },
-  {
-    "dmmulroy/ts-error-translator.nvim",
-    opts = {},
-  },
+
+  -- {
+  --   "dmmulroy/ts-error-translator.nvim",
+  --   opts = {},
+  -- },
+
   "hashivim/vim-terraform",
-  -- "Exafunction/codeium.vim",
+
+  {
+    'razak17/tailwind-fold.nvim',
+    opts = {
+      symbol = "≈",
+    },
+    dependencies = { 'nvim-treesitter/nvim-treesitter' },
+    ft = { 'html', 'svelte', 'astro', 'vue', 'typescriptreact', 'php', 'blade' },
+  },
+
+  {
+    "NStefan002/screenkey.nvim",
+    lazy = false,
+    version = "*", -- or branch = "main", to use the latest commit
+  },
 }
 
 local terminal_opened_status = function()
@@ -229,6 +308,8 @@ M.hooks = {
     -- Floatterm config
     vim.g.floaterm_title = ""
 
+    vim.opt.laststatus = 3
+
     vim.o.backupdir = "/tmp/.nvim/backup"
     vim.o.directory = "/tmp/.nvim/swap"
     vim.o.undodir = "/tmp/.nvim/undo"
@@ -275,6 +356,12 @@ M.hooks = {
     })
     vim.treesitter.language.register('markdown', 'mdx')
     vim.treesitter.language.register('bash', 'sh')
+
+    -- -- background opacity
+    -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+    -- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+    -- vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none" })
+    -- vim.api.nvim_set_hl(0, "Pmenu", { bg = "none" })
 
     -- local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
     -- parser_config.rescript = {

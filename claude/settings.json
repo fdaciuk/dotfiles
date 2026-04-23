@@ -130,7 +130,9 @@
     "github@claude-plugins-official": false,
     "pr-review-toolkit@claude-plugins-official": false,
     "frontend-design@claude-plugins-official": true,
-    "lua-lsp@claude-plugins-official": true
+    "lua-lsp@claude-plugins-official": true,
+    "context7@claude-plugins-official": true,
+    "playwright@claude-plugins-official": true
   },
   "alwaysThinkingEnabled": true
 }
